@@ -111,9 +111,6 @@ ratio, one degenerate output), while Bhashini round-tripped both languages at
 100% script accuracy.
 
 ---
-
-## Setup
-
 Requires Python 3.11+, and a reachable PostgreSQL 16 with the `vector` extension.
 
 ```bash
@@ -127,8 +124,39 @@ Credentials are read from the environment only and are never hardcoded. `.env`
 is gitignored and must stay that way — it holds live API keys.
 
 ---
+**##Future Plans**
+Smarter agents
 
-## Boundaries
+Search by meaning: combine keyword search with meaning-based search, so "loan without guarantee" finds the "collateral-free" rule, in any language.
+Test before shipping: we use it only if it finds the right clause more often on about 60 test questions, including Hindi and Kannada ones.
+Follow-up agent: waits days for a bank's reply, watches for rule changes, and reminds the owner. This is where LangGraph would be useful.
+Frameworks: LangChain and LangGraph come in only when a feature needs them. Today's flows are short, so plain code is enough.
+Better learning
+
+Harder training exam: the current bill-reading test is nearly solved (0.976), so training could not beat it.
+Scheme-question training: teach the model to pick the right scheme and cite the right clause.
+Same safety rule: a new model replaces the old one only if it scores strictly higher.
+More coverage
+
+Fill knowledge gaps: PMEGP rate tables, CLCSS, Jan Samarth and NIDHI.
+State schemes: starting with Karnataka.
+Reaching owners
+
+WhatsApp: go live once Meta unlocks the account, so owners need no new app.
+Field interviews: talk to owners, accountants and bank branches to fix what is confusing.
+Trust and fairness
+
+GST sandbox: keep the simulated filing clearly labelled.
+Outside time stamp: add an independent time-stamping service to the sealed bank file, because today our server is the only notary.
+Fairness audit: check that results don't favour some groups of owners over others.
+Roll-out
+
+Pilot: 100 real businesses after the finale on 27 December.
+More states: expand after the pilot.
+Before the finale
+
+Demo and rehearsal: videos, QR links and dry runs.
+Open items to close: the pricing figure and team names on the deck's placeholder slides.
 
 - **Filing stays with the owner or their professional.** MunimAI prepares; it does not file.
 - **Financial data is used only with consent**, purpose-bound and revocable.
