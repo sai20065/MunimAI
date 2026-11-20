@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-label="System map: owner, language service, router, agents, auditor, two models on a supercomputer">
+  <defs>
+    <marker id="ar" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M1,1 L10,6 L1,11 Z" fill="#6A68A8"/></marker>
+  </defs>
+  <rect width="1200" height="600" rx="24" fill="#F5F3FF"/>
+  <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" fill="#14143A">
+    <!-- top row -->
+    <rect x="40" y="40" width="210" height="110" rx="20" fill="#BFE3FF"/>
+    <text x="145" y="86" font-size="34">🗣️</text><text x="145" y="118" font-size="26" font-weight="800">Owner</text><text x="145" y="140" font-size="18">voice, text, photos</text>
+    <rect x="310" y="40" width="230" height="110" rx="20" fill="#E3D9FF"/>
+    <text x="425" y="86" font-size="34">🔤</text><text x="425" y="118" font-size="26" font-weight="800">Bhashini</text><text x="425" y="140" font-size="18">speech ⇄ text ⇄ language</text>
+    <rect x="600" y="40" width="230" height="110" rx="20" fill="#9B7BFF"/>
+    <text x="715" y="86" font-size="34">🧭</text><text x="715" y="118" font-size="26" font-weight="800">Router</text><text x="715" y="140" font-size="18">fixed rules, not AI</text>
+    <rect x="890" y="40" width="270" height="110" rx="20" fill="#FFD58A"/>
+    <text x="1025" y="86" font-size="34">📁</text><text x="1025" y="118" font-size="26" font-weight="800">Reply and files</text><text x="1025" y="140" font-size="18">spoken answer, sealed PDF</text>
+    <!-- agents -->
+    <rect x="40" y="210" width="790" height="150" rx="22" fill="#fff" stroke="#CFCBF0" stroke-width="3"/>
+    <text x="435" y="244" font-size="22" font-weight="700" fill="#5B38D0">THE AGENT TEAM</text>
+    <rect x="60" y="260" width="115" height="84" rx="14" fill="#C9F5E3"/><text x="117" y="290" font-size="26">📒</text><text x="117" y="318" font-size="17" font-weight="700">Ledger</text><text x="117" y="336" font-size="14">reads bills</text>
+    <rect x="187" y="260" width="115" height="84" rx="14" fill="#FFE3B0"/><text x="244" y="290" font-size="26">🏛️</text><text x="244" y="318" font-size="17" font-weight="700">Scheme</text><text x="244" y="336" font-size="14">official rules</text>
+    <rect x="314" y="260" width="115" height="84" rx="14" fill="#E3D9FF"/><text x="371" y="290" font-size="26">📈</text><text x="371" y="318" font-size="17" font-weight="700">Readiness</text><text x="371" y="336" font-size="14">books score</text>
+    <rect x="441" y="260" width="115" height="84" rx="14" fill="#FFD6E0"/><text x="498" y="290" font-size="26">🧾</text><text x="498" y="318" font-size="17" font-weight="700">GST helper</text><text x="498" y="336" font-size="14">drafts only</text>
+    <rect x="568" y="260" width="115" height="84" rx="14" fill="#D8F0FF"/><text x="625" y="290" font-size="26">📁</text><text x="625" y="318" font-size="17" font-weight="700">Bank file</text><text x="625" y="336" font-size="14">sealed PDF</text>
+    <rect x="695" y="260" width="120" height="84" rx="14" fill="#E9E5FB"/><text x="755" y="290" font-size="26">🌐</text><text x="755" y="318" font-size="17" font-weight="700">Web search</text><text x="755" y="336" font-size="14">last resort</text>
+    <!-- verifier -->
+    <rect x="40" y="410" width="790" height="80" rx="22" fill="#3FE0A8"/>
+    <text x="435" y="446" font-size="28" font-weight="800">🛡️ Auditor (verifier)</text>
+    <text x="435" y="474" font-size="20">Blocks any claim with no official clause, no consent, or a stale rule</text>
+    <!-- models -->
+    <rect x="890" y="210" width="270" height="280" rx="22" fill="#14143A"/>
+    <text x="1025" y="246" font-size="22" font-weight="800" fill="#7FE7FF">PARAM SHAVAK</text>
+    <text x="1025" y="268" font-size="16" fill="#D3D0F0">shared college supercomputer</text>
+    <rect x="910" y="284" width="230" height="86" rx="16" fill="#9B7BFF"/>
+    <text x="1025" y="318" font-size="24" font-weight="800">🧠 Qwen · boss</text><text x="1025" y="346" font-size="17">7B · GPU · answers</text>
+    <rect x="910" y="384" width="230" height="86" rx="16" fill="#3FE0A8"/>
+    <text x="1025" y="418" font-size="24" font-weight="800">🛠️ Gemma · worker</text><text x="1025" y="446" font-size="17">4B · plain memory · bills</text>
+    <!-- footer -->
+    <text x="600" y="548" font-size="24" font-weight="700" fill="#C8244E">Boss thinks. Worker does the routine. Code does every number.</text>
+    <text x="600" y="578" font-size="18" fill="#5A5890">Our share of the graphics card is capped at 17 GB. The worker uses none of it.</text>
+  </g>
+  <g stroke="#6A68A8" stroke-width="5" fill="none" marker-end="url(#ar)">
+    <path d="M252,95 L304,95"/><path d="M542,95 L594,95"/><path d="M715,152 L715,204"/>
+    <path d="M435,362 L435,404"/><path d="M832,450 L884,450"/>
+  </g>
+  <path d="M1025,152 L1025,204" stroke="#6A68A8" stroke-width="5" fill="none" stroke-dasharray="2 10" stroke-linecap="round"/>
+</svg>

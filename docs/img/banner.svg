@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="SaralcreditAI banner: speak, we prepare, you decide">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4DB8FF"/>
+      <stop offset="0.55" stop-color="#9B7BFF"/>
+      <stop offset="1" stop-color="#FF5E8A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="320" rx="28" fill="url(#bg)"/>
+  <circle cx="1080" cy="60" r="150" fill="#ffffff" opacity="0.10"/>
+  <circle cx="1130" cy="290" r="110" fill="#ffffff" opacity="0.10"/>
+  <circle cx="90" cy="300" r="90" fill="#ffffff" opacity="0.08"/>
+  <text x="70" y="128" font-family="Segoe UI, Arial, sans-serif" font-size="82" font-weight="800" fill="#ffffff">SaralcreditAI</text>
+  <text x="74" y="184" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="600" fill="#ffffff">A team of small AI agents that helps small businesses get credit</text>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#14143A">
+    <rect x="70" y="222" width="250" height="56" rx="28" fill="#ffffff"/>
+    <text x="195" y="260" text-anchor="middle">🗣️ You speak</text>
+    <rect x="345" y="222" width="300" height="56" rx="28" fill="#3FE0A8"/>
+    <text x="495" y="260" text-anchor="middle">🤖 Agents prepare</text>
+    <rect x="670" y="222" width="260" height="56" rx="28" fill="#FFD58A"/>
+    <text x="800" y="260" text-anchor="middle">✅ You decide</text>
+  </g>
+</svg>
