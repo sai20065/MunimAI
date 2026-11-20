@@ -251,6 +251,6 @@ Run the tests with `python -m pytest munimai/eval`.
 
 **Built for Tech4Bharat 2026 · Agents prepare, owners decide.**
 
-Licence: not yet chosen.
+Licence: [MIT](LICENSE). The open models we use (Qwen, Gemma) keep their own licences.
 
 </div>
