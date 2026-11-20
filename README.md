@@ -222,8 +222,13 @@ Run the tests with `python -m pytest munimai/eval`.
 | 🧪 | **Harder training exam** | Train for scheme questions too, with the same "only if strictly better" rule |
 | 💬 | **WhatsApp live** | So owners need no new app |
 | 🏛️ | **More schemes** | PMEGP rate tables, CLCSS, Jan Samarth, NIDHI and state programmes |
+| 🧪 | **GST sandbox** | Keep the simulated filing clearly labelled |
 | ⏱️ | **Outside time stamp** | Make the sealed bank file independently verifiable |
-| 🏪 | **Pilot** | 100 real businesses, then a fairness audit and more states |
+| ⚖️ | **Fairness audit** | Check that results do not favour some groups of owners over others |
+| 🎤 | **Field interviews** | Talk to owners, accountants and bank branches to fix what is confusing |
+| 🏪 | **Pilot** | 100 real businesses after the finale on 27 December, then more states |
+
+**Before the finale:** demo and rehearsal (videos, QR links, dry runs), and closing the open items on the deck's placeholder slides (pricing, team names). State schemes start with **Karnataka**.
 
 ---
 
