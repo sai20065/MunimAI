@@ -35,3 +35,10 @@ video/assets/
 video/*.log
 video/p*.mp3
 video/p*.wav
+
+# Local clones of third-party books (non-commercial licence; never commit)
+library_src/
+
+# Logs and scratch
+*.log
+munimai/tools_tmp/

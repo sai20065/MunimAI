@@ -42,6 +42,8 @@ class Claim:
     needs_citation: bool = True          # scheme-eligibility claims do
     used_financial_data: bool = False    # credit claims do
     consent_purpose: Optional[str] = None
+    allowed_numbers: Optional[list] = None   # if set, every number in the text must match one of these
+    receipt_id: Optional[int] = None     # a filing_attempts row; the only thing that lets a claim say "filed"
 
 
 @dataclass
@@ -62,9 +64,7 @@ class Verifier:
         # 4. prepare/file line — a text check, cheapest, do first
         for pat in _FILING_ASSERTIONS:
             if re.search(pat, claim.text, re.IGNORECASE):
-                reasons.append(
-                    "asserts a filing/submission happened; SaralcreditAI only prepares"
-                )
+                reasons.extend(self._filing_reasons(claim))
                 break
 
         # 1 + 2. citation and rule version
@@ -88,6 +88,13 @@ class Verifier:
                 if not valid_ids:
                     reasons.append("no current clause among the citations")
 
+        # 5. number grounding: an analysis may only quote numbers the code computed
+        if claim.allowed_numbers is not None:
+            from ..analytics.grounding import ungrounded_numbers
+            bad = ungrounded_numbers(claim.text, claim.allowed_numbers)
+            if bad:
+                reasons.append("quotes numbers that were not computed: " + ", ".join(bad[:5]))
+
         # 3. consent
         if claim.used_financial_data:
             if not claim.consent_purpose:
@@ -105,6 +112,20 @@ class Verifier:
         verdict = Verdict(passed=not reasons, reasons=reasons, valid_clause_ids=valid_ids)
         self._record(claim, verdict)
         return verdict
+
+    def _filing_reasons(self, claim: Claim) -> list[str]:
+        """A claim may say something was filed only if a real receipt row backs it, and a sandbox
+        receipt must be labelled SIMULATED in the text. No receipt means the claim is blocked."""
+        if claim.receipt_id is None:
+            return ["asserts a filing/submission happened with no receipt; SaralcreditAI only prepares"]
+        row = self.conn.execute(
+            "SELECT simulated, status FROM filing_attempts WHERE id=%s AND business_id=%s",
+            (claim.receipt_id, claim.business_id)).fetchone()
+        if not row or row[1] != "filed":
+            return ["cites a filing receipt that does not exist for this business"]
+        if row[0] and "simulated" not in claim.text.lower():
+            return ["a sandbox filing must be labelled SIMULATED"]
+        return []
 
     def _record(self, claim: Claim, verdict: Verdict) -> None:
         """Persist the decision. A blocked claim must carry its reason (the DB

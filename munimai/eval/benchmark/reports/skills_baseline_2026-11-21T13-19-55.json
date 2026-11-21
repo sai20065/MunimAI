@@ -1,0 +1,24 @@
+{
+  "qwen2.5-7b (boss)": {
+    "healthy": true,
+    "formula": {
+      "proposed": 37,
+      "valid": 31,
+      "useful": 24,
+      "no_json": 0,
+      "score": 0.838,
+      "seconds": 33
+    }
+  },
+  "gemma-3n-e4b (math)": {
+    "healthy": true,
+    "formula": {
+      "proposed": 46,
+      "valid": 22,
+      "useful": 11,
+      "no_json": 0,
+      "score": 0.478,
+      "seconds": 305
+    }
+  }
+}

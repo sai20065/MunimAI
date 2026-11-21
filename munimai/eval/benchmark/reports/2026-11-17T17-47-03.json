@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-11-17T17:47:03",
+  "n_scenarios": 15,
+  "weighted_score": 0.9333333333333333,
+  "field_accuracy": {
+    "direction": 1.0,
+    "amount": 1.0,
+    "gst": 0.9333333333333333
+  },
+  "per_tag_pass_rate": {
+    "Kirana Store": 1.0,
+    "Street Vendor": 1.0,
+    "Tailoring Unit": 1.0,
+    "Auto-Repair Shop": 0.0,
+    "Small Manufacturer": 1.0,
+    "Mobile-Repair Shop": 1.0,
+    "Tea Stall": 1.0
+  },
+  "failures": [
+    {
+      "id": "fe3bf6ea-dbd3-4a81-b61f-b0b172d4a534",
+      "tag": "Auto-Repair Shop",
+      "expected": {
+        "direction": "out",
+        "amount_paise": 466548,
+        "gst_rate_bp": 500
+      },
+      "got": {
+        "direction": "out",
+        "amount_paise": 466548,
+        "gst_rate_bp": null
+      }
+    }
+  ]
+}

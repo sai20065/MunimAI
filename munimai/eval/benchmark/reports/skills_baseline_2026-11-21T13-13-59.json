@@ -1,0 +1,86 @@
+{
+  "qwen2.5-7b (boss)": {
+    "healthy": true,
+    "formula": {
+      "proposed": 32,
+      "valid": 12,
+      "useful": 11,
+      "no_json": 0,
+      "score": 0.375,
+      "seconds": 20
+    },
+    "classify": {
+      "n": 52,
+      "correct": 47,
+      "batch_errors": 0,
+      "score": 0.904,
+      "seconds": 8
+    },
+    "ledger": {
+      "n": 30,
+      "score": 1.0,
+      "fields": {
+        "direction": 1.0,
+        "amount": 1.0,
+        "gst": 1.0
+      },
+      "seconds": 48
+    }
+  },
+  "gemma-3-4b (worker)": {
+    "healthy": true,
+    "formula": {
+      "proposed": 0,
+      "valid": 0,
+      "useful": 0,
+      "no_json": 4,
+      "score": 0.0,
+      "seconds": 240
+    },
+    "classify": {
+      "n": 52,
+      "correct": 49,
+      "batch_errors": 0,
+      "score": 0.942,
+      "seconds": 84
+    },
+    "ledger": {
+      "n": 30,
+      "score": 1.0,
+      "fields": {
+        "direction": 1.0,
+        "amount": 1.0,
+        "gst": 1.0
+      },
+      "seconds": 328
+    }
+  },
+  "gemma-3n-e4b (math)": {
+    "healthy": true,
+    "formula": {
+      "proposed": 32,
+      "valid": 14,
+      "useful": 7,
+      "no_json": 0,
+      "score": 0.438,
+      "seconds": 275
+    },
+    "classify": {
+      "n": 52,
+      "correct": 48,
+      "batch_errors": 0,
+      "score": 0.923,
+      "seconds": 79
+    },
+    "ledger": {
+      "n": 30,
+      "score": 1.0,
+      "fields": {
+        "direction": 1.0,
+        "amount": 1.0,
+        "gst": 1.0
+      },
+      "seconds": 344
+    }
+  }
+}

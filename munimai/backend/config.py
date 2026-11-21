@@ -140,6 +140,18 @@ class LLMSettings:
             role="worker",
         )
 
+    @classmethod
+    def from_env_math(cls) -> "LLMSettings":
+        """The Math agent's second Gemma (Gemma 3n E4B) on system RAM only, capped at 6 GB by systemd."""
+        return cls(
+            base_url=os.environ.get("MATH_LLM_BASE_URL", "http://100.86.188.31:8092/v1"),
+            model_served_name=os.environ.get("MATH_LLM_MODEL", "gemma-3n-math"),
+            model_path=os.environ.get("MATH_LLM_MODEL_PATH",
+                                      "/home/admin/models/gemma3n-math/gemma-3n-E4B-it-Q4_K_M.gguf"),
+            timeout_s=int(os.environ.get("MATH_LLM_TIMEOUT_S", "240")),
+            role="math",
+        )
+
 
 @dataclass(frozen=True)
 class WhatsAppSettings:

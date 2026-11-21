@@ -22,6 +22,7 @@ webhook to reach it.
 from __future__ import annotations
 
 import json
+import os
 import tempfile
 import threading
 from pathlib import Path
@@ -44,6 +45,12 @@ from .agents import readiness as _ready
 from .agents.credit import CreditAgent
 from . import proof as _proof
 from . import schema_ext
+from .agents import coordinator as _coord
+from .agents.math_agent import MathAgent as _MathAgent
+from .agents.auditor import Auditor as _Auditor
+from .autonomy import scheduler as _scheduler
+from .connectors import base as _cbase, csvimport as _csvimport, tally as _tally
+from .filing import gate as _gate
 from .router import CANNED, classify
 from .bhashini_client import BhashiniClient, BhashiniConfigError
 from .config import DBSettings, LLMSettings, WhatsAppSettings
@@ -60,6 +67,7 @@ _db = DBSettings.from_env()
 _wa_settings = WhatsAppSettings.from_env()
 _wa = WhatsAppClient(_wa_settings)
 _llm = LLM()                                     # boss — Qwen/GPU, reasoning + citations
+_math_llm = LLM(LLMSettings.from_env_math())       # second Gemma (3n E4B), system RAM only, proposes formulas
 _ledger_llm = LLM(LLMSettings.from_env_worker())  # worker — Gemma/CPU, bill extraction only
 _ocr = RemoteEasyOCR()
 try:
@@ -96,6 +104,9 @@ try:
         schema_ext.ensure(_c)
 except Exception:  # the app still starts; document features report the error when used
     pass
+
+if os.environ.get("AUTONOMY_TICK_S"):
+    _scheduler.start_background(_get_conn, int(os.environ["AUTONOMY_TICK_S"]))
 
 _FILES: dict[str, tuple[bytes, str, str]] = {}   # token -> (bytes, filename, mime)
 _LAST: dict[str, dict] = {}                      # browser id -> last turn, for "save this as a PDF"
@@ -857,6 +868,152 @@ def sim_readiness(x_munim_id: Optional[str] = Header(None)) -> dict:
         bid = _sim_business(conn, x_munim_id); conn.commit()
         text, data, act = _readiness_answer(conn, bid)
         return {"text": text, "data": data, "action": act}
+    finally:
+        conn.close()
+
+
+
+# ------------------------------------------------------------------ virtual CA
+def _period(month: Optional[str]):
+    from datetime import date as _d
+    if month:
+        y, m = (int(x) for x in month.split("-"))
+        return _coord.month_bounds(y, m)
+    return _coord.previous_month(_d.today())
+
+
+@app.post("/sim/import")
+def sim_import(body: dict, x_munim_id: Optional[str] = Header(None)) -> dict:
+    """Bring books in. kind: tally (voucher XML) | csv (books) | gstr2b (supplier file). Read-only on the source."""
+    kind, text = body.get("kind"), body.get("text", "")
+    conn = _get_conn()
+    try:
+        bid = _sim_business(conn, x_munim_id); conn.commit()
+        if kind == "tally":
+            entries, info = _tally.parse_vouchers(text)
+            return {**info, **_cbase.save(conn, bid, entries)}
+        if kind == "csv":
+            entries, info = _csvimport.parse_books(text)
+            return {**info, **_cbase.save(conn, bid, entries)}
+        if kind == "gstr2b":
+            lines = _csvimport.parse_gstr2b(text)
+            for g in lines:
+                conn.execute(
+                    "INSERT INTO gstr2b_lines (business_id, supplier_gstin, supplier_name, invoice_no, invoice_date, taxable_paise, tax_paise)"
+                    " VALUES (%s,%s,%s,%s,%s,%s,%s) ON CONFLICT (business_id, supplier_gstin, invoice_no) DO NOTHING",
+                    (bid, g["supplier_gstin"], g["supplier_name"], g["invoice_no"], g["invoice_date"], g["taxable_paise"], g["tax_paise"]))
+            conn.commit()
+            return {"gstr2b_lines": len(lines), "note": "synthetic supplier file; nothing was fetched from the GST portal"}
+        return {"error": "kind must be tally, csv or gstr2b"}
+    finally:
+        conn.close()
+
+
+@app.post("/sim/close")
+def sim_close(body: dict, x_munim_id: Optional[str] = Header(None)) -> dict:
+    """Run the autonomous month-close: prepare, self-audit, verify, snapshot. Stops at ready_for_review."""
+    conn = _get_conn()
+    try:
+        bid = _sim_business(conn, x_munim_id); conn.commit()
+        start, end = _period(body.get("month"))
+        tid = _coord.ensure_task(conn, bid, start, end)
+        _coord.reopen(conn, tid)
+        status = _coord.run_task(conn, tid, Trace(business_id=bid),
+                                 analyser=_analyser if body.get("analyse", True) else None)
+        return _close_view(conn, bid, status, start, end)
+    finally:
+        conn.close()
+
+
+
+def _analyser(conn, bid, start, end, task_id, trace) -> None:
+    """Math agent step for the month-close. Web benchmarks only when the owner has given a sector or activity."""
+    attrs = conn.execute("SELECT attrs FROM businesses WHERE id=%s", (bid,)).fetchone()[0] or {}
+    sector = attrs.get("sector") or attrs.get("activity")
+    second = _math_llm if os.environ.get("MATH_SECOND_OPINION") == "1" and _math_llm.health() else None
+    _MathAgent(conn, _llm, _llm, second_llm=second).run(
+        bid, (end.year, end.month), task_id=task_id, sector=sector, use_web=bool(sector), trace=trace)
+
+
+@app.get("/sim/insights")
+def sim_insights(x_munim_id: Optional[str] = Header(None)) -> dict:
+    """Latest insights and the formulas behind them (validated, descriptive, indicative or rejected, with reasons)."""
+    conn = _get_conn()
+    try:
+        bid = _sim_business(conn, x_munim_id)
+        ins = [dict(title=r[0], body=r[1], facts=r[2], at=str(r[3])) for r in conn.execute(
+            "SELECT title, body, numbers, created_at FROM insights WHERE business_id=%s ORDER BY id DESC LIMIT 3", (bid,)).fetchall()]
+        fs = [dict(name=r[0], expression=r[1], kind=r[2], status=r[3], unit=r[4], evidence=r[5], source=r[6]) for r in conn.execute(
+            "SELECT name, expression, kind, status, unit, evidence, source FROM formulas WHERE business_id=%s ORDER BY id DESC LIMIT 20",
+            (bid,)).fetchall()]
+        return {"insights": ins, "formulas": fs, "math_model_up": _math_llm.health()}
+    finally:
+        conn.close()
+
+
+def _close_view(conn, bid, status, start, end) -> dict:
+    findings = [dict(id=r[0], rule=r[1], severity=r[2], message=r[3], entry_ids=r[4], rule_ref=r[5], status=r[6]) for r in conn.execute(
+        "SELECT id, rule, severity, message, entry_ids, rule_ref, status FROM findings WHERE task_id=%s ORDER BY "
+        "CASE severity WHEN 'critical' THEN 0 WHEN 'warn' THEN 1 ELSE 2 END, id", (status["id"],)).fetchall()]
+    snap = None
+    if status.get("snapshot_id"):
+        row = conn.execute("SELECT payload, sha256 FROM snapshots WHERE id=%s", (status["snapshot_id"],)).fetchone()
+        snap = {"id": status["snapshot_id"], "sha256": row[1], "return": row[0]["return"]}
+    return {"task": status, "findings": findings, "snapshot": snap,
+            "brief": _coord.consultant_brief(conn, bid, start, end),
+            "note": "Draft for your review. Nothing is filed until you approve with a code."}
+
+
+@app.post("/sim/code")
+def sim_code(body: dict, x_munim_id: Optional[str] = Header(None)) -> dict:
+    conn = _get_conn()
+    try:
+        bid = _sim_business(conn, x_munim_id)
+        _gate._snapshot(conn, int(body["snapshot_id"]), bid)
+        return {"code": _gate.issue_code(conn, int(body["snapshot_id"])),
+                "note": "Sandbox: the code is shown here. A real portal would send it to your phone."}
+    except _gate.GateError as e:
+        return {"error": str(e)}
+    finally:
+        conn.close()
+
+
+@app.post("/sim/approve")
+def sim_approve(body: dict, x_munim_id: Optional[str] = Header(None)) -> dict:
+    conn = _get_conn()
+    try:
+        bid = _sim_business(conn, x_munim_id)
+        aid = _gate.approve(conn, bid, int(body["snapshot_id"]), body.get("approver") or "owner", str(body.get("code", "")))
+        return {"approval_id": aid}
+    except _gate.GateError as e:
+        conn.rollback()
+        return {"error": str(e)}
+    finally:
+        conn.close()
+
+
+@app.post("/sim/file")
+def sim_file(body: dict, x_munim_id: Optional[str] = Header(None)) -> dict:
+    """File an approved return through the SANDBOX adapter. The receipt is labelled SIMULATED."""
+    conn = _get_conn()
+    try:
+        bid = _sim_business(conn, x_munim_id)
+        return {"receipt": _gate.file_return(conn, bid, int(body["approval_id"]))}
+    except _gate.GateError as e:
+        conn.rollback()
+        return {"error": str(e), "stale": isinstance(e, _gate.StaleApproval)}
+    finally:
+        conn.close()
+
+
+@app.post("/sim/autonomy")
+def sim_autonomy(body: dict, x_munim_id: Optional[str] = Header(None)) -> dict:
+    conn = _get_conn()
+    try:
+        bid = _sim_business(conn, x_munim_id)
+        if "enabled" in body:
+            _gate.set_autonomy(conn, bid, bool(body["enabled"]))
+        return {"enabled": _gate.autonomy_enabled(conn, bid)}
     finally:
         conn.close()
 
