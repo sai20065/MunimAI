@@ -8,7 +8,7 @@
 ![Problem](https://img.shields.io/badge/Problem-3.2%20Credit%20%26%20Schemes-4DB8FF?style=for-the-badge)
 ![GST](https://img.shields.io/badge/Also-3.1%20GST%20help-3FE0A8?style=for-the-badge&labelColor=14143A)
 ![Languages](https://img.shields.io/badge/Speaks-English%20%C2%B7%20%E0%A4%B9%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%80%20%C2%B7%20%E0%A2%95%E0%B2%A8%E0%B3%8D%E0%B2%A8%E0%B2%A1-FF5E8A?style=for-the-badge)
-![Tests](https://img.shields.io/badge/tests-56%20passing-2EA44F?style=for-the-badge)
+![Tests](https://img.shields.io/badge/tests-120%2B%20passing-2EA44F?style=for-the-badge)
 
 **Speak in your language. A team of small AI agents reads your bills, checks the government's rules, and prepares the file a bank needs. You stay in control.**
 
@@ -210,6 +210,30 @@ Open **http://127.0.0.1:8088** for the browser console. It also needs a reachabl
 Run the tests with `python -m pytest munimai/eval`.
 
 > 🔑 `.env` holds live keys and is gitignored. Never commit it.
+
+---
+
+## 🖥️ The screens
+
+| Screen | What it does |
+|---|---|
+| 💬 **Chat** | Ask by voice or text in Kannada, Hindi or English, upload bills, get cited answers |
+| 📅 **Close the month** | Import books (Tally XML, CSV, supplier file), let the agent check them, fix problems, approve with a one-time code, file in the **sandbox** (receipt is marked SIMULATED) |
+| 📈 **Insights** | Margins, trends and checked formulas as tiles and sparklines, market context marked *not official*, attributed reading notes, and the ideas that did not hold up |
+
+Light and dark themes, phone and desktop layouts, keyboard friendly. The interface was audited with scripted user tasks and an accessibility checker (see `docs/ux_audit.md`).
+
+## 🎤 Voice, free and local
+
+English speech and dictation use **Whisper** through [faster-whisper](https://github.com/SYSTRAN/faster-whisper) (MIT licence, no key, no cloud) running on your own computer. Hindi and Kannada use Bhashini. If the Whisper service is not running, English falls back to Bhashini.
+
+```bash
+python -m venv .venv-stt
+.venv-stt\Scripts\python.exe -m pip install --no-cache-dir -r munimai/stt/requirements-stt.txt
+.venv-stt\Scripts\python.exe munimai/stt/stt_service.py     # first run downloads a 0.5 GB model
+```
+
+Models and temporary files stay inside the project folder. See `NOTICE.md` for licences.
 
 ---
 

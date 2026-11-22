@@ -1,0 +1,6 @@
+# Local Whisper service (free, MIT). Install into its OWN virtual environment, not into the main Python:
+#   python -m venv .venv-stt
+#   .venv-stt\Scripts\python.exe -m pip install --no-cache-dir -r munimai\stt\requirements-stt.txt
+#   .venv-stt\Scripts\python.exe munimai\stt\stt_service.py
+# Models and temp files are written under D:\param shavak\project KS (models\whisper, tmp). Set STT_ROOT to move them.
+faster-whisper

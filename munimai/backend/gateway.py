@@ -46,6 +46,7 @@ from .agents.credit import CreditAgent
 from . import proof as _proof
 from . import schema_ext
 from .agents import coordinator as _coord
+from . import stt as _stt
 from .agents.math_agent import MathAgent as _MathAgent
 from .agents.auditor import Auditor as _Auditor
 from .autonomy import scheduler as _scheduler
@@ -445,7 +446,7 @@ def sim_profile_save(body: dict, x_munim_id: Optional[str] = Header(None)) -> di
 @app.get("/sim/status")
 def sim_status() -> dict:
     """Health of the two models, for the test console's status strip."""
-    return {"boss": _llm.health(), "worker": _ledger_llm.health()}
+    return {"boss": _llm.health(), "worker": _ledger_llm.health(), "stt": _stt.health(), "math": _math_llm.health()}
 
 
 @app.get("/sim/books")
@@ -456,13 +457,13 @@ def sim_books(x_munim_id: Optional[str] = Header(None)) -> dict:
         bid = _sim_business(conn, x_munim_id); conn.commit()
         rows = conn.execute(
             """SELECT entry_date, direction, amount_paise, category, counterparty,
-                      gst_rate_bp, needs_review
-               FROM ledger_entries WHERE business_id=%s ORDER BY id DESC LIMIT 8""",
+                      gst_rate_bp, needs_review, id
+               FROM ledger_entries WHERE business_id=%s ORDER BY entry_date DESC, id DESC LIMIT 60""",
             (bid,)).fetchall()
         return {"entries": [
             {"date": str(r[0]), "direction": r[1], "amount": int(r[2]) / 100,
              "category": r[3], "counterparty": r[4],
-             "gst_pct": (r[5] / 100) if r[5] else None, "review": r[6]}
+             "gst_pct": (r[5] / 100) if r[5] else None, "review": r[6], "id": r[7]}
             for r in rows]}
     finally:
         conn.close()
@@ -941,8 +942,8 @@ def sim_insights(x_munim_id: Optional[str] = Header(None)) -> dict:
     conn = _get_conn()
     try:
         bid = _sim_business(conn, x_munim_id)
-        ins = [dict(title=r[0], body=r[1], facts=r[2], at=str(r[3])) for r in conn.execute(
-            "SELECT title, body, numbers, created_at FROM insights WHERE business_id=%s ORDER BY id DESC LIMIT 3", (bid,)).fetchall()]
+        ins = [dict(title=r[0], body=r[1], facts=r[2], at=str(r[3]), notes=r[4]) for r in conn.execute(
+            "SELECT title, body, numbers, created_at, notes FROM insights WHERE business_id=%s ORDER BY id DESC LIMIT 3", (bid,)).fetchall()]
         fs = [dict(name=r[0], expression=r[1], kind=r[2], status=r[3], unit=r[4], evidence=r[5], source=r[6]) for r in conn.execute(
             "SELECT name, expression, kind, status, unit, evidence, source FROM formulas WHERE business_id=%s ORDER BY id DESC LIMIT 20",
             (bid,)).fetchall()]
@@ -959,7 +960,22 @@ def _close_view(conn, bid, status, start, end) -> dict:
     if status.get("snapshot_id"):
         row = conn.execute("SELECT payload, sha256 FROM snapshots WHERE id=%s", (status["snapshot_id"],)).fetchone()
         snap = {"id": status["snapshot_id"], "sha256": row[1], "return": row[0]["return"]}
-    return {"task": status, "findings": findings, "snapshot": snap,
+    ids = sorted({i for f in findings for i in (f["entry_ids"] or [])})
+    entries = {}
+    if ids:
+        for r in conn.execute("SELECT id, entry_date, direction, amount_paise, counterparty, invoice_no, needs_review, category "
+                              "FROM ledger_entries WHERE business_id=%s AND id = ANY(%s)", (bid, ids)).fetchall():
+            entries[r[0]] = {"id": r[0], "date": str(r[1]), "direction": r[2], "amount": int(r[3]) / 100, "party": r[4],
+                             "invoice_no": r[5], "review": r[6], "category": r[7]}
+    approval = receipt = None
+    if snap:
+        a = conn.execute("SELECT id FROM approvals WHERE snapshot_id=%s ORDER BY id DESC LIMIT 1", (snap["id"],)).fetchone()
+        if a:
+            approval = a[0]
+            f = conn.execute("SELECT receipt FROM filing_attempts WHERE approval_id=%s AND status='filed'", (a[0],)).fetchone()
+            receipt = f[0] if f else None
+    return {"task": status, "findings": findings, "snapshot": snap, "entries": entries, "approval_id": approval, "receipt": receipt,
+            "autonomy": _gate.autonomy_enabled(conn, bid),
             "brief": _coord.consultant_brief(conn, bid, start, end),
             "note": "Draft for your review. Nothing is filed until you approve with a code."}
 
@@ -1090,6 +1106,109 @@ def sim_trace(trace_id: str) -> JSONResponse:
         return JSONResponse({"events": []})
     events = [_json.loads(l) for l in path.read_text(encoding="utf-8").splitlines() if l.strip()]
     return JSONResponse({"events": events})
+
+# ------------------------------------------------------------------ voice: free local Whisper
+@app.post("/sim/stt")
+async def sim_stt(file: UploadFile = File(...), language: str = Form("en")) -> dict:
+    """Speech to text only (no answer). English uses local Whisper; Hindi and Kannada use Bhashini.
+    Falls back to Bhashini if Whisper is down, so dictation keeps working."""
+    audio = await file.read()
+    if not audio:
+        return {"text": "", "engine": None, "error": "empty audio"}
+    if language == "en":
+        try:
+            text = _stt.transcribe(_to_wav(audio), "en")
+        except Exception:
+            text = None
+        if text:
+            return {"text": text, "engine": "whisper"}
+    if _bhashini is None:
+        return {"text": "", "engine": None, "error": "no speech engine available"}
+    try:
+        return {"text": _bhashini.speech_to_text(_to_wav(audio), language=language), "engine": "bhashini"}  # type: ignore[arg-type]
+    except Exception as exc:
+        return {"text": "", "engine": None, "error": str(exc)[:200]}
+
+
+# ------------------------------------------------------------------ data for the new screens
+@app.get("/sim/series")
+def sim_series(months: int = 12, x_munim_id: Optional[str] = Header(None)) -> dict:
+    """Monthly figures for sparklines. Rupees as plain numbers; margin as a percentage."""
+    from datetime import date as _d
+    from .analytics import series as _S
+    conn = _get_conn()
+    try:
+        bid = _sim_business(conn, x_munim_id)
+        today = _d.today()
+        ms, s = _S.load(conn, bid, (today.year, today.month), max(2, min(24, months)))
+        sales, buys = s["sales"].tolist(), s["purchases"].tolist()
+        margin = [None if sa <= 0 else round(100 * (sa - bu) / sa, 1) for sa, bu in zip(sales, buys)]
+        return {"months": ["%d-%02d" % m for m in ms], "sales": sales, "purchases": buys, "gross_profit": s["gross_profit"].tolist(),
+                "margin_pct": margin}
+    finally:
+        conn.close()
+
+
+@app.get("/sim/close/last")
+def sim_close_last(x_munim_id: Optional[str] = Header(None)) -> dict:
+    """The most recent month-close for this business, so the screen survives a reload."""
+    conn = _get_conn()
+    try:
+        bid = _sim_business(conn, x_munim_id)
+        row = conn.execute("SELECT id, period_start, period_end FROM tasks WHERE business_id=%s AND kind='month_close' "
+                           "ORDER BY id DESC LIMIT 1", (bid,)).fetchone()
+        if not row:
+            return {"task": None, "autonomy": _gate.autonomy_enabled(conn, bid)}
+        status = _coord.task_status(conn, row[0])
+        out = _close_view(conn, bid, status, row[1], row[2])
+        out["autonomy"] = _gate.autonomy_enabled(conn, bid)
+        return out
+    finally:
+        conn.close()
+
+
+@app.post("/sim/entries/{entry_id}/confirm")
+def sim_entry_confirm(entry_id: int, x_munim_id: Optional[str] = Header(None)) -> dict:
+    conn = _get_conn()
+    try:
+        bid = _sim_business(conn, x_munim_id)
+        n = conn.execute("UPDATE ledger_entries SET needs_review=FALSE WHERE id=%s AND business_id=%s", (entry_id, bid)).rowcount
+        conn.commit()
+        Trace(business_id=bid).emit("ui", "tool_call", {"entry": entry_id, "changed": n}, tool_name="entry.confirm")
+        return {"ok": bool(n)}
+    finally:
+        conn.close()
+
+
+@app.delete("/sim/entries/{entry_id}")
+def sim_entry_delete(entry_id: int, x_munim_id: Optional[str] = Header(None)) -> dict:
+    """Remove one ledger entry (for example a duplicate invoice). Recorded in the trace."""
+    conn = _get_conn()
+    try:
+        bid = _sim_business(conn, x_munim_id)
+        row = conn.execute("SELECT entry_date, direction, amount_paise, category, counterparty, invoice_no FROM ledger_entries "
+                           "WHERE id=%s AND business_id=%s", (entry_id, bid)).fetchone()
+        if not row:
+            return {"ok": False}
+        conn.execute("DELETE FROM ledger_entries WHERE id=%s AND business_id=%s", (entry_id, bid))
+        conn.commit()
+        Trace(business_id=bid).emit("ui", "tool_call", {"entry": entry_id, "removed": [str(x) for x in row]}, tool_name="entry.delete")
+        return {"ok": True}
+    finally:
+        conn.close()
+
+
+@app.get("/sim/template.csv")
+def sim_template() -> PlainTextResponse:
+    text = ("date,type,party,gstin,invoice_no,amount,gst_rate\n"
+            "2026-10-03,sale,Anita Tailors,29AAAAA0000A1Z5,S1,11800,18\n"
+            "2026-10-05,purchase,Mysore Silk,29CCCCC2222C1Z5,P1,5900,18\n")
+    return PlainTextResponse(text, headers={"Content-Disposition": 'attachment; filename="books-template.csv"'})
+
+
+
+from fastapi.staticfiles import StaticFiles
+app.mount("/ui", StaticFiles(directory=str(Path(__file__).parent.parent / "sim_ui")), name="ui")
 
 
 @app.get("/sim/")

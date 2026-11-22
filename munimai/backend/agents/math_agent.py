@@ -216,10 +216,11 @@ class MathAgent:
         ok = Verifier(self.conn).check(Claim(business_id=bid, agent="math", text=text, needs_citation=False, allowed_numbers=allowed)).passed
         notes = self._reading_notes([f for f in facts if "market" not in f])
         if notes:                                 # after the number check: these are definitions, not figures about the business
-            text += "\n\nReading notes (definitions from open textbooks, not about your numbers):\n" + "\n".join(notes)
+            text += ("\n\nReading notes (definitions from open textbooks, not about your numbers):\n"
+                     + "\n".join('- %s: "%s" (%s)' % (n["name"], n["text"], n["attribution"]) for n in notes))
         title = "What your numbers say this month"
-        self.conn.execute("INSERT INTO insights (business_id, task_id, title, body, numbers, grounded) VALUES (%s,%s,%s,%s,%s,%s)",
-                          (bid, task_id, title, text, Jsonb(facts), ok))
+        self.conn.execute("INSERT INTO insights (business_id, task_id, title, body, numbers, grounded, notes) VALUES (%s,%s,%s,%s,%s,%s,%s)",
+                          (bid, task_id, title, text, Jsonb(facts), ok, Jsonb(notes)))
         self.conn.commit()
         return [{"title": title, "body": text, "facts": facts}]
 
@@ -237,7 +238,7 @@ class MathAgent:
                     if (ex and relevant and not re.search(r"[0-9]", ex) and not JUDGEMENT.search(ex)
                             and ex not in seen and len(ex) > 60):
                         seen.add(ex)
-                        out.append(f'- {f["name"]}: "{ex}" ({h["attribution"]})')
+                        out.append({"name": f["name"], "text": ex, "attribution": h["attribution"], "url": h["url"], "license": h["license"]})
                         break
         except Exception:
             self.conn.rollback()

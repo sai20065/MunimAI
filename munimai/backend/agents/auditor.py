@@ -63,7 +63,7 @@ def audit_rows(rows: list[dict], gstr2b: list[dict], today: date) -> list[Findin
         if len(grp) > 1:
             sev = "critical" if direction == "out" else "warn"
             out.append(Finding("duplicate_invoice", sev,
-                               f"Invoice {inv} from {grp[0].get('counterparty') or 'the same party'} appears "
+                               f"Invoice {grp[0]['invoice_no']} from {grp[0].get('counterparty') or 'the same party'} appears "
                                f"{len(grp)} times." + (" Claiming its credit twice is a serious error." if direction == "out" else ""),
                                [g["id"] for g in grp], REF_ITC_INVOICE if direction == "out" else None))
 

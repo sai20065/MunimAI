@@ -42,3 +42,10 @@ library_src/
 # Logs and scratch
 *.log
 munimai/tools_tmp/
+
+# Local speech service and UI audit scratch (kept on D:, never committed)
+.venv-stt/
+tmp/
+munimai/uitest/shots/
+munimai/uitest/audit.json
+munimai/uitest/audit_id.txt

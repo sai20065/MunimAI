@@ -154,5 +154,6 @@ def _autonomy(conn: psycopg.Connection) -> None:
                source_url TEXT NOT NULL, attribution TEXT NOT NULL)""")
     conn.execute("CREATE INDEX IF NOT EXISTS library_fts_idx ON library_chunks USING GIN (to_tsvector('english', text))")
     conn.execute("ALTER TABLE market_facts ADD COLUMN IF NOT EXISTS value_high DOUBLE PRECISION")
+    conn.execute("ALTER TABLE insights ADD COLUMN IF NOT EXISTS notes JSONB NOT NULL DEFAULT '[]'::jsonb")
     conn.execute("CREATE UNIQUE INDEX IF NOT EXISTS one_filing_per_approval ON filing_attempts (approval_id) "
                  "WHERE status = 'filed'")
