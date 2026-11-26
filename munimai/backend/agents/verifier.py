@@ -5,11 +5,13 @@ Nothing an agent produces reaches the owner without passing here. The gate is
 deliberately dumb and strict: it does not reason, it checks facts against the
 database. A clever answer with no citation loses to a plain answer that has one.
 
-Four checks, matching the four promises on the pitch:
+Checks, matching the promises on the pitch:
   1. citation    — a claim tagged as needing a source must cite >=1 real clause
   2. rule_version— each cited clause must be current (not superseded)
   3. consent     — a claim that used financial data must have active consent
   4. no_filing   — the claim text must not assert that something was filed/submitted
+  5. numbers     — an analysis may quote only numbers the code computed
+  6. faithfulness— a scheme answer may say only what the clauses it cites say (agents/faithfulness.py)
 
 A claim that passes is recorded with its citations; a claim that fails is
 recorded with the reason. Both are auditable later.
@@ -44,6 +46,7 @@ class Claim:
     consent_purpose: Optional[str] = None
     allowed_numbers: Optional[list] = None   # if set, every number in the text must match one of these
     receipt_id: Optional[int] = None     # a filing_attempts row; the only thing that lets a claim say "filed"
+    check_faithfulness: bool = False     # scheme answers: every sentence must be supported by the clauses it cites
 
 
 @dataclass
@@ -51,6 +54,7 @@ class Verdict:
     passed: bool
     reasons: list[str] = field(default_factory=list)
     valid_clause_ids: list[int] = field(default_factory=list)
+    unfaithful: bool = False             # citations were fine but the text says more than the cited clauses do
 
 
 class Verifier:
@@ -88,6 +92,16 @@ class Verifier:
                 if not valid_ids:
                     reasons.append("no current clause among the citations")
 
+        # 6. faithfulness: the sentences must be supported by the clauses they cite (fixed rules, backend/agents/faithfulness.py)
+        unfaithful = False
+        if claim.needs_citation and claim.check_faithfulness and valid_ids and not reasons:
+            from . import faithfulness
+            rows = self.conn.execute("SELECT scheme_code, clause_text FROM scheme_clauses WHERE id = ANY(%s)", (valid_ids,)).fetchall()
+            res = faithfulness.check(claim.text, [{"scheme_code": r[0], "text": r[1]} for r in rows])
+            if not res.passed:
+                unfaithful = True
+                reasons.extend(res.reasons())
+
         # 5. number grounding: an analysis may only quote numbers the code computed
         if claim.allowed_numbers is not None:
             from ..analytics.grounding import ungrounded_numbers
@@ -109,7 +123,7 @@ class Verifier:
                         f"no active consent for '{claim.consent_purpose}'"
                     )
 
-        verdict = Verdict(passed=not reasons, reasons=reasons, valid_clause_ids=valid_ids)
+        verdict = Verdict(passed=not reasons, reasons=reasons, valid_clause_ids=valid_ids, unfaithful=unfaithful)
         self._record(claim, verdict)
         return verdict
 

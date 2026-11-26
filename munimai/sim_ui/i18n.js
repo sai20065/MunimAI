@@ -1,6 +1,9 @@
 /* Strings for SaralcreditAI. Hindi and Kannada are written by the builder: please have a native speaker review them. */
 window.T = {
  en:{
+  pPlan:'Plan',planOf:'of {n} steps done',actProfile:'Answer questions',actDocs:'Add documents',actBooks:'Add your books',actFix:'Review problems',actConsent:'Give permission',actBuild:'Build the bank file',
+  sysH:'Resources',vram:'GPU memory (main model)',ram:'System memory (helper models)',resNote:'Live from the server. The main model has the GPU to itself; helpers run on system memory only.',resNone:'Server numbers are not available right now.',
+  memH:'What I remember',memNone:'Nothing yet. I only remember what you tell me in chat.',memRecent:'Recent questions',memForget:'Forget everything',memForgetT:'Forget what I remember?',memForgetD:'This erases the notes I keep about you from chat. Your books and documents are not touched.',memCleared:'Forgotten',
   convS:'Hands-free conversation',
   say:'Tap the mic and speak',listen:'Listening… stop talking and I will answer',think:'Thinking',speak:'Speaking',ph:'Type your question',
   conv:'Conversation mode: keep listening, and let me interrupt the reply by speaking',hello:'Ask about loans, bills and GST',
@@ -34,6 +37,9 @@ window.T = {
   upd:'The assistant is not running. Start it and refresh.'
  },
  hi:{
+  pPlan:'योजना',planOf:'में से {n} कदम पूरे',actProfile:'सवालों के जवाब दें',actDocs:'दस्तावेज़ जोड़ें',actBooks:'अपनी बही जोड़ें',actFix:'समस्याएँ देखें',actConsent:'अनुमति दें',actBuild:'बैंक फ़ाइल बनाएँ',
+  sysH:'संसाधन',vram:'GPU मेमोरी (मुख्य मॉडल)',ram:'सिस्टम मेमोरी (सहायक मॉडल)',resNote:'सर्वर से सीधे। मुख्य मॉडल के पास GPU अकेला है; सहायक मॉडल सिर्फ़ सिस्टम मेमोरी पर चलते हैं।',resNone:'अभी सर्वर के आँकड़े उपलब्ध नहीं हैं।',
+  memH:'मुझे क्या याद है',memNone:'अभी कुछ नहीं। मुझे सिर्फ़ वही याद रहता है जो आप चैट में बताते हैं।',memRecent:'हाल के सवाल',memForget:'सब भूल जाएँ',memForgetT:'जो याद है वह मिटा दें?',memForgetD:'चैट से मैंने जो नोट्स रखे हैं वे मिट जाएँगे। आपकी बही और दस्तावेज़ वैसे ही रहेंगे।',memCleared:'मिटा दिया',
   convS:'हैंड्स-फ्री बातचीत',
   say:'बोलने के लिए माइक दबाएँ',listen:'सुन रहा हूँ… बोलना रोकें, मैं जवाब दूँगा',think:'सोच रहा हूँ',speak:'बोल रहा हूँ',ph:'अपना सवाल लिखें',
   conv:'बातचीत मोड: सुनता रहूँ, और बोलकर जवाब बीच में रोका जा सके',hello:'लोन, बिल और GST के बारे में पूछें',
@@ -67,6 +73,9 @@ window.T = {
   upd:'सहायक चालू नहीं है। उसे शुरू करके ताज़ा करें।'
  },
  kn:{
+  pPlan:'ಯೋಜನೆ',planOf:'ರಲ್ಲಿ {n} ಹಂತ ಮುಗಿದಿದೆ',actProfile:'ಪ್ರಶ್ನೆಗಳಿಗೆ ಉತ್ತರಿಸಿ',actDocs:'ದಾಖಲೆ ಸೇರಿಸಿ',actBooks:'ನಿಮ್ಮ ಲೆಕ್ಕ ಸೇರಿಸಿ',actFix:'ಸಮಸ್ಯೆಗಳನ್ನು ನೋಡಿ',actConsent:'ಅನುಮತಿ ನೀಡಿ',actBuild:'ಬ್ಯಾಂಕ್ ಫೈಲ್ ಮಾಡಿ',
+  sysH:'ಸಂಪನ್ಮೂಲಗಳು',vram:'GPU ಮೆಮೊರಿ (ಮುಖ್ಯ ಮಾದರಿ)',ram:'ಸಿಸ್ಟಮ್ ಮೆಮೊರಿ (ಸಹಾಯಕ ಮಾದರಿಗಳು)',resNote:'ಸರ್ವರ್‌ನಿಂದ ನೇರವಾಗಿ. ಮುಖ್ಯ ಮಾದರಿಗೆ GPU ಒಂದೇ; ಸಹಾಯಕ ಮಾದರಿಗಳು ಸಿಸ್ಟಮ್ ಮೆಮೊರಿಯಲ್ಲಿ ಮಾತ್ರ ಓಡುತ್ತವೆ.',resNone:'ಸರ್ವರ್ ಅಂಕಿಗಳು ಈಗ ಲಭ್ಯವಿಲ್ಲ.',
+  memH:'ನನಗೆ ನೆನಪಿರುವುದು',memNone:'ಇನ್ನೂ ಏನೂ ಇಲ್ಲ. ನೀವು ಚಾಟ್‌ನಲ್ಲಿ ಹೇಳಿದ್ದನ್ನು ಮಾತ್ರ ನಾನು ನೆನಪಿಟ್ಟುಕೊಳ್ಳುತ್ತೇನೆ.',memRecent:'ಇತ್ತೀಚಿನ ಪ್ರಶ್ನೆಗಳು',memForget:'ಎಲ್ಲವನ್ನೂ ಮರೆಯಿರಿ',memForgetT:'ನೆನಪಿರುವುದನ್ನು ಅಳಿಸಬೇಕೇ?',memForgetD:'ಚಾಟ್‌ನಿಂದ ನಾನು ಇಟ್ಟುಕೊಂಡಿರುವ ಟಿಪ್ಪಣಿಗಳು ಅಳಿಯುತ್ತವೆ. ನಿಮ್ಮ ಲೆಕ್ಕ ಮತ್ತು ದಾಖಲೆಗಳಿಗೆ ಏನೂ ಆಗುವುದಿಲ್ಲ.',memCleared:'ಅಳಿಸಲಾಗಿದೆ',
   convS:'ಕೈ ಬಳಸದ ಸಂಭಾಷಣೆ',
   say:'ಮಾತನಾಡಲು ಮೈಕ್ ಒತ್ತಿ',listen:'ಕೇಳುತ್ತಿದ್ದೇನೆ… ಮಾತು ನಿಲ್ಲಿಸಿ, ನಾನು ಉತ್ತರಿಸುತ್ತೇನೆ',think:'ಯೋಚಿಸುತ್ತಿದ್ದೇನೆ',speak:'ಮಾತನಾಡುತ್ತಿದ್ದೇನೆ',ph:'ನಿಮ್ಮ ಪ್ರಶ್ನೆ ಟೈಪ್ ಮಾಡಿ',
   conv:'ಸಂಭಾಷಣೆ ಮೋಡ್: ಕೇಳುತ್ತಲೇ ಇರಿ, ಮಾತನಾಡಿ ಉತ್ತರವನ್ನು ನಿಲ್ಲಿಸಬಹುದು',hello:'ಸಾಲ, ಬಿಲ್ ಮತ್ತು GST ಬಗ್ಗೆ ಕೇಳಿ',

@@ -28,6 +28,7 @@ from typing import Optional
 
 import psycopg
 
+from .. import embed_client
 from ..llm import LLM
 from ..trace import Trace
 from .verifier import Claim
@@ -48,7 +49,8 @@ _SYSTEM = (
     "subsidy that is not in them. Name the scheme(s) your answer relies on. If the "
     "clauses come from different schemes, do not mix their rules: keep each scheme's "
     "rules separate. If the clauses do not settle the question, say what is still "
-    "needed. Do not claim any application was filed or submitted. "
+    "needed. Never say a scheme does NOT offer something just because the clauses you were given do not "
+    "mention it: say that the clauses you have do not state it. Do not claim any application was filed or submitted. "
     "If the question is NOT about loans, subsidies, eligibility, documents or scheme "
     "rules, do NOT force an answer from the clauses: set cited_ids to [] and say in "
     "answer that this question is outside your scheme knowledge."
@@ -72,6 +74,17 @@ _ALIASES = {
     "startup": "STARTUP_INDIA", "start-up": "STARTUP_INDIA", "dpiit": "STARTUP_INDIA",
     "fund of funds": "STARTUP_PLAYBOOK",
     "mudra": "MUDRA", "shishu": "MUDRA", "kishore": "MUDRA", "tarun": "MUDRA",
+    "udyam": "UDYAM", "msme classification": "UDYAM", "msme definition": "UDYAM", "micro enterprise": "UDYAM",
+    "nidhi": "NIDHI", "prayas": "NIDHI",
+    "jan samarth": "JAN_SAMARTH", "jansamarth": "JAN_SAMARTH",
+    "uttar pradesh": "UP_MSME_POLICY", "up msme": "UP_MSME_POLICY",
+    "gujarat": "GUJARAT_IND_POLICY_2022",
+    "tamil nadu": "TAMILNADU_STARTUP_POLICY", "tamilnadu": "TAMILNADU_STARTUP_POLICY",
+    "andhra pradesh": "ANDHRA_PRADESH_STARTUP_POLICY_2024_29",
+    "karnataka": "KARNATAKA_INDUSTRIAL_POLICY_2025_30",
+    "telangana": "TELANGANA_MSME_HANDBOOK_2024", "we-hub": "TELANGANA_MSME_HANDBOOK_2024", "wehub": "TELANGANA_MSME_HANDBOOK_2024",
+    "clcss": "TELANGANA_MSME_HANDBOOK_2024", "sclcss": "TELANGANA_MSME_HANDBOOK_2024",
+    "credit linked capital subsidy": "TELANGANA_MSME_HANDBOOK_2024", "cluster development": "TELANGANA_MSME_HANDBOOK_2024",
 }
 
 
@@ -88,13 +101,22 @@ def _tokens(text: str) -> list[str]:
     return out
 
 
+RRF_K = 60
+DENSE_MIN = 0.50      # cosine floor for a dense hit to count at all
+DENSE_TOP = 24
+BM25_W, DENSE_W = 1.0, 2.0      # fusion weights, picked from an 18-setting grid on eval/benchmark/retrieval_bench.py
+
+
 def rank_clauses(rows: list[tuple[int, str, str, str]], question: str,
-                 limit: int = 12, max_schemes: int = 3) -> list[tuple[int, str, str, str]]:
+                 limit: int = 12, max_schemes: int = 3,
+                 dense_ranks: Optional[dict[int, int]] = None) -> list[tuple[int, str, str, str]]:
     """BM25-style relevance over every current clause, then keep the best 1-3
     schemes so one answer never mixes unrelated schemes' rules.
-    rows: (id, scheme_code, clause_ref, text)."""
+    rows: (id, scheme_code, clause_ref, text).
+    dense_ranks: optional {clause id: 0-based rank} from embedding search; when given, BM25 and
+    dense ranks are merged by reciprocal rank fusion before the scheme-family step."""
     q = _tokens(question)
-    if not q or not rows:
+    if not rows or (not q and not dense_ranks):
         return []
     docs = [_tokens(f"{r[1].replace('_', ' ')} {r[3]}") for r in rows]
     n = len(docs)
@@ -111,6 +133,12 @@ def rank_clauses(rows: list[tuple[int, str, str, str]], question: str,
                 idf = math.log(1 + (n - df[w] + 0.5) / (df[w] + 0.5))
                 sc += idf * tf[w] * (k1 + 1) / (tf[w] + k1 * (1 - b + b * len(d) / avg))
         scores.append(sc)
+
+    if dense_ranks:
+        order = sorted(range(n), key=lambda i: -scores[i])
+        bm_rank = {rows[i][0]: pos for pos, i in enumerate(order) if scores[i] > 0}
+        scores = [(BM25_W / (RRF_K + bm_rank[r[0]] + 1) if r[0] in bm_rank else 0.0)
+                  + (DENSE_W / (RRF_K + dense_ranks[r[0]] + 1) if r[0] in dense_ranks else 0.0) for r in rows]
 
     ql = question.lower()
     named = {fam for alias, fam in _ALIASES.items() if alias in ql}
@@ -137,6 +165,7 @@ class SchemeAgent:
     def __init__(self, conn: psycopg.Connection, llm: LLM) -> None:
         self.conn = conn
         self.llm = llm
+        self.last_method = "bm25"
 
     def retrieve(self, scheme_code: Optional[str] = None, limit: int = 12,
                  question: str = "") -> list[tuple[int, str, str, str]]:
@@ -154,7 +183,27 @@ class SchemeAgent:
         rows = self.conn.execute(
             """SELECT id, scheme_code, clause_ref, clause_text FROM scheme_clauses
                WHERE superseded_at IS NULL""").fetchall()
-        return rank_clauses([(r[0], r[1], r[2], r[3]) for r in rows], question, limit)
+        dense = self._dense_ranks(question)
+        self.last_method = "hybrid" if dense else "bm25"
+        return rank_clauses([(r[0], r[1], r[2], r[3]) for r in rows], question, limit, dense_ranks=dense)
+
+    def _dense_ranks(self, question: str) -> dict[int, int]:
+        """{clause id: rank} from the embedding search, or {} when the service or the vectors are missing."""
+        if not question.strip():
+            return {}
+        vec = embed_client.embed([question], timeout=6)
+        if not vec:
+            return {}
+        try:
+            rows = self.conn.execute(
+                """SELECT id, 1 - (embedding <=> %s::vector) AS sim FROM scheme_clauses
+                   WHERE superseded_at IS NULL AND embedding IS NOT NULL
+                   ORDER BY embedding <=> %s::vector LIMIT %s""",
+                (embed_client.to_pg(vec[0]), embed_client.to_pg(vec[0]), DENSE_TOP)).fetchall()
+        except psycopg.Error:
+            self.conn.rollback()
+            return {}
+        return {r[0]: pos for pos, r in enumerate([r for r in rows if r[1] >= DENSE_MIN])}
 
     def answer(
         self,
@@ -163,6 +212,8 @@ class SchemeAgent:
         scheme_code: Optional[str] = None,
         *,
         trace: Optional[Trace] = None,
+        memory: str = "",
+        revise: str = "",
     ) -> tuple[SchemeAnswer, Claim]:
         if trace:
             trace.emit("scheme", "agent_start", {"question": question,
@@ -171,7 +222,7 @@ class SchemeAgent:
         retrieved_ids = [c[0] for c in clauses]
         if trace:
             trace.emit("scheme", "tool_call",
-                       {"retrieved": len(clauses), "clause_ids": retrieved_ids,
+                       {"retrieved": len(clauses), "clause_ids": retrieved_ids, "method": self.last_method,
                         "schemes": sorted({_family(c[1]) for c in clauses})},
                        tool_name="kb.retrieve")
 
@@ -179,7 +230,10 @@ class SchemeAgent:
             f"[{cid}] ({code} / {ref}) {text}" for cid, code, ref, text in clauses)
         user = (
             f"Business question: {question}\n\n"
-            f"Clauses you may use:\n{clause_block}\n\n"
+            + (f"{memory}\n\n" if memory else "")
+            + (f"Your previous answer was rejected by the checker: {revise}. Revise it: use only the numbered "
+               "clauses below and cite their numbers.\n\n" if revise else "")
+            + f"Clauses you may use:\n{clause_block}\n\n"
             "Answer the question, naming the scheme(s) used and citing clause numbers. "
             'Return JSON: {"answer": "<plain-language answer naming the scheme and the clause '
             'numbers you used>", "cited_ids": [<clause numbers>]}'
@@ -208,6 +262,7 @@ class SchemeAgent:
             text=answer_text,
             cited_clause_ids=cited,
             needs_citation=True,
+            check_faithfulness=True,
         )
         if trace:
             trace.emit("scheme", "agent_end",

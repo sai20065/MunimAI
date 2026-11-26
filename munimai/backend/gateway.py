@@ -36,8 +36,11 @@ from .agents.ledger import LedgerAgent
 from .agents.scheme import SchemeAgent
 from .agents.verifier import Verifier
 from . import docstore
+from . import embed_client as _embed_client
 from . import export as _export
 from .agents import general as _general
+from .agents import journey as _journey
+from .agents import memory as _memory
 from .agents.application import BANKS, SCHEMES, AppRequest, ApplicationAgent
 from .agents.dossier import _KIND_LABEL, DossierAgent
 from .agents import fit as _fit
@@ -345,15 +348,39 @@ def _handle_question(question: str, business_id: int,
         return _fit_answer(conn, business_id)[0]
     if intent == "readiness":
         return _readiness_answer(conn, business_id, trace)[0]
+    if intent == "journey":
+        plan = _journey.advance(conn, business_id)
+        trace.emit("journey", "tool_result", {"done": plan["done"], "total": plan["total"],
+                                              "next": (plan["next"] or {}).get("key")}, tool_name="journey.advance")
+        return _journey.reply_text(plan)
+    ctx = _memory.context(conn, business_id)
     if intent != "eligibility":
         trace.emit("router", "route", {"to": "general"})
         text, source = _general.answer(conn, business_id, question, _llm,
-                                       has_docs=docstore.has_documents(conn, business_id), trace=trace)
+                                       has_docs=docstore.has_documents(conn, business_id), trace=trace, memory=ctx)
         trace.emit("router", "tool_result", {"answer_source": source}, tool_name="general")
         return text
     trace.emit("router", "route", {"to": "scheme"})
-    answer, claim = SchemeAgent(conn, _llm).answer(business_id, question, trace=trace)
+    asked = _memory.augment_query(conn, business_id, question)
+    if asked != question:
+        trace.emit("memory", "tool_result", {"follow_up_resolved_to": asked[-60:]}, tool_name="memory.augment_query")
+    scheme_agent = SchemeAgent(conn, _llm)
+    answer, claim = scheme_agent.answer(business_id, asked, trace=trace, memory=ctx)
     verdict = Verifier(conn).check(claim)
+    if not verdict.passed:                       # self-reflection: the checker's reasons go back once, never more
+        trace.emit("scheme", "verifier", {"passed": False, "reasons": verdict.reasons, "action": "one revision"})
+        answer, claim = scheme_agent.answer(business_id, asked, trace=trace, memory=ctx,
+                                            revise="; ".join(verdict.reasons)[:500])
+        verdict = Verifier(conn).check(claim)
+        trace.emit("scheme", "verifier", {"passed": verdict.passed, "after_revision": True, "reasons": verdict.reasons})
+    if not verdict.passed and verdict.unfaithful and verdict.valid_clause_ids:
+        # the citations are real but the summary still says more than they do: show the official words instead
+        rows = conn.execute("SELECT clause_ref, clause_text FROM scheme_clauses WHERE id=ANY(%s) ORDER BY id LIMIT 2",
+                            (verdict.valid_clause_ids,)).fetchall()
+        quotes = "\n\n".join(f"“{' '.join(t.split())[:600]}” ({ref})" for ref, t in rows)
+        trace.emit("scheme", "verifier", {"action": "verbatim_fallback", "clauses": [r[0] for r in rows]})
+        return ("I could not check my own summary against the official text, so here is what the cited clause says, word for word:\n\n"
+                + quotes + f"\n\n(Sources: {', '.join(r[0] for r in rows)})")
     if not verdict.passed:
         return ("I can't confirm that yet — " + "; ".join(verdict.reasons)
                 + ". Let me find the right source before answering.")
@@ -446,7 +473,62 @@ def sim_profile_save(body: dict, x_munim_id: Optional[str] = Header(None)) -> di
 @app.get("/sim/status")
 def sim_status() -> dict:
     """Health of the two models, for the test console's status strip."""
-    return {"boss": _llm.health(), "worker": _ledger_llm.health(), "stt": _stt.health(), "math": _math_llm.health()}
+    return {"boss": _llm.health(), "worker": _ledger_llm.health(), "stt": _stt.health(), "math": _math_llm.health(),
+            "embed": _embed_client.available(), "resources": _lab_resources()}
+
+
+VRAM_CAP_MIB = 17 * 1024      # the self-imposed GPU budget; the GPU belongs to the Qwen boss
+WORKER_RAM_CAP_MIB = 30 * 1024
+
+
+def _lab_resources() -> dict:
+    """Live GPU and RAM use on the lab box against the budgets we set, or {} if the box does not answer."""
+    import requests as _rq
+    try:
+        s = _rq.get(f"{_embed_client.EMBED_URL}/stats", timeout=4).json()
+    except Exception:
+        return {}
+    gpu0 = (s.get("gpus") or [{}])[0]
+    units = s.get("units") or {}
+    ram_models = sum((u.get("ram_mib") or 0) for k, u in units.items() if k != "qwen-boss")
+    return {"vram_used_mib": gpu0.get("used_mib"), "vram_cap_mib": VRAM_CAP_MIB, "gpu_total_mib": gpu0.get("total_mib"),
+            "ram_models_mib": ram_models, "ram_models_cap_mib": WORKER_RAM_CAP_MIB,
+            "ram_box_available_mib": s.get("ram_available_mib"), "ram_box_total_mib": s.get("ram_total_mib"),
+            "units": units}
+
+
+@app.get("/sim/goal")
+def sim_goal(x_munim_id: Optional[str] = Header(None)) -> dict:
+    """The owner's loan-readiness plan, re-checked now. Deterministic, no model call."""
+    conn = _get_conn()
+    try:
+        bid = _sim_business(conn, x_munim_id); conn.commit()
+        return _journey.advance(conn, bid)
+    finally:
+        conn.close()
+
+
+@app.get("/sim/memory")
+def sim_memory(x_munim_id: Optional[str] = Header(None)) -> dict:
+    """Exactly what the assistant remembers about this owner, so the owner can read it."""
+    conn = _get_conn()
+    try:
+        bid = _sim_business(conn, x_munim_id); conn.commit()
+        return _memory.view(conn, bid)
+    finally:
+        conn.close()
+
+
+@app.delete("/sim/memory")
+def sim_forget(x_munim_id: Optional[str] = Header(None)) -> dict:
+    """Erase everything remembered about this owner (the ledger and documents are not touched)."""
+    conn = _get_conn()
+    try:
+        bid = _sim_business(conn, x_munim_id); conn.commit()
+        _memory.forget(conn, bid)
+        return {"ok": True}
+    finally:
+        conn.close()
 
 
 @app.get("/sim/books")
@@ -708,6 +790,7 @@ def _chat_stream(kind: str, payload, lang: str, speak: bool, munim_id: Optional[
             yield _sse("done", {}); return
         yield _sse("stage", {"id": "thinking", "label": "Checking the official rules"})
         reply_en = _handle_question(text_en, bid, conn, trace)
+        _memory.record_turn(conn, bid, text_en, reply_en, intent, lang)
         reply = reply_en
         if lang != "en":
             yield _sse("stage", {"id": "translating", "label": "Writing the reply in your language"})

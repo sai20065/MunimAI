@@ -1,0 +1,1647 @@
+[
+ {
+  "question": "If I run a small shop selling clothes, how much will I have to pay for a loan?",
+  "answer": "Based on the information provided, the amount you will have to pay for a loan depends on the specific scheme and the size of the loan. For loans up to ₹3 lakh, the interest rate is 7% per annum. For loans above ₹3 lakh and up to ₹5 lakh, the interest rate is equivalent to the bank’s 1-year MCLR or cost of funds or any other external benchmark-based lending rate or 10% per annum, whichever is lower. Please note that these details are from the Telangana MSME Handbook 2024 and Stand-Up India Scheme.",
+  "cited": [
+   "home.what_is_stand_up_india.2",
+   "total_20_20book_20_2.page_43.103"
+  ],
+  "clauses": [
+   {
+    "id": 1363,
+    "scheme_code": "STANDUP_INDIA",
+    "ref": "home.what_is_stand_up_india.2",
+    "text": "Stand-Up India Scheme Facilitates bank loans between ₹10 lakh and ₹1 Crore to at least one Scheduled Caste (SC) or Scheduled Tribe (ST) borrower and at least one woman borrower per bank branch for setting up a greenfield enterprise.\nThis enterprise may be in manufacturing, services, agri-allied activities or the trading sector. In case of non-individual enterprises at least 51% of the shareholding and controlling stake should be held by either an SC/ST or woman entrepreneur."
+   },
+   {
+    "id": 7188,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_43.103",
+    "text": "For loans up to ₹3 lakh under the scheme, banks will extend credit at a concessional interest rate of 7% per annum. 5. For loans above ₹3 lakh and upto ₹5 lakh under the scheme, banks will extend credit at interest rate equivalent to their 1 year-MCLR or cost of funds or any other external benchmark based lending rate or 10% per annum, whichever is lower. C. SCHEME APPLICABLE FOR: 1. DAY-NRLM promotes aﬃ nity-based women Self Help Groups (SHGs). However, only in case of groups to be formed with persons with disabilities and other special categories like elders and transgenders, DAY-NRLM may have both men and women in the Self- Help Groups. 2."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 4,
+  "issues": []
+ },
+ {
+  "question": "If I apply for a loan through this scheme, do I need to give a promise beforehand?",
+  "answer": "No, you do not need to give a promise beforehand to apply for a loan through the Credit Guarantee Trust Fund for Micro & Small Enterprises (CGTMSE) scheme. Clause 23 from the CGTMSE scheme states that no documentation between the lender and the borrower is required for availing guarantee cover.",
+  "cited": [],
+  "clauses": [],
+  "passed": true,
+  "score": 1.0,
+  "checked": 0,
+  "issues": []
+ },
+ {
+  "question": "If I take a loan under this scheme, how long do I have to pay it back before I have to stop making payments to the bank?",
+  "answer": "The repayment period for the loan can range between 3 to 7 years after an initial moratorium as prescribed by the concerned bank/financial institution. This information is derived from clause [1974] of the PMEGP scheme.",
+  "cited": [
+   "revised_scheme_guide.revised_scheme_guidelines_of_prime_m.26"
+  ],
+  "clauses": [
+   {
+    "id": 1974,
+    "scheme_code": "PMEGP",
+    "ref": "revised_scheme_guide.revised_scheme_guidelines_of_prime_m.26",
+    "text": "In case the incurred Capital Expenditure and Working Capital Expenditure (at the end of third year from the commencement of production) is less than the sanctioned amount under the Bank loan (including own contribution) the excess Margin Money (Subsidy) (against the short fall) shall be refunded to KVIC.\n8.4 Rare of Interest and repayment schedule\nNormal Rate of interest shall be charged. Repayment schedule may range between 3 to 7 years after an initial moratorium as may be prescribed by the concerned Bank/financial institution."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 1,
+  "issues": []
+ },
+ {
+  "question": "Can I get a loan if I just started my shop?",
+  "answer": "Yes, you can get a loan if you just started your shop. The Stand-Up India Credit Support Bank loan scheme allows loans between ₹10 lakh and ₹1 crore for setting up a greenfield enterprise. Clause 1363 from the STANDUP_INDIA scheme applies here.",
+  "cited": [
+   "home.what_is_stand_up_india.2"
+  ],
+  "clauses": [
+   {
+    "id": 1363,
+    "scheme_code": "STANDUP_INDIA",
+    "ref": "home.what_is_stand_up_india.2",
+    "text": "Stand-Up India Scheme Facilitates bank loans between ₹10 lakh and ₹1 Crore to at least one Scheduled Caste (SC) or Scheduled Tribe (ST) borrower and at least one woman borrower per bank branch for setting up a greenfield enterprise.\nThis enterprise may be in manufacturing, services, agri-allied activities or the trading sector. In case of non-individual enterprises at least 51% of the shareholding and controlling stake should be held by either an SC/ST or woman entrepreneur."
+   }
+  ],
+  "passed": false,
+  "score": 0.667,
+  "checked": 3,
+  "issues": [
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "Clause 1363 from the STANDUP_INDIA scheme applies here.",
+    "detail": "figure(s) not in the cited text: 1,363"
+   }
+  ]
+ },
+ {
+  "question": "If I use a bank to help me get this loan, will I pay more interest?",
+  "answer": "No, using a bank to help secure the loan will not necessarily result in paying more interest, as the clauses do not specify that banks will charge additional interest for acting as intermediaries. The interest rates are based on the banks' prevailing rates or RBI guidelines, but there is no mention of differential interest rates for banks using BCs for sourcing and monitoring functions.",
+  "cited": [
+   "71.faqs.13",
+   "home.page_4.17",
+   "home.page_12.48",
+   "home.page_17.70",
+   "rawmaterialagainstbg.assistance_against_the_security_of_b.6",
+   "rawmaterialagainstbg.assistance_against_the_security_of_b.7",
+   "revised_scheme_guide.revised_scheme_guidelines_of_prime_m.23",
+   "revised_scheme_guide.revised_scheme_guidelines_of_prime_m.24",
+   "revised_scheme_guide.revised_scheme_guidelines_of_prime_m.26"
+  ],
+  "clauses": [
+   {
+    "id": 1031,
+    "scheme_code": "CGTMSE",
+    "ref": "71.faqs.13",
+    "text": "In case of Scheduled Commercial Banks, Regional Rural Banks (RRBs), Small Finance Banks (SFBs), Cooperative Banks & SHG Banks, the rates will be as per their prevailing rates of interest. Banks using BCs for sourcing and monitoring function for the Scheme can have a differential interest rate structure for the Scheme, to provide for the cost towards BCs, subjects to any regulatory caps that may have been imposed by RBI. In case of NBFC, NBFC-MFIs etc., interest rates will be as per RBI guidelines for respective lender category."
+   },
+   {
+    "id": 1080,
+    "scheme_code": "CGTMSE",
+    "ref": "home.page_4.17",
+    "text": "(ii) not exceeding ₹200 lakh (Small Finance Banks  (SFBs), Regional Rural Banks, State Financial Institutions and Scheduled Urban Co-operative Banks (including Non-Scheduled Urban Co-operative Banks, State Co-operative Banks and District Central Co-operative Banks))  (iii) not exceeding ₹50 lakh (Microfinance Institutions), by way of term loan  and/or working capital facilities on or after entering into an agreement with  the Trust, without any collateral security and/or third party guarantees or  such amount as may be decided by the Trust from time to time."
+   },
+   {
+    "id": 1111,
+    "scheme_code": "CGTMSE",
+    "ref": "home.page_12.48",
+    "text": "In the event of any error or discrepancy or shortfall being found in  the computation of the amounts or in the calculation of the  guarantee fee / annual service fee, such deficiency / shortfall shall  be paid by the eligible lending institution to the Trust together with  interest on such amount at a rate of four per cent over and above  the Bank Rate, or as may be prescribed by the Trust from time to  time. Any amount found to have been paid in excess would be  refunded by the Trust."
+   },
+   {
+    "id": 1133,
+    "scheme_code": "CGTMSE",
+    "ref": "home.page_17.70",
+    "text": "(viii) The lending institution shall be liable to refund the claim released by  the Trust together with penal interest at the rate of 4% above the  prevailing Bank Rate, if such a recall is made by the Trust in the event  of serious deficiencies having existed in the matter of appraisal /  renewal / follow-up / conduct of the credit facility or where lodgement  of the claim was more than once or where there existed suppression  of any material information on part of the lending institutions for the  settlement of claims."
+   },
+   {
+    "id": 1219,
+    "scheme_code": "NSIC",
+    "ref": "rawmaterialagainstbg.assistance_against_the_security_of_b.6",
+    "text": "Effective Rate of Interest (% per Annum)\nUpto 180 Days\n(i) Units having valid SME 1 rating*\n9.25\n9.75\n(ii) Units having valid SME 2 rating*\n9.75\n10.25\n10.25\n10.75\n* Note: The concessional rate of interest for the good rated MSMEs, as mentioned at Sl. No. (i) and (ii) in the table above shall be applicable only to those cases, where the units make timely repayments of the Corporation's dues. The units which have not re-paid its dues within the stipulated 180 days, shall not be eligible for the concessional rate of interest. Such units shall be charged rate of interest mentioned at Sl. No. (iii) above."
+   },
+   {
+    "id": 1220,
+    "scheme_code": "NSIC",
+    "ref": "rawmaterialagainstbg.assistance_against_the_security_of_b.7",
+    "text": "Penal Charge on delayed payment (beyond 180 days), over and above the normal rate of interest, would be as under:\nIn case any outstanding is more than 180 days\n1.25% per quarter"
+   },
+   {
+    "id": 1971,
+    "scheme_code": "PMEGP",
+    "ref": "revised_scheme_guide.revised_scheme_guidelines_of_prime_m.23",
+    "text": "Exaggeration in the cost of the project with a view only to availing higher amount of subsidy should not be allowed.\nKVIC in consultations with Bankers Association had devised scoring model (Score card) which is being used by IAs for appraisal of PMEGP proposals and subsequent forwarding of applications/proposals to the Banks. The scoring model is displayed on the website of KVIC and Ministry.\n8. Bank Finance\n8.1 The Bank will sanction 90% of the project cost in case of General Category of beneficiary/institution and 95% in case of special category of the beneficiary/institution, and disburse full amount suitably for setting up of the project."
+   },
+   {
+    "id": 1972,
+    "scheme_code": "PMEGP",
+    "ref": "revised_scheme_guide.revised_scheme_guidelines_of_prime_m.24",
+    "text": "8.2 Banks will finance Capital Expenditure in the form of Term Loan and working Capital in the form of Cash Credit. Project can also be financed by the Bank in the form of composite loan consisting of Capital Expenditure and Working Capital."
+   },
+   {
+    "id": 1974,
+    "scheme_code": "PMEGP",
+    "ref": "revised_scheme_guide.revised_scheme_guidelines_of_prime_m.26",
+    "text": "In case the incurred Capital Expenditure and Working Capital Expenditure (at the end of third year from the commencement of production) is less than the sanctioned amount under the Bank loan (including own contribution) the excess Margin Money (Subsidy) (against the short fall) shall be refunded to KVIC.\n8.4 Rare of Interest and repayment schedule\nNormal Rate of interest shall be charged. Repayment schedule may range between 3 to 7 years after an initial moratorium as may be prescribed by the concerned Bank/financial institution."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 1,
+  "issues": []
+ },
+ {
+  "question": "If I run a small shop selling spices, can I get a loan to buy a bigger cooler?",
+  "answer": "Yes, you can get a loan to buy a bigger cooler through the Credit Linked Capital Subsidy Scheme (CLCSS) for SC/ST Micro & Small Enterprises (Clause [7333]).",
+  "cited": [
+   "total_20_20book_20_2.page_131.248"
+  ],
+  "clauses": [
+   {
+    "id": 7333,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_131.248",
+    "text": "A. OBJECTIVE: Ministry of Micro, Small and Medium Enterprises (MSME), Govt. of India has been  operating a scheme for technology upgradation of Micro & Small Enterprises called the Credit Linked Capital Subsidy Scheme (CLCSS) to facilitate purchasing of plant & machinery by  providing upfront capital subsidy to the existing as well as new MSEs. A special provision of 25% subsidy to SC/ST MSEs under National SC/ST Hub (NSSH) on institutional ﬁ nance up  to Rs.1 Cr. for procurement of Plant & Machinery (i.e. a subsidy cap of Rs.25 Lakhs) without  any sector speciﬁ c restrictions on technology upgradation. B. KEY BENEFITS: The scheme would cover SC/ST MSEs of manufacturing and service sectors."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 1,
+  "issues": []
+ },
+ {
+  "question": "Can a small shop owner get a loan through this scheme?",
+  "answer": "A small shop owner can get a loan through Pradhan Mantri Mudra Yojana (PMMY) as it offers collateral-free micro-credit programmes for micro and small enterprises including early-stage businesses and startups. Clause 1488 cites this scheme.",
+  "cited": [
+   "startup_schemes_play.page_28.80"
+  ],
+  "clauses": [
+   {
+    "id": 1488,
+    "scheme_code": "STARTUP_PLAYBOOK",
+    "ref": "startup_schemes_play.page_28.80",
+    "text": "PLAYBOOK OF GOVERNMENT SCHEMES AND INITIATIVES FOR STARTUPS Page 28 of 107 S. N o. Scheme Name & Nodal Ministry Stage & Focus What Is This Scheme? Who Can Apply? What Do You Get? How Much? 28. Pradhan Mantri Mudra Yojana  (PMMY) Credit Support Collateral- free micro- credit  programme  under Shishu, Kishor and Tarun  categories. Non- corporate,  non-farm  micro/small  enterprises  including  early-stage  businesses  and startups. [LOAN / CREDIT] Loans up  to ₹10  lakh; Tarun Plus up to ₹20 lakh  for eligible  repeat  borrowers Department  of Financial Services, Ministry of Finance Micro- enterprise  loans Term loan /  working capital  through banks, MFIs and NBFCs 29."
+   }
+  ],
+  "passed": false,
+  "score": 0.0,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "category_not_in_clause",
+    "sentence": "A small shop owner can get a loan through Pradhan Mantri Mudra Yojana (PMMY) as it offers collateral-free micro-credit programmes for micro and small enterprises including early-stage businesses and s",
+    "detail": "category not in the cited text: small"
+   },
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "Clause 1488 cites this scheme.",
+    "detail": "figure(s) not in the cited text: 1,488"
+   }
+  ]
+ },
+ {
+  "question": "If I run a small grocery store, could I get a loan to buy a new refrigerator?",
+  "answer": "Yes, you could get a loan to buy a new refrigerator for your small grocery store under the Credit Guarantee Trust Fund for Micro & Small Enterprises (CGTMSE) scheme. Clause [1069] defines the eligible borrower as new or existing Micro and Small Enterprises, and Clause [1489] specifies the loan amount for greenfield enterprises promoted by SC/ST and/or women entrepreneurs.",
+  "cited": [
+   "home.page_2.6",
+   "startup_schemes_play.page_28.81"
+  ],
+  "clauses": [
+   {
+    "id": 1069,
+    "scheme_code": "CGTMSE",
+    "ref": "home.page_2.6",
+    "text": "(iv) “Eligible borrower” means new or existing Micro and Small Enterprises to which credit facility has been provided by the lending  institution without any collateral security and/or third party guarantees. However, a “Hybrid / Partial Collateral Security” product allowing  guarantee cover on credit facilities having collateral security, for the  portion of credit facility not covered by collateral security (unsecured  portion), has also been introduced by CGTMSE."
+   },
+   {
+    "id": 1489,
+    "scheme_code": "STARTUP_PLAYBOOK",
+    "ref": "startup_schemes_play.page_28.81",
+    "text": "Stand Up India Credit Support Bank loan  scheme for  greenfield  enterprises  promoted  by SC/ST  and/or  women  entrepreneu rs. At least one SC/ST  borrower or  one woman  borrower per  bank branch  for greenfield  non-farm  enterprise. [LOAN / CREDIT] ₹10 lakh  to ₹1  crore loan Department  of Financial Services, Ministry of Finance SC/ST &  women  entrepreneur ship Composite bank  loan 30. PMFME – PM Formalisatio n of Micro Food Processing Enterprises Formalisati on / Scaling MoFPI  scheme  formalising  and  upgrading  micro food- processing  enterprises  under One District One Product."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 2,
+  "issues": []
+ },
+ {
+  "question": "If I’ve already gotten a small loan through MUDRA, can I get a bigger one?",
+  "answer": "Yes, if you have already successfully repaid a Tarun loan, you can get a bigger Tarun Plus loan of up to 20 lakh. This is based on clause [6] of MUDRA_TARUN.",
+  "cited": [
+   "loan_amount.tarun_plus_condition"
+  ],
+  "clauses": [
+   {
+    "id": 6,
+    "scheme_code": "MUDRA_TARUN",
+    "ref": "loan_amount.tarun_plus_condition",
+    "text": "Tarun Plus : covering loans above 10 lakh to 20 lakh (for those entrepreneurs who have availed and successfully repaid previous loans under the ‘Tarun’ category)."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 2,
+  "issues": []
+ },
+ {
+  "question": "Where can a small shop owner get a loan through this MUDRA program?",
+  "answer": "A small shop owner can get a loan through the MUDRA program by approaching a nearby branch office of a bank, NBFC, or MFI. Clause 16 of MUDRA_GENERAL states this.",
+  "cited": [
+   "delivery.channel"
+  ],
+  "clauses": [
+   {
+    "id": 16,
+    "scheme_code": "MUDRA_GENERAL",
+    "ref": "delivery.channel",
+    "text": "MUDRA is a refinancing Institution. MUDRA does not lend directly to the micro entrepreneurs / individuals. Mudra loans under Pradhan Mantri Mudra Yojana (PMMY) can be availed of from nearby branch office of a bank, NBFC, MFIs etc."
+   }
+  ],
+  "passed": false,
+  "score": 0.5,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "Clause 16 of MUDRA_GENERAL states this.",
+    "detail": "figure(s) not in the cited text: 16"
+   }
+  ]
+ },
+ {
+  "question": "If I run a small business and register with a specific program, can the government be required to buy some of my products?",
+  "answer": "Yes, if you register with the Single Point Registration Scheme (SPRS), you can be eligible to participate in government purchases through the Public Procurement Policy for Micro & Small Enterprises (MSEs) Order 2012. This is stated in clause [7343] of the Telangana MSME Handbook 2024.",
+  "cited": [
+   "total_20_20book_20_2.page_133.258"
+  ],
+  "clauses": [
+   {
+    "id": 7343,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_133.258",
+    "text": "The units registered under Single Point Registration Scheme of NSIC are eligible to get the  beneﬁ ts under Public Procurement Policy for Micro & Small Enterprises (MSEs) Order 2012 as notiﬁ ed  by the Government of India, Ministry of Micro Small & Medium Enterprises, New Delhi vide Gazette Notiﬁ cation dated 23.03.2012 and amendment vide order no. S.O."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 2,
+  "issues": []
+ },
+ {
+  "question": "How much does it cost to register my business?",
+  "answer": "The cost to register your business depends on the specific scheme and type of registration. For NSIC Single Point Registration, the nominal fee is Rs. 100 + GST for Scheduled Castes and Scheduled Tribes. For other types of registration, the fee is based on the turnover as per the latest audited balance sheet. Refer to the NSIC Single Point Registration scheme for detailed information.",
+  "cited": [
+   "singlepointregistrat.5a_registration_fee.15",
+   "total_20_20book_20_2.page_33.76"
+  ],
+  "clauses": [
+   {
+    "id": 1207,
+    "scheme_code": "NSIC",
+    "ref": "singlepointregistrat.5a_registration_fee.15",
+    "text": "The registration Fee is based on the Turnover as per latest audited Balance Sheet of the Micro & Small Enterprise for the Registration, Renewal and any other amendment etc.\nNominal fee on SPRS registration for Scheduled Caste and Scheduled Tribe at Rs.100/- + GST (From 2021-22 to 2025-26).\nMSEs located in North Eastern Region are entitled for 20% concession in fee (Fee for Technical Inspections of MSEs will remain the same).\n5b) You may visit Fee Calculator for calculation of Fee."
+   },
+   {
+    "id": 7161,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_33.76",
+    "text": "B. KEY BENEFITS: Cost of Certiﬁ cation • Certiﬁ cation Level 1: BRONZE: Rs. 10,000/- • Certiﬁ cation Level 2: SILVER: Rs. 40,000/- • Certiﬁ cation Level 3: GOLD: Rs. 90,000/- Subsidy on cost of ZED certiﬁ cation: • Joining Reward of Rs."
+   }
+  ],
+  "passed": false,
+  "score": 0.75,
+  "checked": 4,
+  "issues": [
+   {
+    "kind": "low_overlap",
+    "sentence": "Refer to the NSIC Single Point Registration scheme for detailed information.",
+    "detail": "little of this sentence appears in the cited text"
+   }
+  ]
+ },
+ {
+  "question": "If I run a small shop, can I get help from the government to grow my business?",
+  "answer": "Yes, if you run a small shop, you can get help from the government to grow your business. You can apply for grants, subsidies, and low-interest loans provided by the government under the Credit Linked Capital Subsidy Scheme (CLCSS) for Micro & Small Enterprises. Additionally, you can seek assistance for facilities and resources to help you establish and grow your business. Please refer to clauses [7333] and [7342].",
+  "cited": [
+   "total_20_20book_20_2.page_131.248",
+   "total_20_20book_20_2.page_133.257"
+  ],
+  "clauses": [
+   {
+    "id": 7333,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_131.248",
+    "text": "A. OBJECTIVE: Ministry of Micro, Small and Medium Enterprises (MSME), Govt. of India has been  operating a scheme for technology upgradation of Micro & Small Enterprises called the Credit Linked Capital Subsidy Scheme (CLCSS) to facilitate purchasing of plant & machinery by  providing upfront capital subsidy to the existing as well as new MSEs. A special provision of 25% subsidy to SC/ST MSEs under National SC/ST Hub (NSSH) on institutional ﬁ nance up  to Rs.1 Cr. for procurement of Plant & Machinery (i.e. a subsidy cap of Rs.25 Lakhs) without  any sector speciﬁ c restrictions on technology upgradation. B. KEY BENEFITS: The scheme would cover SC/ST MSEs of manufacturing and service sectors."
+   },
+   {
+    "id": 7342,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_133.257",
+    "text": "SINGLE POINT REGISTRATION SCHEME (SPRS) A. OBJECTIVE: The Government is the single largest buyer of a variety of goods. With a view to increase the  share of purchases from the small-scale sector, the Government Stores Purchase Programme was  launched in 1955-56. NSIC registers Micro & small Enterprises (MSEs) under Single Point Registration  scheme (SPRS) for participation in Government Purchases. B. KEY BENEFITS:"
+   }
+  ],
+  "passed": false,
+  "score": 0.75,
+  "checked": 4,
+  "issues": [
+   {
+    "kind": "low_overlap",
+    "sentence": "Additionally, you can seek assistance for facilities and resources to help you establish and grow your business.",
+    "detail": "little of this sentence appears in the cited text"
+   }
+  ]
+ },
+ {
+  "question": "How can a small business find out about government programs to help them get more customers?",
+  "answer": "A small business can find out about government programs to help them get more customers by using the STARTUP_PLAYBOOK / startup_schemes_play.page_6.9 (Decision Tree) and STARTUP_PLAYBOOK / startup_schemes_play.page_14.27 (Market Access) schemes. These schemes provide guidance on finding relevant government initiatives and accessing market opportunities.",
+  "cited": [
+   "startup_schemes_play.page_6.9",
+   "startup_schemes_play.page_14.27"
+  ],
+  "clauses": [
+   {
+    "id": 1417,
+    "scheme_code": "STARTUP_PLAYBOOK",
+    "ref": "startup_schemes_play.page_6.9",
+    "text": "PLAYBOOK OF GOVERNMENT SCHEMES AND INITIATIVES FOR STARTUPS Page 6 of 107 Objective This Playbook consolidates Central Government schemes and incentives  relevant to India’s startup ecosystem into a  single, usable reference document. It is  designed to help entrepreneurs find the right  scheme for their stage and sector. Who It Is For • Entrepreneurs & Founders • Students & Aspiring Entrepreneurs • Investors & Incubators • Policymakers & Intermediaries How to Use This Playbook 1 Start with the Decision Tree. Answer 5 quick questions to find schemes suited to you. 2 Check the “What Do You Need?” Index for a need-based view (grant, equity, loan, etc.)."
+   },
+   {
+    "id": 1435,
+    "scheme_code": "STARTUP_PLAYBOOK",
+    "ref": "startup_schemes_play.page_14.27",
+    "text": "Also  open to all  startups for  listing. [MARKET ACCESS] Platform for  showcasing  innovations  for public  procurement Government  e Marketplace  (GeM), Department  of Commerce Government  procurement  access Market  access  (governmen t  procuremen t). Exemption  from prior  experience,  turnover  and EMD  requirement s. 7. NIDHI – Seed Support Program  (SSP) Seed / Post- Incubation Seed support  deployed through DST-supported TBIs to help  incubated  startups bridge  prototype to  market."
+   }
+  ],
+  "passed": false,
+  "score": 0.5,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "A small business can find out about government programs to help them get more customers by using the STARTUP_PLAYBOOK / startup_schemes_play.page_6.9 (Decision Tree) and STARTUP_PLAYBOOK / startup_sch",
+    "detail": "figure(s) not in the cited text: 7, 14"
+   },
+   {
+    "kind": "category_not_in_clause",
+    "sentence": "A small business can find out about government programs to help them get more customers by using the STARTUP_PLAYBOOK / startup_schemes_play.page_6.9 (Decision Tree) and STARTUP_PLAYBOOK / startup_sch",
+    "detail": "category not in the cited text: small"
+   }
+  ]
+ },
+ {
+  "question": "If I run a small shop that makes things, can I get help with a government loan to grow my business?",
+  "answer": "Yes, you can get help with a government loan to grow your business. The Credit Linked Capital Subsidy Scheme (CLCSS) under the Pradhan Mantri Mudra Yojana (PMMY) and the Credit Guarantee Trust Fund for Micro & Small Enterprises (CGTMSE) can provide collateral-free loans. Refer to clauses [7216] and [1478].",
+  "cited": [
+   "startup_schemes_play.page_25.70",
+   "total_20_20book_20_2.page_59.131"
+  ],
+  "clauses": [
+   {
+    "id": 1478,
+    "scheme_code": "STARTUP_PLAYBOOK",
+    "ref": "startup_schemes_play.page_25.70",
+    "text": "Credit Guarantee Trust Fund  for Micro & Small Enterprises  (CGTMSE) Credit Support Guarantee  scheme  enabling  collateral- free loans to  micro and  small  enterprises  through  member  lending  institutions. MSEs  including  startup MSMEs  borrowing  from eligible  banks/NBFCs/ FIs. [LOAN / CREDIT] Guarantee  coverage  ceiling up  to ₹10  crore;  guarantee  percentag e varies Ministry of Micro, Small & Medium Enterprises Collateral- free MSME  loans Credit guarantee  cover for lender;  easier access to  debt without  collateral"
+   },
+   {
+    "id": 7216,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_59.131",
+    "text": "A. OBJECTIVE: To provide future growth to new and existing SMEs through strategic project funding to  help them develop their existing units B. KEY BENEFITS: • Loan for purchase of land & construction of factory building purchase of plant & machinery,  miscellaneous ﬁ xed assets, installation of rooftop solar projects, acquisition of other energy  eﬃ ciency devices etc. • Assistance to existing entities for expansion / modernization / technology upgradation in  the same line of business. • Financing upto Rs. 50 crore subject to maximum of 80% of the project cost. • MCLR Linked attractive rate of Interest. • Repayment upto 7 years with moratorium upto 2 years. C."
+   }
+  ],
+  "passed": false,
+  "score": 0.667,
+  "checked": 3,
+  "issues": [
+   {
+    "kind": "scheme_not_cited",
+    "sentence": "The Credit Linked Capital Subsidy Scheme (CLCSS) under the Pradhan Mantri Mudra Yojana (PMMY) and the Credit Guarantee Trust Fund for Micro & Small Enterprises (CGTMSE) can provide collateral-free loa",
+    "detail": "names a scheme the cited clauses do not belong to: mudra"
+   }
+  ]
+ },
+ {
+  "question": "If I’ve already gotten help from another government program, can I still apply for this loan?",
+  "answer": "If you have already received help from another government program, you are not eligible for this loan under the PMEGP scheme.",
+  "cited": [
+   "faq.eligibility_conditions_of_beneficiar.3",
+   "termsandconditions.eligibility_conditions_of_beneficiar.13",
+   "homepage.trading_activities.17",
+   "revised_scheme_guide.revised_scheme_guidelines_of_prime_m.10"
+  ],
+  "clauses": [
+   {
+    "id": 1905,
+    "scheme_code": "PMEGP",
+    "ref": "faq.eligibility_conditions_of_beneficiar.3",
+    "text": "Existing Units (under PMRY, REGP or any other scheme of Government of India or State Government) and the units that have already availed Government Subsidy under any other scheme of Government of India or State Government are not eligible.\nOther eligibility conditions for PMEGP (New units)\nProjects without Capital Expenditure are not eligible for Financing under the Scheme."
+   },
+   {
+    "id": 1924,
+    "scheme_code": "PMEGP",
+    "ref": "termsandconditions.eligibility_conditions_of_beneficiar.13",
+    "text": "Existing Units (under PMRY, REGP or any other scheme of Government of India or State Government) and the units that have already availed Government Subsidy under any other scheme of Government of India or State Government are not eligible.\nOther eligibility conditions for PMEGP (New units)\nProjects without Capital Expenditure are not eligible for Financing under the Scheme."
+   },
+   {
+    "id": 1947,
+    "scheme_code": "PMEGP",
+    "ref": "homepage.trading_activities.17",
+    "text": "The unit should have been making profit for the last three years.\nBeneficiary may apply to the same financing bank, which provided first loan, or to any other bank, which is willing to extend credit facility for second loan.\nRegistration under Udyam portal is mandatory."
+   },
+   {
+    "id": 1958,
+    "scheme_code": "PMEGP",
+    "ref": "revised_scheme_guide.revised_scheme_guidelines_of_prime_m.10",
+    "text": "Existing Units (under PMRY, REGP or any other scheme of Government of India or State Government) and the units that have already availed Government Subsidy under any other scheme of Government of India or State Government are not eligible\nOther Eligibility Conditions of PMEGP (New units)\nProjects without Capital Expenditure are not eligible for Financing under the scheme."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 1,
+  "issues": []
+ },
+ {
+  "question": "If I run a small shop, can I use the money for buying a van to deliver goods?",
+  "answer": "Yes, you can use the money for buying a van to deliver goods under the PMEGP scheme, as it allows the purchase of vans for transportation of goods. Refer to clauses [1927], [1908], [1945] and [1926].",
+  "cited": [
+   "faq.trading_activities.6",
+   "termsandconditions.trading_activities.15",
+   "termsandconditions.trading_activities.16",
+   "homepage.trading_activities.15"
+  ],
+  "clauses": [
+   {
+    "id": 1908,
+    "scheme_code": "PMEGP",
+    "ref": "faq.trading_activities.6",
+    "text": "Maximum 10% of the financial allocation in a year in a state may be used for Business / Trading activities as above [(a), (b) and (c)].\nTransport activities -Transport activities viz purchase of Cab/Van/ Boat/Motorboat/Shikara etc. for transportation of tourists or general public will be allowed. A ceiling of 10% on the extent of projects financed under transport activities is applicable in all areas except NER, Hilly region, LWE-affected districts and A & N Islands, Goa, Puducherry, Daman & Diu, Dadra Nagar Haveli, J&K, Lakshadweep, or other specific areas as may be declared so by the Government."
+   },
+   {
+    "id": 1926,
+    "scheme_code": "PMEGP",
+    "ref": "termsandconditions.trading_activities.15",
+    "text": "Business / Trading activities in the form of sales outlets may be permitted in NER, Left wing Extremism (LWE)-affected districts and A & N Islands.\nRetail outlets/Business - selling Khadi products, Village Industry products procured from Khadi and Village Industry Institutions certified by KVIC and products manufactured by PMEGP units and SFURTI clusters only may be permitted under PMEGP across the country.\nRetail outlets backed by Manufacturing (including processing) / Service facilities may be permitted across the country.\nThe maximum cost of the project for Business / Trading activities as above [(a) and (b)] may be Rs.20 lakh (at par with the maximum project cost for Service sector)."
+   },
+   {
+    "id": 1927,
+    "scheme_code": "PMEGP",
+    "ref": "termsandconditions.trading_activities.16",
+    "text": "Maximum 10% of the financial allocation in a year in a state may be used for Business / Trading activities as above [(a), (b) and (c)].\nTransport activities -Transport activities viz purchase of Cab/Van/ Boat/Motorboat/Shikara etc. for transportation of tourists or general public will be allowed. A ceiling of 10% on the extent of projects financed under transport activities is applicable in all areas except NER, Hilly region, LWE-affected districts and A & N Islands, Goa, Puducherry, Daman & Diu, Dadra Nagar Haveli, J&K, Lakshadweep, or other specific areas as may be declared so by the Government."
+   },
+   {
+    "id": 1945,
+    "scheme_code": "PMEGP",
+    "ref": "homepage.trading_activities.15",
+    "text": "Maximum 10% of the financial allocation in a year in a state may be used for Business / Trading activities as above [(a), (b) and (c)].\nTransport activities -Transport activities viz purchase of Cab/Van/ Boat/Motorboat/Shikara etc. for transportation of tourists or general public will be allowed. A ceiling of 10% on the extent of projects financed under transport activities is applicable in all areas except NER, Hilly region, LWE-affected districts and A & N Islands, Goa, Puducherry, Daman & Diu, Dadra Nagar Haveli, J&K, Lakshadweep, or other specific areas as may be declared so by the Government."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 2,
+  "issues": []
+ },
+ {
+  "question": "If I run a taxi service, can I get a loan to buy a van?",
+  "answer": "Yes, you can get a loan to buy a van for your taxi service under the SIDBI EXPRESS scheme, which allows financing for the purchase of machines/equipment. Refer to clause [7222] for details.",
+  "cited": [
+   "total_20_20book_20_2.page_62.137"
+  ],
+  "clauses": [
+   {
+    "id": 7222,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_62.137",
+    "text": "EXPRESS-SIDBI SCHEME A. OBJECTIVE: To provide expeditious sanction of term loan through automated platform to “New to SIDBI” customers in manufacturing/service sector for purchase of machines/equipment. B. KEY BENEFITS: 1. Quick sanction of machinery loan through automated platform using GST returns, ITRs, Bank Statement and CIBIL score. 2. Loan amount up to Rs. 1 Crore with immediate in-principle oﬀ er. 3. Upto 100% ﬁ nancing with 25% security in the form of ﬁ xed deposit. 4. Processing fees of 0.50% plus applicable GST. 5. MCLR Linked attractive rate of Interest. 6. Repayment upto 60 months. C. SCHEME APPLICABLE FOR: MSME units in operation for at least three years."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 2,
+  "issues": []
+ },
+ {
+  "question": "If I haven't gotten my OTP, how can I still get the money for my business?",
+  "answer": "You can still attempt to get the money for your business by resending the OTP if you did not receive it initially. According to clauses [1938], [1939], and [1937], you can resend the OTP if you didn't receive it.",
+  "cited": [
+   "homepage.choose_verification_method.7",
+   "homepage.choose_verification_method.8",
+   "homepage.choose_verification_method.9"
+  ],
+  "clauses": [
+   {
+    "id": 1937,
+    "scheme_code": "PMEGP",
+    "ref": "homepage.choose_verification_method.7",
+    "text": "Select how you would like to receive the OTP for verification.\nOTP will be sent to your registered mobile number\nOTP will be sent to your registered email address\nIf you do not have access to your registered mobile number, you may verify using your registered email address.\nDidn't receive OTP? Resend OTP (00:45)\nNote: Old PMEGP Portal applicants must enter their User ID and click on “Forgot Password” to receive a new password on their registered mobile number."
+   },
+   {
+    "id": 1938,
+    "scheme_code": "PMEGP",
+    "ref": "homepage.choose_verification_method.8",
+    "text": "Select how you would like to receive the OTP for verification.\nOTP will be sent to your registered mobile number\nOTP will be sent to your registered email address\nIf you do not have access to your registered mobile number, you may verify using your registered email address.\nDidn't receive OTP? Resend OTP (00:45)"
+   },
+   {
+    "id": 1939,
+    "scheme_code": "PMEGP",
+    "ref": "homepage.choose_verification_method.9",
+    "text": "Select how you would like to receive the OTP.\nOTP will be sent to your registered mobile number\nOTP will be sent to your registered email address\nIf you do not have access to your registered mobile number, you may verify using your registered email address.\nOTP Verification - Password Reset\nDidn't receive OTP? Resend OTP\nOTP verified successfully. Please set your new password.\nPassword must be 8 characters with at least 1 uppercase, 1 lowercase, 1 number, and 1 special character.\nOfficial Login (KVIC/KVIB/DIC/COIR)\nEDP Training Center Login"
+   }
+  ],
+  "passed": false,
+  "score": 0.5,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "unsupported_negative",
+    "sentence": "You can still attempt to get the money for your business by resending the OTP if you did not receive it initially.",
+    "detail": "says something is not offered or allowed, but no cited clause says so"
+   }
+  ]
+ },
+ {
+  "question": "If I'm buying a building that's already built, can I use that cost when figuring out how much money I need for my business?",
+  "answer": "No, the cost of buying a building that is already built cannot be included in the project cost according to PMEGP guidelines (clauses [1906], [1925], [1959], [1943]).",
+  "cited": [
+   "faq.eligibility_conditions_of_beneficiar.4",
+   "termsandconditions.eligibility_conditions_of_beneficiar.14",
+   "homepage.eligibility_conditions_of_beneficiar.13",
+   "revised_scheme_guide.revised_scheme_guidelines_of_prime_m.11"
+  ],
+  "clauses": [
+   {
+    "id": 1906,
+    "scheme_code": "PMEGP",
+    "ref": "faq.eligibility_conditions_of_beneficiar.4",
+    "text": "Cost of the land should not be included in the Project cost. Cost of the ready built shed as well as long lease or rental Work-shed/Workshop can be included in the project cost subject to restricting such cost of ready built as well as long lease or rental workshed/workshop to be included in the project cost calculated for a maximum period of 3 years only.\nPMEGP is applicable to all new viable microenterprises, including Village Industries projects except activities prohibited by local Government/Authorities keeping in view environment or socio-economic factors and activities indicated in the negative list of the guidelines (Para 30 of the guidelines)."
+   },
+   {
+    "id": 1925,
+    "scheme_code": "PMEGP",
+    "ref": "termsandconditions.eligibility_conditions_of_beneficiar.14",
+    "text": "Cost of the land should not be included in the Project cost. Cost of the ready built shed as well as long lease or rental Work-shed/Workshop can be included in the project cost subject to restricting such cost of ready built as well as long lease or rental workshed/workshop to be included in the project cost calculated for a maximum period of 3 years only.\nPMEGP is applicable to all new viable microenterprises, including Village Industries projects except activities prohibited by local Government/Authorities keeping in view environment or socio-economic factors and activities indicated in the negative list of the guidelines (Para 30 of the guidelines)."
+   },
+   {
+    "id": 1943,
+    "scheme_code": "PMEGP",
+    "ref": "homepage.eligibility_conditions_of_beneficiar.13",
+    "text": "Cost of the land should not be included in the Project cost. Cost of the ready built shed as well as long lease or rental Work-shed/Workshop can be included in the project cost subject to restricting such cost of ready built as well as long lease or rental workshed/workshop to be included in the project cost calculated for a maximum period of 3 years only.\nPMEGP is applicable to all new viable microenterprises, including Village Industries projects except activities prohibited by local Government/Authorities keeping in view environment or socio-economic factors and activities indicated in the negative list of the guidelines (Para 30 of the guidelines)."
+   },
+   {
+    "id": 1959,
+    "scheme_code": "PMEGP",
+    "ref": "revised_scheme_guide.revised_scheme_guidelines_of_prime_m.11",
+    "text": "Cost of the land should not be included in the Project cost. Cost of the ready built as well as long lease or rental Work-shed/Workshop can be included in the project cost subject to restricting such cost of ready built as well as long lease or rental work shed/workshop to be included in the project cost calculated for a maximum period of 3 years only.\nPMEGP is applicable to all new viable micro enterprises, including Village Industries projects except activities prohibited by Local Government/Authority keeping in view environment or socio-economic factors and activities indicated in the negative list of the guidelines. (Para 30 of the guidelines)."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 1,
+  "issues": []
+ },
+ {
+  "question": "How do I find out if my shop is included in the government’s help program?",
+  "answer": "To find out if your shop is included in the government’s help program, you should visit the websites provided in the schemes applicable for micro-enterprises. For example, you can check the Special Marketing Assistance Scheme (SMAS) at https://scsthub.in/content/special-marketing-assistance-scheme-smas and the Credit Linked Capital Subsidy Scheme (CLCSS) at https://my.msme.gov.in/MyMsmeMob/MsmeScheme/Pages/0_3_1.html. These schemes are designed to assist micro-enterprises like yours.",
+  "cited": [
+   "total_20_20book_20_2.page_131.248",
+   "total_20_20book_20_2.page_134.264"
+  ],
+  "clauses": [
+   {
+    "id": 7333,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_131.248",
+    "text": "A. OBJECTIVE: Ministry of Micro, Small and Medium Enterprises (MSME), Govt. of India has been  operating a scheme for technology upgradation of Micro & Small Enterprises called the Credit Linked Capital Subsidy Scheme (CLCSS) to facilitate purchasing of plant & machinery by  providing upfront capital subsidy to the existing as well as new MSEs. A special provision of 25% subsidy to SC/ST MSEs under National SC/ST Hub (NSSH) on institutional ﬁ nance up  to Rs.1 Cr. for procurement of Plant & Machinery (i.e. a subsidy cap of Rs.25 Lakhs) without  any sector speciﬁ c restrictions on technology upgradation. B. KEY BENEFITS: The scheme would cover SC/ST MSEs of manufacturing and service sectors."
+   },
+   {
+    "id": 7349,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_134.264",
+    "text": "SCHEME APPLICABLE FOR: • Sole Proprietorships, Partnerships, Co-operative and Societies, Private Micro / Small enterprises owned by SC/ST Entrepreneurs engaged in the manufacturing and service activities shall be eligible for seeking assistance. • SC/ST MSEs engaged in trading activities shall not be applicable for SCLCSS subsidy. D. DETAILED INFORMATION: More details: https://scsthub.in/content/special-marketing-assistance-scheme-smas E. HOW TO APPLY: To apply the scheme, visit the website:  https://scsthub.in/content/special-marketing-assistance-scheme-smas SPECIAL MARKETING ASSISTANCE SCHEME (SMAS) 85"
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 1,
+  "issues": []
+ },
+ {
+  "question": "If I’m running a small shop in a bigger town, can I still get a loan through this scheme?",
+  "answer": "Yes, you can still get a loan through the Credit Guarantee Trust Fund for Micro & Small Enterprises (CGTMSE) scheme, as it enables collateral-free loans to micro and small enterprises through member lending institutions. Clause 1079 mentions that the trust covers credit facilities extended by Member Lending Institutions to a single eligible borrower in the Micro and Small Enterprises sector for credit facility not exceeding ₹10 crore.",
+  "cited": [
+   "home.page_4.16"
+  ],
+  "clauses": [
+   {
+    "id": 1079,
+    "scheme_code": "CGTMSE",
+    "ref": "home.page_4.16",
+    "text": "Credit facilities eligible under the Scheme The Trust shall cover credit facilities (Fund based and/or Non fund based)  extended by Member Lending Institution(s) to a single eligible borrower in  the Micro and Small Enterprises sector for credit facility (i) not exceeding ₹10  crore (Public Sector Banks, Private Sector Banks, Foreign Banks, select Financial Institutions);"
+   }
+  ],
+  "passed": false,
+  "score": 0.5,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "Clause 1079 mentions that the trust covers credit facilities extended by Member Lending Institutions to a single eligible borrower in the Micro and Small Enterprises sector for credit facility not exc",
+    "detail": "figure(s) not in the cited text: 1,079"
+   }
+  ]
+ },
+ {
+  "question": "Which states can apply for this loan program?",
+  "answer": "The loan program is available for applicants in Telangana as specified in clause 7329 of the TELENGANA_MSME_HANDBOOK_2024.",
+  "cited": [
+   "total_20_20book_20_2.page_129.244"
+  ],
+  "clauses": [
+   {
+    "id": 7329,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_129.244",
+    "text": "B. KEY BENEFITS: • This scheme facilitates bank loans between 10 lakh and 1 Crore for setting up a greenﬁ eld enterprise. • The rate of interest would be lowest applicable rate of the bank for that category not to exceed base rate (MCLR) + 3% + tenor premium. C. SCHEME APPLICABLE FOR : The following are the eligible conditions to apply for the scheme: • SC / ST and /or Women entrepreneurs, above 18 years of age • Loans under the scheme is available only for Green Field Projects."
+   }
+  ],
+  "passed": false,
+  "score": 0.0,
+  "checked": 1,
+  "issues": [
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "The loan program is available for applicants in Telangana as specified in clause 7329 of the TELENGANA_MSME_HANDBOOK_2024.",
+    "detail": "figure(s) not in the cited text: 7,329"
+   },
+   {
+    "kind": "low_overlap",
+    "sentence": "The loan program is available for applicants in Telangana as specified in clause 7329 of the TELENGANA_MSME_HANDBOOK_2024.",
+    "detail": "little of this sentence appears in the cited text"
+   }
+  ]
+ },
+ {
+  "question": "If I get approved for this scheme, how much money can I actually get to buy tools for my business?",
+  "answer": "You can get up to Rs. 25 lakh to buy tools for your business under the Telangana MSME Handbook 2024 scheme, as stated in clause [7098].",
+  "cited": [
+   "total_20_20book_20_2.page_13.13"
+  ],
+  "clauses": [
+   {
+    "id": 7098,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_13.13",
+    "text": "The maximum cost of the project/unit admissible in the  manufacturing sector is ₹ 25 lakhs and, in the business,/service sector, it is ₹ 10 lakhs.The  balance amount of the total project cost will be provided by the banks in the form of term loan  and working capital. C. SCHEME APPLICABLE FOR: All Enterpreneurs above 18 years of age and planning to set up a new project. Self Help Groups (including those belonging to BPL provided that they have not availed beneﬁ ts under  any other Scheme), Institutions registered under Societies Registration Act,1860; Production Co-operative Societies, and Charitable Trusts are also eligible. D. DETAILED INFORMATION:"
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 1,
+  "issues": []
+ },
+ {
+  "question": "If I use a digital payment method for my shop, will the government give me a little money back for each transaction?",
+  "answer": "The government will not give you a little money back for each transaction using digital payment methods based on the provided clauses. However, the UP MSME Policy offers financial support for the adoption of ICT platforms, which includes ERP systems, but it does not specifically mention a refund for each transaction. Cited clauses: [2310]",
+  "cited": [
+   "english_msme_policy_.page_12.50"
+  ],
+  "clauses": [
+   {
+    "id": 2310,
+    "scheme_code": "UP_MSME_POLICY",
+    "ref": "english_msme_policy_.page_12.50",
+    "text": "The Micro, Small and Medium Enterprises would be given financial support in  the form of reimbursement for the adoption of Enterprise Resource Planning (ERP)  system and other ICT platforms and facilities. For installing the ERP systems approved  by the Directorate of Industries and Enterprises Promotion, Uttar Pradesh, support of 75  percent of the capital expenditure (maximum Rs 01 lakh) would be provided. For  implementing the ICT facilities, a support of 75 percent of the capital expenditure  (maximum Rs 5 lakh) would be provided."
+   }
+  ],
+  "passed": false,
+  "score": 0.333,
+  "checked": 3,
+  "issues": [
+   {
+    "kind": "unsupported_negative",
+    "sentence": "The government will not give you a little money back for each transaction using digital payment methods based on the provided clauses.",
+    "detail": "says something is not offered or allowed, but no cited clause says so"
+   },
+   {
+    "kind": "low_overlap",
+    "sentence": "The government will not give you a little money back for each transaction using digital payment methods based on the provided clauses.",
+    "detail": "little of this sentence appears in the cited text"
+   },
+   {
+    "kind": "unsupported_negative",
+    "sentence": "However, the UP MSME Policy offers financial support for the adoption of ICT platforms, which includes ERP systems, but it does not specifically mention a refund for each transaction.",
+    "detail": "says something is not offered or allowed, but no cited clause says so"
+   }
+  ]
+ },
+ {
+  "question": "Can I get this loan if my wife and kids are with me?",
+  "answer": "Yes, you can get this loan as long as your business meets the eligibility criteria under the MUDRA_GENERAL scheme (clause 8), which includes women as eligible applicants.",
+  "cited": [
+   "eligibility.enterprise_type"
+  ],
+  "clauses": [
+   {
+    "id": 8,
+    "scheme_code": "MUDRA_GENERAL",
+    "ref": "eligibility.enterprise_type",
+    "text": "Any individual including women, proprietary concern, partnership firm, private limited company or any other entity are eligible applicant under PMMY loans, whose loan requirement is up to 20 lakh."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 1,
+  "issues": []
+ },
+ {
+  "question": "If I’m a carpenter, can the government help me get better tools?",
+  "answer": "Yes, the government can help you get better tools through the PM Vishwakarma scheme, as it specifically aims to provide support for better and modern tools to enhance the capability, productivity, and quality of products. Clause 1246 from PM_VISHWAKARMA cites this.",
+  "cited": [
+   "home.scheme_objectives.5"
+  ],
+  "clauses": [
+   {
+    "id": 1246,
+    "scheme_code": "PM_VISHWAKARMA",
+    "ref": "home.scheme_objectives.5",
+    "text": "PM Vishwakarma is a new scheme and envisages to provide end-to-end holistic support to the traditional artisans and craftspeople in scaling up of their conventional products and services. The objectives of the scheme are as given below:\n1. To enable the recognition of artisans and craftspeople as Vishwakarma making them eligible to avail all the benefits under the Scheme.\n2. To provide skill upgradation to hone their skills and make relevant and suitable training opportunities available to them.\n3. To provide support for better and modern tools to enhance their capability, productivity, and quality of products."
+   }
+  ],
+  "passed": false,
+  "score": 0.5,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "Clause 1246 from PM_VISHWAKARMA cites this.",
+    "detail": "figure(s) not in the cited text: 1,246"
+   }
+  ]
+ },
+ {
+  "question": "If I’m a small business owner, can I get a loan without needing to put up a lot of extra money as security?",
+  "answer": "Yes, you can get a loan without needing to put up a lot of extra money as security. This is possible under the Credit Guarantee Trust Fund for Micro & Small Enterprises (CGTMSE) scheme, as mentioned in clause [1069].",
+  "cited": [
+   "home.page_2.6"
+  ],
+  "clauses": [
+   {
+    "id": 1069,
+    "scheme_code": "CGTMSE",
+    "ref": "home.page_2.6",
+    "text": "(iv) “Eligible borrower” means new or existing Micro and Small Enterprises to which credit facility has been provided by the lending  institution without any collateral security and/or third party guarantees. However, a “Hybrid / Partial Collateral Security” product allowing  guarantee cover on credit facilities having collateral security, for the  portion of credit facility not covered by collateral security (unsecured  portion), has also been introduced by CGTMSE."
+   }
+  ],
+  "passed": false,
+  "score": 0.5,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "low_overlap",
+    "sentence": "Yes, you can get a loan without needing to put up a lot of extra money as security.",
+    "detail": "little of this sentence appears in the cited text"
+   }
+  ]
+ },
+ {
+  "question": "If I’m starting a small business and need to buy some new tools, how much money can SIDBI lend me?",
+  "answer": "SIDBI can lend up to ₹25 lakh for buying new tools through its business loan facility for micro, small, and medium enterprises (MSMEs). This is under the EXPRESS, SPEED, and UDAY schemes, as mentioned in clause [1320].",
+  "cited": [
+   "business_loan.for_msmes.4"
+  ],
+  "clauses": [
+   {
+    "id": 1320,
+    "scheme_code": "SIDBI",
+    "ref": "business_loan.for_msmes.4",
+    "text": "Financial Assistance for:\nMachinery/equipment/fixtures\nRenovation of business premises\nBalance transfer of high cost loan\nAny bonafide business activities\nUp to ₹25 lakh\nEMI-based, up to 36 months\nStarting from 10.5% p.a.\nQuick straight-through processes, minimal inputs required\n3+ years with GST & Udyam Registration\n18 to 65 years\nOwned residence/business premises:\nWithin 50 km from SIDBI branch\nCall us at 88891 79597\n88891 79597"
+   }
+  ],
+  "passed": false,
+  "score": 0.5,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "category_not_in_clause",
+    "sentence": "SIDBI can lend up to ₹25 lakh for buying new tools through its business loan facility for micro, small, and medium enterprises (MSMEs).",
+    "detail": "category not in the cited text: medium, micro"
+   }
+  ]
+ },
+ {
+  "question": "If I’m starting a small business and need to buy some new tools, can I get a loan from this program?",
+  "answer": "Yes, you can get a loan from the SIDBI Machinery Loan facility under the EXPRESS or SPEED schemes for purchasing new tools and equipment.",
+  "cited": [
+   "machinery_loan.frequently_asked_questions_faqs.5",
+   "business_loan.for_msmes.4"
+  ],
+  "clauses": [
+   {
+    "id": 1314,
+    "scheme_code": "SIDBI",
+    "ref": "machinery_loan.frequently_asked_questions_faqs.5",
+    "text": "SIDBI's Machinery Loan facility is a form of MSME equipment finance that enables Micro, Small and Medium Enterprises (MSMEs) to acquire new machinery and equipment for setting up new unit, capacity expansion, modernisation and technology upgradation of existing units. Assistance is extended under the EXPRESS, SPEED and UDAY schemes.\nThe EXPRESS scheme is a digitally assessed term loan facility targeted to existing entities with 3-year vintage, for the purchase of new machinery and equipment, with expeditious sanction.\nThe SIDBI SPEED scheme is SIDBI's machinery finance scheme, targeted to existing entities with 3-year vintage for the purchase of equipment, with expeditious sanction."
+   },
+   {
+    "id": 1320,
+    "scheme_code": "SIDBI",
+    "ref": "business_loan.for_msmes.4",
+    "text": "Financial Assistance for:\nMachinery/equipment/fixtures\nRenovation of business premises\nBalance transfer of high cost loan\nAny bonafide business activities\nUp to ₹25 lakh\nEMI-based, up to 36 months\nStarting from 10.5% p.a.\nQuick straight-through processes, minimal inputs required\n3+ years with GST & Udyam Registration\n18 to 65 years\nOwned residence/business premises:\nWithin 50 km from SIDBI branch\nCall us at 88891 79597\n88891 79597"
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 1,
+  "issues": []
+ },
+ {
+  "question": "If I run a small shop and need money to pay for supplies, can SIDBI help me get a loan?",
+  "answer": "Yes, SIDBI can help you get a loan for your small shop supplies. You can apply for a working capital loan under the SIDBI STEP scheme, which is designed to enhance production and fund operating needs. Refer to clause [1309] for more details.",
+  "cited": [
+   "working_capital.frequently_asked_questions_faqs.10"
+  ],
+  "clauses": [
+   {
+    "id": 1309,
+    "scheme_code": "SIDBI",
+    "ref": "working_capital.frequently_asked_questions_faqs.10",
+    "text": "A SIDBI working capital loan can be applied online. Applications are submitted through the \"Apply Now\" option on the SIDBI website, which opens the Bank's online loan application portal. Enterprises that need assistance in filing the application may approach nearest SIDBI Branch Office or a Referral Partner registered with SIDBI. For queries, call the toll-free number 180-022-6753 or WhatsApp +91 86930 33333."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 2,
+  "issues": []
+ },
+ {
+  "question": "If I’ve been running my shop for at least two years, can I get a loan through this scheme?",
+  "answer": "Yes, you can get a loan through the ARISE-SIDBI SCHEME 40 as it applies to businesses with at least two years of operations.",
+  "cited": [
+   "total_20_20book_20_2.page_59.132"
+  ],
+  "clauses": [
+   {
+    "id": 7217,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_59.132",
+    "text": "SCHEME APPLICABLE FOR: • Minimum two years of operations along with audited accounts • Cash proﬁ t in last audited ﬁ nancial results • No defaults to Bank/FIs.• D. DETAILED INFORMATION: https://www.sidbi.in/en/project-funding E. HOW TO APPLY:  https://www.sidbi.in/en/project-funding ARISE- SIDBI SCHEME 40"
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 1,
+  "issues": []
+ },
+ {
+  "question": "If I’ve been running my shop for more than three years and have my GST and Udyam registration, can I get a loan from SIDBI?",
+  "answer": "Yes, you can get a loan from SIDBI under the EXPRESS scheme of the Machinery Loan facility, as you meet the eligibility criteria of being in operation for more than three years and having GST and Udyam Registration. Clause [1315] details this.",
+  "cited": [
+   "machinery_loan.frequently_asked_questions_faqs.6"
+  ],
+  "clauses": [
+   {
+    "id": 1315,
+    "scheme_code": "SIDBI",
+    "ref": "machinery_loan.frequently_asked_questions_faqs.6",
+    "text": "The UDAY scheme is SIDBI's machinery finance scheme targeted to new entities and existing entities having less than 3 years of vintage for purchase of new machinery and equipment, with expeditious sanction.\nEXPRESS: up to ₹ 3 crore.\nSPEED: up to ₹ 15 crore.\nUDAY: up to ₹ 50 lakh.\nEXPRESS: MSME units in operation for at least three years with mandatory GST registration.\nSPEED: MSME units in operation for at least three years with cash profit in last 3 FYs.\nUDAY: Greenfield/New MSME enterprise and existing MSME enterprise with less than 3 years of operations.\nEXPRESS / UDAY: Repayment up to 60 months.\nSPEED: Repayment up to 84 months."
+   }
+  ],
+  "passed": false,
+  "score": 0.5,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "scheme_not_cited",
+    "sentence": "Yes, you can get a loan from SIDBI under the EXPRESS scheme of the Machinery Loan facility, as you meet the eligibility criteria of being in operation for more than three years and having GST and Udya",
+    "detail": "names a scheme the cited clauses do not belong to: udyam"
+   }
+  ]
+ },
+ {
+  "question": "If I get money from this scheme, do I have to show how I’m using it every year?",
+  "answer": "Yes, if you get money from the SISFS scheme, you have to show how you’re using it every year. This is based on clause 1358 from the SISFS guidelines.",
+  "cited": [
+   "guidelines_20for_20s.page_13.38"
+  ],
+  "clauses": [
+   {
+    "id": 1358,
+    "scheme_code": "SISFS",
+    "ref": "guidelines_20for_20s.page_13.38",
+    "text": "Ministry of Commerce and Industry Department for Promotion of Industry and Internal Trade Page 13 of 14 Guidelines for Startup India Seed Fund Scheme 9.3 Each incubator shall report the funds sanctioned, received, and disbursed to  each startup for each financial year 9.4 Incubators would also submit detailed report on status of utilization of funds and  audited expenditure for each financial year 10. Indicators of Successful Implementation 10.1 The following shall be tracked and recorded by incubators for all beneficiary  startups: 1. Progress of proof of concept 2. Progress of prototype development 3. Progress of product development 4. Progress of field trials 5."
+   }
+  ],
+  "passed": false,
+  "score": 0.0,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "low_overlap",
+    "sentence": "Yes, if you get money from the SISFS scheme, you have to show how you’re using it every year.",
+    "detail": "little of this sentence appears in the cited text"
+   },
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "This is based on clause 1358 from the SISFS guidelines.",
+    "detail": "figure(s) not in the cited text: 1,358"
+   }
+  ]
+ },
+ {
+  "question": "If a small business hasn't gotten help from the government, how long does it need to be running before it can apply?",
+  "answer": "A small business needs to be operational for at least 2 years before it can apply for certain government schemes, as stated in the ARISE-SIDBI scheme (clause 7217).",
+  "cited": [
+   "total_20_20book_20_2.page_59.132"
+  ],
+  "clauses": [
+   {
+    "id": 7217,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_59.132",
+    "text": "SCHEME APPLICABLE FOR: • Minimum two years of operations along with audited accounts • Cash proﬁ t in last audited ﬁ nancial results • No defaults to Bank/FIs.• D. DETAILED INFORMATION: https://www.sidbi.in/en/project-funding E. HOW TO APPLY:  https://www.sidbi.in/en/project-funding ARISE- SIDBI SCHEME 40"
+   }
+  ],
+  "passed": false,
+  "score": 0.0,
+  "checked": 1,
+  "issues": [
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "A small business needs to be operational for at least 2 years before it can apply for certain government schemes, as stated in the ARISE-SIDBI scheme (clause 7217).",
+    "detail": "figure(s) not in the cited text: 24 months, 7,217"
+   },
+   {
+    "kind": "category_not_in_clause",
+    "sentence": "A small business needs to be operational for at least 2 years before it can apply for certain government schemes, as stated in the ARISE-SIDBI scheme (clause 7217).",
+    "detail": "category not in the cited text: small"
+   }
+  ]
+ },
+ {
+  "question": "How much money has the government given to startups through this program in the last few years?",
+  "answer": "The clauses provided do not specify the amount of money given to startups through this program in the last few years. The clauses focus on eligibility criteria, benefits, and registration processes but do not mention financial details.",
+  "cited": [],
+  "clauses": [],
+  "passed": true,
+  "score": 1.0,
+  "checked": 0,
+  "issues": []
+ },
+ {
+  "question": "If I apply for money from this scheme, what do I need to show them about my business plan?",
+  "answer": "To show your business plan when applying for money from the Startup India Seed Fund Scheme (SISFS), you need to demonstrate the team strength, technical and business expertise, and a fund utilization plan. Refer to clause [1347] for details.",
+  "cited": [
+   "guidelines_20for_20s.page_9.27"
+  ],
+  "clauses": [
+   {
+    "id": 1347,
+    "scheme_code": "SISFS",
+    "ref": "guidelines_20for_20s.page_9.27",
+    "text": "The applicant may be asked to submit details on team profile, problem  statement, product/service overview, business model, customer profile,  market size, quantum of funds needed, projected utilization plan for funds,  etc.  i. The incubators shall shortlist applicants as per eligibility criteria given in  para 3.1.  v. Eligible applications will be evaluated by ISMC using the following  criteria:"
+   }
+  ],
+  "passed": false,
+  "score": 0.5,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "scheme_not_cited",
+    "sentence": "To show your business plan when applying for money from the Startup India Seed Fund Scheme (SISFS), you need to demonstrate the team strength, technical and business expertise, and a fund utilization ",
+    "detail": "names a scheme the cited clauses do not belong to: startup"
+   }
+  ]
+ },
+ {
+  "question": "Who decides which incubators get money from this government program?",
+  "answer": "Experts Advisory Committee (EAC) decides which incubators get money from this government program. Clause 6.5 from SISFS states that EAC may lay down improved guidelines for selection of incubators under the scheme from time to time.",
+  "cited": [
+   "guidelines_20for_20s.page_8.23"
+  ],
+  "clauses": [
+   {
+    "id": 1343,
+    "scheme_code": "SISFS",
+    "ref": "guidelines_20for_20s.page_8.23",
+    "text": "Ministry of Commerce and Industry Department for Promotion of Industry and Internal Trade Page 8 of 14 Guidelines for Startup India Seed Fund Scheme 1. Evaluate the applications received during the period 2. Select incubators for funds under the Scheme 3. Decide the total amount of fund and number of installments in which it is  to be allocated to each incubator 4. Specify milestones to be achieved by each incubator for release of  installments 6.4 EAC shall also monitor progress of incubators against sanctioned funds under  the Scheme and take further actions as may be required 6.5 EAC may lay down improved guidelines for selection of incubators under the  scheme from time to time 7."
+   }
+  ],
+  "passed": false,
+  "score": 0.5,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "low_overlap",
+    "sentence": "Experts Advisory Committee (EAC) decides which incubators get money from this government program.",
+    "detail": "little of this sentence appears in the cited text"
+   }
+  ]
+ },
+ {
+  "question": "How much money can a small business get in a loan through this program?",
+  "answer": "The maximum loan amount a small business can get through this program is up to ₹1 crore, as stated in the STHAPAN- SIDBI SCHEME (TELANGANA_MSME_HANDBOOK_2024 / total_20_20book_20_2.page_58.130, clause [7215]).",
+  "cited": [
+   "total_20_20book_20_2.page_58.130"
+  ],
+  "clauses": [
+   {
+    "id": 7215,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_58.130",
+    "text": "20 crore, promoter’s experience of 5 years in similar line of business. • For loan upto Rs. 20 crore, promoter’s experience of 3 years in similar line of business. • No defaults to Bank/FIs.• D. DETAILED INFORMATION: https://www.sidbi.in/en/project-funding E. How to apply:  https://www.sidbi.in/en/project-funding STHAPAN- SIDBI SCHEME 39"
+   }
+  ],
+  "passed": false,
+  "score": 0.0,
+  "checked": 1,
+  "issues": [
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "The maximum loan amount a small business can get through this program is up to ₹1 crore, as stated in the STHAPAN- SIDBI SCHEME (TELANGANA_MSME_HANDBOOK_2024 / total_20_20book_20_2.page_58.130, clause",
+    "detail": "figure(s) not in the cited text: 10,000,000, 20, 20, 20"
+   },
+   {
+    "kind": "category_not_in_clause",
+    "sentence": "The maximum loan amount a small business can get through this program is up to ₹1 crore, as stated in the STHAPAN- SIDBI SCHEME (TELANGANA_MSME_HANDBOOK_2024 / total_20_20book_20_2.page_58.130, clause",
+    "detail": "category not in the cited text: small"
+   }
+  ]
+ },
+ {
+  "question": "How much money do I need to put down to get a loan?",
+  "answer": "You need to put down 15% of the loan amount, as stated in the Stand-Up India scheme. Clause [1364] specifies that the loan requires a 15% margin money.",
+  "cited": [
+   "home.salient_features.3"
+  ],
+  "clauses": [
+   {
+    "id": 1364,
+    "scheme_code": "STANDUP_INDIA",
+    "ref": "home.salient_features.3",
+    "text": "Loans to SC/ST and women entrepreneurs above 18 years.\nLoans for setting up greenfield enterprise.\nLoans between ₹10 lakh to ₹1 crore.\nComposite loan (inclusive of Term Loan and Working Capital).\n15% Margin money.\nSecurity cover under Credit Guarantee Fund Scheme for Stand-Up India Loans (CGFSIL)."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 2,
+  "issues": []
+ },
+ {
+  "question": "What capital subsidy does Karnataka give to small enterprises in Zone 2 under the industrial policy?",
+  "answer": "Karnataka gives a capital subsidy of 25% of VFA up to Rs.200 lakhs for small enterprises in Zone 2 under the industrial policy. Clause 4488 is used.",
+  "cited": [
+   "karnataka_pdf.page_95.1"
+  ],
+  "clauses": [
+   {
+    "id": 4488,
+    "scheme_code": "KARNATAKA_INDUSTRIAL_POLICY_2025_30",
+    "ref": "karnataka_pdf.page_95.1",
+    "text": "FINANCIAL INCENTIVES FOR MSME ENTERPRISES 11.1 Capital Subsidy for Micro and Small Enterprises Micro Enterprises Entrepreneur  category Zone-1 Zone-2 Zone-3  (Only Bengaluru Rural District) % of  subsidy Max  limit % of  subsidy Max  limit % of  subsidy Max  limit General 30% of VFA Rs.30  lakhs 25% of VFA Rs.25  lakhs 10% of VFA Rs.10  lakhs Special  (SC/ST, Women, Minorities,Physically Challenged and Ex- Servicemen) 35% of VFA Rs.35  lakhs 30% of VFA Rs.30  lakhs 15% of VFA Rs.15  lakhs Small Enterprises Entrepreneur  category Zone-1 Zone-2 Zone-3  (Only Bengaluru Rural District) % of  subsidy Max  limit % of  subsidy Max  limit % of  subsidy Max  limit General 25% of VFA Rs.200  lakhs 20% of VFA Rs.150  lakhs 10% of VFA Rs.50  lakhs Special  (SC/ST, Women, Minorities, Physically Challenged and Ex- Servicemen) 30% of VFA Rs.225  lakhs 25% of VFA Rs.175  lakhs 15% of VFA Rs.75  lakhs VFA- Value of Fixed Assets The subsidy for Micro and Small Enterprises wil l be d isbursed in 2 installments."
+   }
+  ],
+  "passed": false,
+  "score": 0.5,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "Clause 4488 is used.",
+    "detail": "figure(s) not in the cited text: 4,488"
+   }
+  ]
+ },
+ {
+  "question": "Do women entrepreneurs get a higher subsidy under the Karnataka industrial policy 2025-30?",
+  "answer": "Women entrepreneurs get a higher subsidy under the Karnataka industrial policy 2025-30. This is based on the Financial Incentives for MSME Enterprises clause (4488).",
+  "cited": [
+   "karnataka_pdf.page_95.1"
+  ],
+  "clauses": [
+   {
+    "id": 4488,
+    "scheme_code": "KARNATAKA_INDUSTRIAL_POLICY_2025_30",
+    "ref": "karnataka_pdf.page_95.1",
+    "text": "FINANCIAL INCENTIVES FOR MSME ENTERPRISES 11.1 Capital Subsidy for Micro and Small Enterprises Micro Enterprises Entrepreneur  category Zone-1 Zone-2 Zone-3  (Only Bengaluru Rural District) % of  subsidy Max  limit % of  subsidy Max  limit % of  subsidy Max  limit General 30% of VFA Rs.30  lakhs 25% of VFA Rs.25  lakhs 10% of VFA Rs.10  lakhs Special  (SC/ST, Women, Minorities,Physically Challenged and Ex- Servicemen) 35% of VFA Rs.35  lakhs 30% of VFA Rs.30  lakhs 15% of VFA Rs.15  lakhs Small Enterprises Entrepreneur  category Zone-1 Zone-2 Zone-3  (Only Bengaluru Rural District) % of  subsidy Max  limit % of  subsidy Max  limit % of  subsidy Max  limit General 25% of VFA Rs.200  lakhs 20% of VFA Rs.150  lakhs 10% of VFA Rs.50  lakhs Special  (SC/ST, Women, Minorities, Physically Challenged and Ex- Servicemen) 30% of VFA Rs.225  lakhs 25% of VFA Rs.175  lakhs 15% of VFA Rs.75  lakhs VFA- Value of Fixed Assets The subsidy for Micro and Small Enterprises wil l be d isbursed in 2 installments."
+   }
+  ],
+  "passed": false,
+  "score": 0.0,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "Women entrepreneurs get a higher subsidy under the Karnataka industrial policy 2025-30.",
+    "detail": "figure(s) not in the cited text: 30"
+   },
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "This is based on the Financial Incentives for MSME Enterprises clause (4488).",
+    "detail": "figure(s) not in the cited text: 4,488"
+   }
+  ]
+ },
+ {
+  "question": "What stamp duty exemption do MSMEs get in Karnataka?",
+  "answer": "MSMEs in Karnataka can avail 100% reimbursement of stamp duty instead of exemption until an amendment is made to the Karnataka Stamp Act under the Karnataka Industrial Policy 2025-30 (Clause 4506).",
+  "cited": [
+   "karnataka_pdf.page_100.19"
+  ],
+  "clauses": [
+   {
+    "id": 4506,
+    "scheme_code": "KARNATAKA_INDUSTRIAL_POLICY_2025_30",
+    "ref": "karnataka_pdf.page_100.19",
+    "text": "100 iv. 100% reimbursement of stamp duty shall be provided in Lieu of 100% exemption of Stamp Duty till such time  an amendment is made in the Karnataka Stamp Act. However, Enterprises can avail stamp duty exemption  and concessional registration charges as per Karnataka Industrial Policy 2020-25 till such time an amendment  is made to the Karnataka Stamp Act under IP 2025-30."
+   }
+  ],
+  "passed": false,
+  "score": 0.0,
+  "checked": 1,
+  "issues": [
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "MSMEs in Karnataka can avail 100% reimbursement of stamp duty instead of exemption until an amendment is made to the Karnataka Stamp Act under the Karnataka Industrial Policy 2025-30 (Clause 4506).",
+    "detail": "figure(s) not in the cited text: 4,506"
+   }
+  ]
+ },
+ {
+  "question": "What is the subsidy under the credit linked capital subsidy scheme for SC/ST enterprises?",
+  "answer": "The subsidy under the Special Credit Linked Capital Subsidy Scheme (SCLCSS) for SC/ST enterprises is 25% of the cost of Plant & Machinery/Equipment, with a ceiling of Rs.25 Lakhs. This information is found in clauses 7337 and 7333.",
+  "cited": [
+   "total_20_20book_20_2.page_131.248",
+   "total_20_20book_20_2.page_132.252"
+  ],
+  "clauses": [
+   {
+    "id": 7333,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_131.248",
+    "text": "A. OBJECTIVE: Ministry of Micro, Small and Medium Enterprises (MSME), Govt. of India has been  operating a scheme for technology upgradation of Micro & Small Enterprises called the Credit Linked Capital Subsidy Scheme (CLCSS) to facilitate purchasing of plant & machinery by  providing upfront capital subsidy to the existing as well as new MSEs. A special provision of 25% subsidy to SC/ST MSEs under National SC/ST Hub (NSSH) on institutional ﬁ nance up  to Rs.1 Cr. for procurement of Plant & Machinery (i.e. a subsidy cap of Rs.25 Lakhs) without  any sector speciﬁ c restrictions on technology upgradation. B. KEY BENEFITS: The scheme would cover SC/ST MSEs of manufacturing and service sectors."
+   },
+   {
+    "id": 7337,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_132.252",
+    "text": "SPECIAL CREDIT LINKED CAPITAL SUBSIDY SCHEME (SCLCSS) FOR SC/ST ENTREPRENEURS A. OBJECTIVE: Special Credit Linked Capital Subsidy Scheme (SCLCSS) was introduced under National SC-ST Hub (NSSH) scheme in 2017 with an objective to promote new enterprises and support  the existing enterprises in their expansion for enhanced participation of SC/ST entrepreneurs  in the public procurement. B. KEY BENEFITS: To ease the access to latest technology, under SCLCSS, there is a provision of 25%  subsidy to the SC-ST MSEs for procurement of Plant & Machinery/ Equipment through  institutional credit (bank loan) with the overall ceiling of Rs."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 1,
+  "issues": []
+ },
+ {
+  "question": "What does the Telangana MSME handbook say about WE-Hub programmes for women?",
+  "answer": "The Telangana MSME handbook mentions WE-Hub’s WE-Engage program, specifically the FLINT sub-scheme, which is a 6-week cohort-based program aimed at enabling women entrepreneurs. Clause 7313 describes the objective and key benefits of the WE-Hub’s WE-Engage FLINT program.",
+  "cited": [
+   "total_20_20book_20_2.page_120.228",
+   "total_20_20book_20_2.page_124.238"
+  ],
+  "clauses": [
+   {
+    "id": 7313,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_120.228",
+    "text": "A. OBJECTIVE: This is a 6-month Incubation Program designed by WE-Hub for existing entrepreneurs  carefully crafted to develop and establish role model MSMEs in ﬁ ve targeted sectors namely, Manufacturing, Food Processing, Fast Moving Consumer Goods (FMCG), Textiles & Handlooms, and Handicrafts. B. KEY BENEFITS: Project Inclusion programme of WE-Hub will beneﬁ t the women through the following  activities: 1. Creation of a best practice model to scale up micro and nano women led enterprises. 2. Creation of local employment, 3. Increase in quality of life through an increase in household incomes. C. SCHEME APPLICABLE FOR:"
+   },
+   {
+    "id": 7323,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_124.238",
+    "text": "These elements are aimed at  helping entrepreneurs enhance their product-market ﬁ t, develop scalable business models,  and secure access to funding. B. KEY BENEFITS: • Product Market Fit • Access to Funding • Goal setting • Gap Identiﬁ cation • Strategic support • Grow Locally & Globally C. SCHEME APPLICABLE FOR: • Business Women. D. DETAILED INFORMATION: https://wehub.telangana.gov.in/we-engage/ E. HOW TO APPLY: https://wehub.telangana.gov.in/we-engage/ 77"
+   }
+  ],
+  "passed": false,
+  "score": 0.5,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "Clause 7313 describes the objective and key benefits of the WE-Hub’s WE-Engage FLINT program.",
+    "detail": "figure(s) not in the cited text: 7,313"
+   }
+  ]
+ },
+ {
+  "question": "Which cluster development support exists for MSMEs?",
+  "answer": "Cluster Development Support exists for MSMEs under the MICRO & SMALL ENTERPRISES CLUSTER DEVELOPMENT (MSE-CDP) scheme, as cited in clause [7101].",
+  "cited": [
+   "total_20_20book_20_2.page_14.16"
+  ],
+  "clauses": [
+   {
+    "id": 7101,
+    "scheme_code": "TELANGANA_MSME_HANDBOOK_2024",
+    "ref": "total_20_20book_20_2.page_14.16",
+    "text": "Online applications can be ﬁ lled at https://cluster.dcmsme.gov.in , Website:http://dcmsme.gov.in/CLCS_TUS_Scheme/Cluster-Development-Programme/ Scheme_Guideline.aspx MICRO & SMALL ENTERPRISES CLUSTER DEVELOPMENT (MSE-CDP) 4"
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 1,
+  "issues": []
+ },
+ {
+  "question": "What is the maximum project cost under PMEGP for manufacturing and for service units?",
+  "answer": "The maximum project cost under PMEGP for manufacturing units is Rs. 50 lakh, and for service units, it is Rs. 20 lakh. These limits are stated in clauses [1973] and [1960].",
+  "cited": [
+   "revised_scheme_guide.revised_scheme_guidelines_of_prime_m.12",
+   "revised_scheme_guide.revised_scheme_guidelines_of_prime_m.25"
+  ],
+  "clauses": [
+   {
+    "id": 1960,
+    "scheme_code": "PMEGP",
+    "ref": "revised_scheme_guide.revised_scheme_guidelines_of_prime_m.12",
+    "text": "Business/Trading activities in the form of sales outlets may be permitted in NER, left wing Extremism (LWE) affected districts and A & N Islands.\nRetails outlets/Business – Selling Khadi Products, village industry products produced from Khadi & Village Industries Institutions certified by KVIC and products manufactured by PMEGP/SFURTI clusters only may be permitted under PMEGP across the country.\nRetail outlets backed by manufacturing (including processing) / Service facilities may br permitted across the country.\nThe maximum cost of project for Business/Trading activities as above (a) & (b) may be Rs. 20 lakh (at par with maximum cost of project for service sector)."
+   },
+   {
+    "id": 1973,
+    "scheme_code": "PMEGP",
+    "ref": "revised_scheme_guide.revised_scheme_guidelines_of_prime_m.25",
+    "text": "8.3 Maximum cost under PMEGP is Rs. 50 lakh, which includes Term loan for Capital Expenditure and working Capital. For manufacturing units, Working capital component should not be more than 40% of the project cost and for units under Service-Trading Sector the working capital shall not be more than 60% of the project cost However, for the projects where the capital expenditure reaches the maximum ceiling of the project cost for manufacturing/service sector units the Banks can consider sanctioning of additional funds over and above Rs. 50 lakhs and Rs. 20 lakhs respectively. In such cases, the additional funds over and above Rs. 50 lakhs and Rs. 20 lakhs will not be covered for subsidy."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 2,
+  "issues": []
+ },
+ {
+  "question": "What subsidy rate does PMEGP give to rural beneficiaries from special categories?",
+  "answer": "PMEGP gives a 35% subsidy rate to rural beneficiaries from special categories, as stated in clause [1954].",
+  "cited": [
+   "revised_scheme_guide.revised_scheme_guidelines_of_prime_m.6"
+  ],
+  "clauses": [
+   {
+    "id": 1954,
+    "scheme_code": "PMEGP",
+    "ref": "revised_scheme_guide.revised_scheme_guidelines_of_prime_m.6",
+    "text": "To increase the wage earning capacity of Workers and artisans and contribute to increase in the growth rate of rural and urban employment.\n3. Quantum and Nature of Financial Assistance\n3.1 Level of support under PMEGP:\ni) For setting up of new micro enterprise (units)\nCategory of the beneficiary under PMEGP\nBeneficiary’s contribution (of project cost)\nArea (location of project/unit)\n10%\n15%\n25%\nSpecial (including SC / ST / OBC /Minorities/Women, Ex-servicemen, Physically handicapped, NER, Hill and Border areas etc.\n05%\n25%\n35%\nRate of Subsidy (of project cost)\nThe maximum cost of the project/unit admissible for Margin Money subsidy under manufacturing sector is Rs. 50.00 lakh)"
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 1,
+  "issues": []
+ },
+ {
+  "question": "What are the MSME classification limits for micro small and medium enterprises?",
+  "answer": "The revised classification criteria for micro, small and medium enterprises are defined in UDYAM, as per clauses 2260 and 2259. A micro enterprise has an investment in plant and machinery or equipment not exceeding 2.5 crore and turnover not exceeding 10 crore. A small enterprise has an investment not exceeding 25 crore and turnover not exceeding 100 crore. A medium enterprise has an investment not exceeding 125 crore and turnover not exceeding 500 crore.",
+  "cited": [
+   "1bfda06b460e72543530.page_8.1",
+   "1bfda06b460e72543530.page_8.2"
+  ],
+  "clauses": [
+   {
+    "id": 2259,
+    "scheme_code": "UDYAM",
+    "ref": "1bfda06b460e72543530.page_8.1",
+    "text": "The Act mandates the Khadi and Village Industries Commission,  as a statutory body under the Government of India, to plan, promote, facilitate, organize  and assist in the development of khadi and village industries including measures relating  to training, raw materials, marketing, research, quality, etc. and other matters connected  therewith or incidental thereto, in accordance with the provisions of the Act. 1.2.4 Definition of Micro, Small and Medium enterprises: To help MSME scale operations and access better resources, the investment and turnover  limits for classification have been increased by 2.5 times and 2 times, respectively."
+   },
+   {
+    "id": 2260,
+    "scheme_code": "UDYAM",
+    "ref": "1bfda06b460e72543530.page_8.2",
+    "text": "The revised classification criteria are as follows:-   a micro enterprise, where the investment in plant and machinery or equipment does  not exceed 2.5 crore and turnover does not exceed 10 crore;   a small enterprise, where the investment in plant and machinery or equipment does  not exceed 25 crore and turnover does not exceed 100 crore; and   a medium enterprise, where the investment in plant and machinery or equipment  does not exceed 125 crore and turnover does not exceed 500 crore."
+   }
+  ],
+  "passed": false,
+  "score": 0.75,
+  "checked": 4,
+  "issues": [
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "The revised classification criteria for micro, small and medium enterprises are defined in UDYAM, as per clauses 2260 and 2259.",
+    "detail": "figure(s) not in the cited text: 2,260, 2,259"
+   }
+  ]
+ },
+ {
+  "question": "Under UP MSME policy what interest subsidy do new micro enterprises get?",
+  "answer": "New micro enterprises in Uttar Pradesh are eligible for an interest subsidy of 50 percent of the interest payable on the loan, subject to a maximum of Rs 25 lakh per unit over 5 years. This is available under the UP MSME policy, as stated in clause 2297.",
+  "cited": [
+   "english_msme_policy_.page_9.37"
+  ],
+  "clauses": [
+   {
+    "id": 2297,
+    "scheme_code": "UP_MSME_POLICY",
+    "ref": "english_msme_policy_.page_9.37",
+    "text": "The Capital interest subsidy for the new Micro Enterprises in the State, 50 percent  of the interest payable on the loan, subject to a maximum of Rs 25 lakh per unit, in 5  years. 5.3.5.1. The above subsidy would be given on annual basis. The unit would be  eligible to claim the subsidy after the full payment of the interest. 5.3.5.2. The Scheduled Caste, Scheduled Tribe and women entrepreneurs would  be given an additional 10 percent that is 60 percent interest subsidy on the annual interest  payment 5.3.5.3."
+   }
+  ],
+  "passed": false,
+  "score": 0.5,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "This is available under the UP MSME policy, as stated in clause 2297.",
+    "detail": "figure(s) not in the cited text: 2,297"
+   }
+  ]
+ },
+ {
+  "question": "What extra do SC ST and women entrepreneurs get under the UP MSME policy?",
+  "answer": "SC, ST and women entrepreneurs get an additional 10 percent interest subsidy on the annual interest payment, making it 60 percent in total. This is under the UP MSME policy, as stated in clause 2297.",
+  "cited": [
+   "english_msme_policy_.page_9.37"
+  ],
+  "clauses": [
+   {
+    "id": 2297,
+    "scheme_code": "UP_MSME_POLICY",
+    "ref": "english_msme_policy_.page_9.37",
+    "text": "The Capital interest subsidy for the new Micro Enterprises in the State, 50 percent  of the interest payable on the loan, subject to a maximum of Rs 25 lakh per unit, in 5  years. 5.3.5.1. The above subsidy would be given on annual basis. The unit would be  eligible to claim the subsidy after the full payment of the interest. 5.3.5.2. The Scheduled Caste, Scheduled Tribe and women entrepreneurs would  be given an additional 10 percent that is 60 percent interest subsidy on the annual interest  payment 5.3.5.3."
+   }
+  ],
+  "passed": false,
+  "score": 0.5,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "This is under the UP MSME policy, as stated in clause 2297.",
+    "detail": "figure(s) not in the cited text: 2,297"
+   }
+  ]
+ },
+ {
+  "question": "What seed funding does the Andhra Pradesh startup policy offer?",
+  "answer": "The Andhra Pradesh startup policy offers need-based seed funding for deep tech and advanced tech startups up to INR 1 Cr. Clause 2393 from ANDHRA_PRADESH_STARTUP_POLICY_2024_29 / ap_innovation_policy.page_21.62 is relevant.",
+  "cited": [
+   "ap_innovation_policy.page_21.62"
+  ],
+  "clauses": [
+   {
+    "id": 2393,
+    "scheme_code": "ANDHRA_PRADESH_STARTUP_POLICY_2024_29",
+    "ref": "ap_innovation_policy.page_21.62",
+    "text": "Page | 18 # Category Incentive 10 Need Based Seed  funding for Deeptech & Advanced tech Startups Up to INR 1 Cr 11 Rental Subsidy for Workstations 100%  rental Subsidy  for  workstations  in  notified  co-working/  neighborhood work/ MSME Parks for 30 employees for one year For Incubators 12 For select new or  existing Incubators/ CoEs/ Accelerators in Government universities  or educational institutes  in the state Up to 100% matching grant under any Government of India schemes,  limited to INR 50 Lakhs 7. NON-FINANCIAL ASSISTANCE 7.1. AP Innovation Passport (APIP)  a."
+   }
+  ],
+  "passed": false,
+  "score": 0.0,
+  "checked": 1,
+  "issues": [
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "The Andhra Pradesh startup policy offers need-based seed funding for deep tech and advanced tech startups up to INR 1 Cr Clause 2393 from ANDHRA_PRADESH_STARTUP_POLICY_2024_29 / ap_innovation_policy.p",
+    "detail": "figure(s) not in the cited text: 2,393, 29, 22"
+   },
+   {
+    "kind": "scheme_not_cited",
+    "sentence": "The Andhra Pradesh startup policy offers need-based seed funding for deep tech and advanced tech startups up to INR 1 Cr Clause 2393 from ANDHRA_PRADESH_STARTUP_POLICY_2024_29 / ap_innovation_policy.p",
+    "detail": "names a scheme the cited clauses do not belong to: seed fund"
+   }
+  ]
+ },
+ {
+  "question": "What interest subsidy does Andhra Pradesh give startups on term loans?",
+  "answer": "Andhra Pradesh gives startups an interest subsidy of 8% on term loans for a period of 3 years. This information is found in clause 3 of ANDHRA_PRADESH_STARTUP_POLICY_2024_29.",
+  "cited": [
+   "ap_innovation_policy.page_20.60"
+  ],
+  "clauses": [
+   {
+    "id": 2391,
+    "scheme_code": "ANDHRA_PRADESH_STARTUP_POLICY_2024_29",
+    "ref": "ap_innovation_policy.page_20.60",
+    "text": "The Spoke Centers will facilitate participation of startups in the  same. The prize money/incentive may be announced at the time  of announcement of the challenge/hackathon. 3 Interest subsidy 8% on term loan for a period of 3 years. 4 Seed funding with Equity Up to 50 Lakhs, based on equity sharing model. 5 Go to market support Up to 50 Lakhs, based on equity sharing model. 6 Support for attending  events/ Fairs etc. 75% of cost, up to 3 Lakhs, incurred towards registration, travel, lodging  and boarding expenses. Maximum of 1 event per year per startup. 7 Accelerator program  support 50% of cost fee re-imbursement, for acceleration programs, up to 2 Lakhs per program."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 1,
+  "issues": []
+ },
+ {
+  "question": "What is NIDHI PRAYAS and how long is a project?",
+  "answer": "NIDHI PRAYAS is a program managed by the Technology Translation & Innovation Division of DST, Govt. of India, with a Management Committee (PMC) to advise and recommend for funding. The project duration can extend beyond 12 months with approval from the PMC/DST or subcommittee as required.",
+  "cited": [
+   "20260520803129779_pd.page_16.55",
+   "20260520803129779_pd.page_22.77"
+  ],
+  "clauses": [
+   {
+    "id": 1802,
+    "scheme_code": "NIDHI",
+    "ref": "20260520803129779_pd.page_16.55",
+    "text": "For extension  beyond 12 months, approval to be sought from PMC/DST/or  subcommittee as the case may be. 7.0 Proposed Implementation Framework: Nodal Program Management Unit Department of Science and Technology has currently designated the Society for Innovation and Entrepreneurship (SINE), IIT Bombay, as the Program Management Unit (PMU) for the NIDHI-PRAYAS Program at the national level. The PMU will be responsible for overseeing and managing the entire NIDHI PRAYAS process, ensuring smooth implementation and monitoring of the  program."
+   },
+   {
+    "id": 1824,
+    "scheme_code": "NIDHI",
+    "ref": "20260520803129779_pd.page_22.77",
+    "text": "A PRAYAS Management Committee (PMC) would be constituted by Technology Translation & Innovation Division of DST, Govt. of India to  advice and give recommendations for the DST to execute the NIDHI PRAYAS Program. The PMC will be selecting the PCs/APCs and will  monitor their progress. Based on the recommendations of the PMC, DST  may facilitate the disbursement of Funds through the PMU. iii. A PRAYAS Local Monitoring Committee (PLMC) - A PRAYAS Local Monitoring Committee (PLMC) would be set up in each PC Centre for  evaluation and scrutiny of the projects, recommending the projects for  appropriate funding, monitoring the progress and taking appropriate"
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 2,
+  "issues": []
+ },
+ {
+  "question": "What is the PRAYAS grant and sustenance allowance?",
+  "answer": "The PRAYAS grant is a prototyping grant for up to ₹40 lakh for Advance PRAYAS Centre (APC) and up to ₹20 lakh for PRAYAS Centre (PC). The sustenance allowance is equal to 20 percent of the approved PRAYAS grant amount for the project duration, provided the innovator or startup team commits to work full-time on the project without any other formal employment. This information is derived from clauses [1794] and [1782].",
+  "cited": [
+   "20260520803129779_pd.page_10.35",
+   "20260520803129779_pd.page_13.47"
+  ],
+  "clauses": [
+   {
+    "id": 1782,
+    "scheme_code": "NIDHI",
+    "ref": "20260520803129779_pd.page_10.35",
+    "text": "sustenance allowance equal to 20 percent of their approved PRAYAS grant amount  for the project duration. While providing a sustenance allowance is not mandatory,  the PLMC at PC/ APC level, may recommend an allowance (up to 20 percent of the  total PRAYAS grant amount) based on the strength of the idea and the overall  project timeline, provided the PRAYASEE pursues the PRAYAS Programme full- time with no other formal employment. The following are the detailed guidelines for PRAYASEEs: 5.4.1 Eligibility Criteria of Innovators/ Startups for Applying to PRAYAS and Advance PRAYAS Centres (APC) 1."
+   },
+   {
+    "id": 1794,
+    "scheme_code": "NIDHI",
+    "ref": "20260520803129779_pd.page_13.47",
+    "text": "In cases where a proposal is not approved at an Advance PRAYAS Centre (APC), subsequent applications to PRAYAS Centres (PCs) may be  considered, subject to independent assessment by the respective PLMC and the  suitability of the proposal for PC-level support. Sustenance Allowance:  i. Innovators or founding teams who have no other source of income during the  project term may be eligible for a sustenance allowance up to 20 percent of their  approved PRAYAS grant, provided: a. The PLMC (PRAYAS Local Monitoring Committee) at PC/ APC deems it  necessary based on the strength of the idea and overall project timeline.  b."
+   }
+  ],
+  "passed": false,
+  "score": 0.5,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "The PRAYAS grant is a prototyping grant for up to ₹40 lakh for Advance PRAYAS Centre (APC) and up to ₹20 lakh for PRAYAS Centre (PC).",
+    "detail": "figure(s) not in the cited text: 4,000,000, 2,000,000"
+   }
+  ]
+ },
+ {
+  "question": "What interest subsidy does the Gujarat industrial policy 2022 give MSMEs?",
+  "answer": "The Gujarat industrial policy 2022 gives an additional 1% interest subsidy to differently abled, women, and registered startup entrepreneurs in the manufacturing sector. This information is found in clause 1697.",
+  "cited": [
+   "gujarat_20industrial.page_6.12"
+  ],
+  "clauses": [
+   {
+    "id": 1697,
+    "scheme_code": "GUJARAT_IND_POLICY_2022",
+    "ref": "gujarat_20industrial.page_6.12",
+    "text": "2.2 Assistance of Capital Investment Subsidy to Micro enterprises Micro enterprises shall be eligible for capital investment subsidy based on  the category of taluka: 2.3 Assistance for Interest Subsidy to Micro, Small and Medium Enterprises in manufacturing sector: a. 1% additional interest subsidy to differently abled entrepreneur, Women entrepreneur and registered startup in manufacturing sector. b. 1% additional interest subsidy to young entrepreneur below age of 35 years on the date of sanction of term loan. c. In any case, eligible enterprise shall have to bear minimum 2% interest levied on term loan by Bank/Financial institution d."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 1,
+  "issues": []
+ },
+ {
+  "question": "Does Gujarat reimburse EPF for MSMEs?",
+  "answer": "Gujarat does not reimburse EPF for MSMEs according to the given clauses.",
+  "cited": [
+   "gujarat_20industrial.page_3.2",
+   "gujarat_20industrial.page_5.9",
+   "gujarat_20industrial.page_5.10",
+   "gujarat_20industrial.page_5.11",
+   "gujarat_20industrial.page_7.16",
+   "gujarat_20industrial.page_7.17",
+   "gujarat_20industrial.page_9.23",
+   "gujarat_20industrial.page_11.30"
+  ],
+  "clauses": [
+   {
+    "id": 1687,
+    "scheme_code": "GUJARAT_IND_POLICY_2022",
+    "ref": "gujarat_20industrial.page_3.2",
+    "text": "Contents 1. Background 04 2. Aatmanirbhar Gujarat Scheme for assistance to MSMEs 05 3. Aatmanirbhar Gujarat Scheme for assistance to 08 Large Industries and Thrust Sector 4. Aatmanirbhar Gujarat Scheme for assistance to 10 Mega Industries"
+   },
+   {
+    "id": 1694,
+    "scheme_code": "GUJARAT_IND_POLICY_2022",
+    "ref": "gujarat_20industrial.page_5.9",
+    "text": "It will also create enhanced opportunities for development of new  manufacturing sectors and their ancillary ecosystem in Gujarat that shall set  global examples in manufacturing. 2. Aatmanirbhar Gujarat Scheme for assistance to MSMEs Micro, small, and medium-sized enterprises (MSMEs) have been key  contributors to Gujarat’s inclusive growth and generation of sustainable  employment opportunities, particularly in semi-urban and rural India. Over the  time, MSMEs have moved up the value chain from manufacturing of simple  goods to sophisticated products."
+   },
+   {
+    "id": 1695,
+    "scheme_code": "GUJARAT_IND_POLICY_2022",
+    "ref": "gujarat_20industrial.page_5.10",
+    "text": "MSMEs also play a central role in nation  building by generating large employment opportunities for youth as well as  through industrialization of rural & backward areas, and thus, reducing regional  imbalances, assuring more equitable distribution of national income and wealth. However, MSMEs function in a highly competitive environment and require an  enabling ecosystem to sustain growth. In order to enable Gujarat’s MSMEs to be  globally competitive, boost value addition and also encourage youth to pursue  their entrepreneurial ambitions, MSMEs shall be eligible for following benefits  under the Aatmanirbhar Gujarat Scheme for assistance to MSMEs: 2.1 Micro, Small and Medium Enterprises:"
+   },
+   {
+    "id": 1696,
+    "scheme_code": "GUJARAT_IND_POLICY_2022",
+    "ref": "gujarat_20industrial.page_5.11",
+    "text": "For the purpose of eligibility under this scheme, a Micro, Small or Medium  enterprise means an enterprise which has fixed capital investment made in Plant and Machinery as per following: a. Micro: Less than or equal to INR 1 crore b. Small: More than INR 1 crore and less than or equal to INR 10 crore c. Medium: More than INR 10 crore and less than or equal to INR 50 crore The enterprise must have obtained acknowledgement/ registration, as the case  may be from appropriate authority."
+   },
+   {
+    "id": 1701,
+    "scheme_code": "GUJARAT_IND_POLICY_2022",
+    "ref": "gujarat_20industrial.page_7.16",
+    "text": "(a) 100% of employer's statutory contribution under EPF amount paid, and (b) The ceiling of incentive amount per employee will be 12% of the employee's basic salary plus applicable Dearness Allowance (DA) and retaining allowance or INR 1800 per month, whichever is lower. 2.6 Other Schemes for comprehensive support to MSMEs:"
+   },
+   {
+    "id": 1702,
+    "scheme_code": "GUJARAT_IND_POLICY_2022",
+    "ref": "gujarat_20industrial.page_7.17",
+    "text": "The MSMEs will continue to avail support under following schemes: • Interest Subsidy to Service Sector MSMEs • Assistance for Quality Certification • Financial Support to MSMEs in ZED Certification • Assistance in implementation of Information and Communication Technology • Assistance for Technology Acquisition • Assistance for Patent Registration • Assistance for saving in consumption of Energy and Water • Assistance for raising Capital through SME Exchange • Assistance for reimbursement of CGTMSE fees • Rehabilitation of Sick enterprise • Assistance for Power Connection charges • Assistance in Rent to MSEs Category of taluka Quantum of incentive Category 1 100% of net SGST for 10 years upto 7.5% of eFCI p.a."
+   },
+   {
+    "id": 1708,
+    "scheme_code": "GUJARAT_IND_POLICY_2022",
+    "ref": "gujarat_20industrial.page_9.23",
+    "text": "3.4 EPF Reimbursement Eligible large industrial undertakings shall be able to claim reimbursement of  employer’s contribution under Employees’ Provident Fund (EPF) made by them  for their new employees working in Gujarat for a period of 10 years from DoCP. The reimbursement shall be made subject to following criteria: a. 100% of employer’s statutory contribution under EPF amount paid, and b."
+   },
+   {
+    "id": 1715,
+    "scheme_code": "GUJARAT_IND_POLICY_2022",
+    "ref": "gujarat_20industrial.page_11.30",
+    "text": "4.5 Reimbursement of SGST on capital goods Eligible Mega industrial units will be eligible for 100% reimbursement of Input SGST paid on capital goods to the extent input tax credit is admissible  under Gujarat GST Act 2017. The reimbursement shall be provided in twenty equal annual instalments. 4.6 EPF Reimbursement Eligible Mega industrial units shall be able to claim reimbursement of  employer’s contribution under Employees’ Provident Fund (EPF) made by  them for their new employees working in Gujarat for a period of 10 years  from DoCP. The reimbursement shall be made subject to following criteria: a. 100% of employer’s statutory contribution under EPF amount paid, and b."
+   }
+  ],
+  "passed": false,
+  "score": 0.0,
+  "checked": 1,
+  "issues": [
+   {
+    "kind": "unsupported_negative",
+    "sentence": "Gujarat does not reimburse EPF for MSMEs according to the given clauses.",
+    "detail": "says something is not offered or allowed, but no cited clause says so"
+   }
+  ]
+ },
+ {
+  "question": "How much seed fund can an eligible startup get under the Startup India Seed Fund Scheme?",
+  "answer": "An eligible startup can get up to Rs. 20 Lakhs as grant for validation of Proof of Concept, prototype development, or product trials under the Startup India Seed Fund Scheme. Clause 1352 (SISFS / guidelines_20for_20s.page_11.32) provides this information.",
+  "cited": [
+   "guidelines_20for_20s.page_11.32"
+  ],
+  "clauses": [
+   {
+    "id": 1352,
+    "scheme_code": "SISFS",
+    "ref": "guidelines_20for_20s.page_11.32",
+    "text": "Ministry of Commerce and Industry Department for Promotion of Industry and Internal Trade Page 11 of 14 Guidelines for Startup India Seed Fund Scheme  xii. An applicant, if rejected once, may apply afresh 7.3 EAC may lay down improved guidelines for selection of startups under the  scheme from time to time 8. Guidelines for Disbursement of Seed Fund to Startups by Incubators 8.1 Seed Fund to an eligible startup by the incubator shall be disbursed as follows: 1. Up to Rs. 20 Lakhs as grant for validation of Proof of Concept, or prototype  development, or product trials. The grant shall be disbursed in milestone- based installments."
+   }
+  ],
+  "passed": false,
+  "score": 0.5,
+  "checked": 2,
+  "issues": [
+   {
+    "kind": "number_not_in_clause",
+    "sentence": "Clause 1352 (SISFS / guidelines_20for_20s.page_11.32) provides this information.",
+    "detail": "figure(s) not in the cited text: 1,352, 20, 20, 11"
+   }
+  ]
+ },
+ {
+  "question": "What is the guarantee cover under CGTMSE for micro enterprises?",
+  "answer": "The guarantee cover under CGTMSE for micro enterprises is up to 85% of the loan amount for micro enterprises, with an additional 5% for those situated in identified credit deficient districts. This information is derived from the Credit Guarantee Fund Scheme for Micro and Small Enterprises (CGTMSE) as stated in clause [1118].",
+  "cited": [
+   "home.page_14.55"
+  ],
+  "clauses": [
+   {
+    "id": 1118,
+    "scheme_code": "CGTMSE",
+    "ref": "home.page_14.55",
+    "text": "Extent of the Guarantee Coverage The Trust shall provide Guarantee as under for guarantees approved on or  after April 01, 2025 The Extent of Guarantee Coverage Category  (including Trading activity) Maximum extent of Guarantee Coverage  where credit facility is Upto ₹ 5  lakh Above ₹ 5 lakh & upto ₹ 50 lakh Above ₹ 50 lakh &  upto ₹ 10 crore Micro Enterprises 85% 75% 75% MSEs located in North East Region, UT of Jammu & Kashmir & UT of Ladakh 80% Women entrepreneurs / MSE promoted  by Agniveers 90% SC/ST entrepreneurs / Person with Disability (PwD)/ MSEs situated in Aspirational District / ZED certified MSEs / Transgender Entrepreneur 85% All other category of borrowers 75% The extent of guarantee coverage for MSEs situated in Identified Credit Deficient Districts (ICDD) by RBI is additional 5% over and above the applicable guarantee coverage wef December 15, 2023  (i.e for guarantee coverage of 75%, the coverage would be 80%, for 80% it would be 85% and for 85% it would be 90%) In case of renewal /enhancement of existing Working Capital accounts  engaged in Trading activity which is already covered under Guarantee Scheme, the revised extent of coverage & fee shall be applicable."
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 1,
+  "issues": []
+ },
+ {
+  "question": "What loan does PM SVANidhi give to street vendors?",
+  "answer": "PM SVANidhi gives loans to street vendors, but the specific loan amount for street vendors is not mentioned in the given clauses.",
+  "cited": [
+   "home.a_special_micro_credit_facility_for_.1",
+   "home.notified_states_uts.3"
+  ],
+  "clauses": [
+   {
+    "id": 1235,
+    "scheme_code": "PM_SVANIDHI",
+    "ref": "home.a_special_micro_credit_facility_for_.1",
+    "text": "PM SVANidhi Portal is live with enhanced loan amount limits. Vendors from Census Towns are also now eligible to avail loans and other benefits under the Scheme || PM SVANidhi Credit Card facility is now available for Second tranche repaid Street Vendors to enhance their working capital limit through a seamless and structured process. || Vendor Mobility (ULB Transfer) facility is now available on PM SVANidhi to enable street vendors to update their ULB details in case of migration to another vending location.\nWith Aadhaar Without Aadhaar\nApply For 15k Apply For 25k Apply For 50k\nPMS - Dashboard Mission Monitoring Dashboard"
+   },
+   {
+    "id": 1237,
+    "scheme_code": "PM_SVANIDHI",
+    "ref": "home.notified_states_uts.3",
+    "text": "The scheme is available for beneficiaries belonging to only those States/UTs which have notified rules and scheme under Street Vendors (Protection of Livelihood and Regulation of Street Vending) Act, 2014.\nClick To View State Notification"
+   }
+  ],
+  "passed": true,
+  "score": 1.0,
+  "checked": 0,
+  "issues": []
+ }
+]

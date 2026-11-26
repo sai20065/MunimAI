@@ -13,6 +13,7 @@ Deliberately NOT an LLM call for intent:
 Intents returned:
   'eligibility' - "can I get a loan", "am I eligible", "mudra kishore?"
   'documents'   - "what documents", "what to send", "kya dastavez"
+  'journey'     - "what should I do next", "help me get a loan", "my progress"
   'capability'  - "can you speak kannada", "what can you do", "how do you work"
   'greeting'    - "hi", "hello", "namaste"
   'thanks'      - "thanks", "dhanyavad"
@@ -74,6 +75,12 @@ def classify(text: str) -> Intent:
                 r"\b(save|send|give|download|make|export)\b.*\b(pdf|image|png|picture)\b"]):
         return "export"
 
+    # progress on the owner's loan-readiness plan (a plan, not a scheme question)
+    if _any(t, [r"\bwhat (should|do|shall) i do next\b", r"\bnext steps?\b", r"\b(my|the) (progress|plan|journey|checklist|to-?do)\b",
+                r"\bhelp me (get|apply|prepare|become)\b.*\b(loan|credit|finance|funding|bank)\b",
+                r"\bloan journey\b", r"\bwhere (am i|do i stand)\b", r"\bwhat('s| is) (left|pending|missing)\b"]):
+        return "journey"
+
     # personalised checks, before the generic scheme question
     if _any(t, [r"\bwhat (would|will|can|should) (i|make me|help me)\b.*\b(eligible|qualify)\b",
                 r"\bwhy (am i|can't i|cant i|am i not)\b.*\b(eligible|qualify)\b",
@@ -100,6 +107,8 @@ def classify(text: str) -> Intent:
         r"\bgrant\b", r"\bsidbi\b", r"\bjan samarth\b", r"\bcollateral\b", r"\bguarantee\b",
         r"\b(which|what) (government |govt )?(scheme|schemes|subsidy|loan)\b", r"\bseed (funding|capital)\b",
         r"\b(government|govt|central|state) (loan |msme )?schemes?\b", r"\bmsme schemes?\b",
+        r"\b(karnataka|telangana|andhra|tamil ?nadu|gujarat|uttar pradesh)\b.*\b(polic(y|ies)|incentive|subsid|scheme|msme|startup)",
+        r"\bclcss\b", r"\bsclcss\b", r"\bprayas\b", r"\budyam\b", r"\bcapital subsid", r"\binterest subsid",
     ]):
         return "eligibility"
 

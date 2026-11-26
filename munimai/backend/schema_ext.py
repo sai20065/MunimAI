@@ -34,6 +34,9 @@ def ensure(conn: psycopg.Connection) -> None:
     conn.execute("ALTER TABLE consents ADD CONSTRAINT consents_granted_via_check "
                  "CHECK (granted_via IN ('whatsapp_reply','aa_flow','simulated','web_click'))")
     _autonomy(conn)
+    from .agents import journey as _journey, memory as _memory
+    _memory.ensure(conn)
+    _journey.ensure(conn)
     conn.commit()
 
 

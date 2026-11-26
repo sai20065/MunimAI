@@ -1,0 +1,59 @@
+{
+ "_meta": {
+  "questions": 135,
+  "skipped_gold_no_longer_current": 0,
+  "current_clauses": 1263
+ },
+ "bm25": {
+  "en": {
+   "n": 45,
+   "recall@8": 0.4,
+   "recall@12": 0.4,
+   "family_hit": 0.533
+  },
+  "hinglish": {
+   "n": 45,
+   "recall@8": 0.311,
+   "recall@12": 0.333,
+   "family_hit": 0.489
+  },
+  "hi": {
+   "n": 45,
+   "recall@8": 0.067,
+   "recall@12": 0.067,
+   "family_hit": 0.111
+  },
+  "all": {
+   "n": 135,
+   "recall@8": 0.259,
+   "recall@12": 0.267,
+   "family_hit": 0.378
+  }
+ },
+ "hybrid": {
+  "en": {
+   "n": 45,
+   "recall@8": 0.467,
+   "recall@12": 0.489,
+   "family_hit": 0.622
+  },
+  "hinglish": {
+   "n": 45,
+   "recall@8": 0.333,
+   "recall@12": 0.333,
+   "family_hit": 0.422
+  },
+  "hi": {
+   "n": 45,
+   "recall@8": 0.378,
+   "recall@12": 0.467,
+   "family_hit": 0.6
+  },
+  "all": {
+   "n": 135,
+   "recall@8": 0.393,
+   "recall@12": 0.43,
+   "family_hit": 0.548
+  }
+ }
+}

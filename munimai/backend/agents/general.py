@@ -42,8 +42,9 @@ _OWN_SYSTEM = (
 
 
 def answer(conn: psycopg.Connection, business_id: int, question: str, llm: LLM,
-           *, has_docs: bool, trace: Optional[Trace] = None) -> tuple[str, str]:
+           *, has_docs: bool, trace: Optional[Trace] = None, memory: str = "") -> tuple[str, str]:
     """Returns (reply_text, source) where source is 'documents' | 'web' | 'general'."""
+    ctx = f"{memory}\n\n" if memory else ""
     if has_docs:
         got = docqa.answer(conn, llm, business_id, question, trace=trace)
         if got:
@@ -57,7 +58,7 @@ def answer(conn: psycopg.Connection, business_id: int, question: str, llm: LLM,
         trace.emit("web", "tool_result", {"results": [(h.url, h.official) for h in hits]}, tool_name="web.search")
     if hits:
         parsed = llm.json_call(
-            _WEB_SYSTEM, f"Question: {question}\n\n{websearch.fence(hits)}",
+            _WEB_SYSTEM, f"{ctx}Question: {question}\n\n{websearch.fence(hits)}",
             schema_hint='{"answer": string, "found": boolean, "used": [int]}',
             trace=trace, agent="web", max_tokens=400)
         if parsed.get("found") and str(parsed.get("answer", "")).strip():
@@ -68,7 +69,7 @@ def answer(conn: psycopg.Connection, business_id: int, question: str, llm: LLM,
                     else "This comes from the web, not an official scheme document. Please verify before relying on it.")
             return f"{str(parsed['answer']).strip()}\n\n{note}\n\n(Sources: {src})", "web"
 
-    res = llm.chat([{"role": "system", "content": _OWN_SYSTEM}, {"role": "user", "content": question}],
+    res = llm.chat([{"role": "system", "content": _OWN_SYSTEM}, {"role": "user", "content": f"{ctx}{question}"}],
                    max_tokens=350, trace=trace, agent="general")
     return (f"{res.text.strip()}\n\nThis is from general knowledge, not from your documents or an "
             "official scheme page. Please verify before relying on it."), "general"

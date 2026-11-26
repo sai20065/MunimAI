@@ -1,0 +1,59 @@
+{
+ "by_type": {
+  "verbatim": {
+   "n": 200,
+   "flagged": 0
+  },
+  "framed": {
+   "n": 200,
+   "flagged": 0
+  },
+  "negation": {
+   "n": 119,
+   "flagged": 119
+  },
+  "invented": {
+   "n": 195,
+   "flagged": 195
+  },
+  "cross_scheme": {
+   "n": 82,
+   "flagged": 82
+  },
+  "units": {
+   "n": 19,
+   "flagged": 1
+  },
+  "number": {
+   "n": 41,
+   "flagged": 40
+  },
+  "category": {
+   "n": 3,
+   "flagged": 3
+  }
+ },
+ "false_positive_rate": 0.002,
+ "detection_rate": 0.998,
+ "precision": 0.998,
+ "faithful_cases": 419,
+ "unfaithful_cases": 440,
+ "wrong_calls": {
+  "number": [
+   {
+    "answer": "Financial assistance for revival of khadi institution with ceiling limit of Rs25 lakh (Capital Expenditure +working fund).",
+    "issues": [],
+    "scheme": "TELANGANA_MSME_HANDBOOK_2024"
+   }
+  ],
+  "units": [
+   {
+    "answer": "Startups,  companies and  innovation-led  enterprises in  strategic/deep- tech sectors. [MIXED] Scheme  corpus ₹Rs 100,000 crore;  project-level  support varies Department  of Science & Technology  (D",
+    "issues": [
+     "number_not_in_clause"
+    ],
+    "scheme": "STARTUP_PLAYBOOK"
+   }
+  ]
+ }
+}

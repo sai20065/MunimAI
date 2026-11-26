@@ -50,6 +50,17 @@ CITATION_ALLOWLIST: frozenset[str] = frozenset(
         "sidbi.in",
         "www.startupindia.gov.in",      # DPIIT, Startup India
         "startupindia.gov.in",
+        # added 2026-11-25; every host is a .gov.in government site
+        "dkvib.delhi.gov.in",           # Delhi KVIB, hosts the PMEGP scheme guidelines
+        "cdnbbsr.s3waas.gov.in",        # NIC S3WaaS hosting for DST (NIDHI-PRAYAS guidelines)
+        "static.pib.gov.in",            # Press Information Bureau documents (Jan Samarth factsheet)
+        "invest.up.gov.in",             # Invest UP, state policies
+        "static.investindia.gov.in",    # Invest India (DPIIT), state policy brochures
+        "ipass.telangana.gov.in",       # Government of Telangana, Industries (TG-iPASS), MSME schemes handbook
+        # EXCEPTION, not a .gov.in host: Invest Karnataka / Karnataka Udyog Mitra, the Government of Karnataka's investment
+        # facilitation agency. Allowed because it hosts the Government of Karnataka's own Operative Guidelines for Industrial
+        # Policy 2025-30 (cover page: Dept of Industries and Commerce, approved 10.04.2026). Remove this line to revoke.
+        "investkarnataka.co.in",
     }
 )
 

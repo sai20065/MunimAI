@@ -86,6 +86,8 @@ addEventListener('hashchange',()=>setRoute(location.hash.slice(1),false));
 document.querySelectorAll('#ptabs button').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('#ptabs button').forEach(x=>x.setAttribute('aria-selected',x===b));
   document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('on',p.id==='p-'+b.dataset.p));
+  if(b.dataset.p==='plan')loadPlan();
+  if(b.dataset.p==='trace')loadSystem();
 });
 $('sideBtn').onclick=()=>$('side').classList.toggle('open');
 
@@ -319,6 +321,39 @@ async function loadBooks(){
 async function loadStatus(){
   try{const s=await api('/sim/status');
     for(const [k,id] of [['boss','Boss'],['worker','Work'],['stt','Stt']]){$('d'+id).className='dot '+(s[k]?'ok':'bad');$('t'+id).textContent=s[k]?'ready':'offline';}}catch{}
+}
+/* ---------- plan, resources, memory ---------- */
+const ACT={open_profile:['actProfile',()=>openFit()],
+  upload_docs:['actDocs',()=>{$('side').classList.add('open');document.querySelector('#ptabs [data-p=files]').click();}],
+  import_books:['actBooks',()=>setRoute('close')],review_findings:['actFix',()=>setRoute('close')],
+  grant_consent:['actConsent',()=>askConsent()],build_file:['actBuild',()=>{document.querySelector('#ptabs [data-p=files]').click();$('bankBtn').click();}]};
+const PLAN_ICON={done:'check-circle-2',needs_you:'circle-dot',pending:'circle'};
+async function loadPlan(){
+  try{const p=await api('/sim/goal',{headers:H});
+    $('plan').innerHTML='<div class="score"><b>'+p.done+'</b><span>'+esc(t('planOf').replace('{n}',p.total))+'</span></div>'
+      +'<div class="meter" role="img" aria-label="'+p.done+' / '+p.total+'"><i style="width:'+Math.round(100*p.done/p.total)+'%"></i></div>'
+      +(p.note?'<p class="empty">'+esc(p.note)+'</p>':'')
+      +p.steps.map(s=>'<div class="stp '+s.status+'"><span class="mk"><i data-lucide="'+PLAN_ICON[s.status]+'"></i></span><div><b>'+esc(s.title)+'</b><small>'+esc(s.detail)+'</small>'
+        +((s.status==='needs_you'||s.action==='build_file')&&ACT[s.action]?'<button class="ghost sm" data-act="'+s.action+'">'+esc(t(ACT[s.action][0]))+'</button>':'')+'</div></div>').join('');
+    $('plan').querySelectorAll('[data-act]').forEach(b=>b.onclick=()=>ACT[b.dataset.act][1]());
+    icons();}catch{$('plan').innerHTML='<p class="empty">'+esc(t('oops'))+'</p>';}
+}
+function resBar(label,used,cap){const pct=cap?Math.min(100,Math.round(100*used/cap)):0;
+  return '<div class="res"><div><span>'+esc(label)+'</span><b>'+(used/1024).toFixed(1)+' / '+(cap/1024).toFixed(0)+' GB</b></div><div class="meter" role="img" aria-label="'+esc(label)+' '+pct+'%"><i style="width:'+pct+'%"></i></div></div>';}
+async function loadSystem(){
+  try{const s=await api('/sim/status');const r=s.resources||{};
+    $('res').innerHTML=r.vram_cap_mib?resBar(t('vram'),r.vram_used_mib,r.vram_cap_mib)+resBar(t('ram'),r.ram_models_mib,r.ram_models_cap_mib)+'<p class="empty">'+esc(t('resNote'))+'</p>'
+      :'<p class="empty">'+esc(t('resNone'))+'</p>';}catch{}
+  try{const m=await api('/sim/memory',{headers:H});const p=m.profile||{};const ints=Object.keys(p.interests||{});
+    const facts=[p.sector&&'Business: '+p.sector,p.state&&'State: '+p.state,p.employees&&'Staff: '+p.employees,
+      p.loan_amount_asked_rupees&&'Loan asked: '+money(p.loan_amount_asked_rupees),ints.length&&'Interested in: '+ints.join(', ')].filter(Boolean);
+    $('mem').innerHTML=(facts.length||m.recent.length)
+      ?'<ul class="memlist">'+facts.map(f=>'<li>'+esc(f)+'</li>').join('')+'</ul>'
+        +(m.recent.length?'<p class="empty">'+esc(t('memRecent'))+': '+m.recent.slice(-3).map(r=>esc(r.q)).join(' · ')+'</p>':'')
+        +'<button class="ghost sm" id="memForget">'+esc(t('memForget'))+'</button>'
+      :'<p class="empty">'+esc(t('memNone'))+'</p>';
+    const f=$('memForget');
+    if(f)f.onclick=async()=>{if(await confirmBox(t('memForgetT'),t('memForgetD'),t('memForget'))){await api('/sim/memory',{method:'DELETE',headers:H});toast(t('memCleared'));loadSystem();}};}catch{}
 }
 let curQ2='';
 function addFile(f){add('them','<a class="chip" href="'+esc(f.url)+'" download="'+esc(f.name)+'"><i data-lucide="download"></i>'+esc(f.name)+'</a>'

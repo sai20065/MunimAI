@@ -61,12 +61,14 @@
   <aside class="side" id="side" aria-label="Books, readiness, files and trace">
     <div class="ptabs" role="tablist" id="ptabs">
       <button role="tab" data-p="books" aria-selected="true" data-i="pBooks">Books</button>
+      <button role="tab" data-p="plan" aria-selected="false" data-i="pPlan">Plan</button>
       <button role="tab" data-p="ready" aria-selected="false" data-i="pReady">Readiness</button>
       <button role="tab" data-p="files" aria-selected="false" data-i="pFiles">Files</button>
       <button role="tab" data-p="trace" aria-selected="false" data-i="pTrace">Trace</button>
     </div>
     <div class="pbody" tabindex="0" role="region" aria-label="Side panel">
       <div class="pane on" id="p-books"><div id="books"><p class="empty">Nothing here yet. Send a bill to add it.</p></div></div>
+      <div class="pane" id="p-plan"><div id="plan"><p class="empty">Loading…</p></div></div>
       <div class="pane" id="p-ready">
         <div id="ready"><p class="empty">Turn on the switch below to see how ready your books look to a lender.</p></div>
         <label class="sw" id="consentRow"><input type="checkbox" id="consent"><span>Let SaralcreditAI read my books for loan checks. You can switch this off any time.</span></label>
@@ -82,6 +84,8 @@
           <div><span class="dot" id="dBoss"></span>Main model <span id="tBoss" class="empty"></span></div>
           <div><span class="dot" id="dWork"></span>Helper model <span id="tWork" class="empty"></span></div>
           <div><span class="dot" id="dStt"></span>Voice (Whisper) <span id="tStt" class="empty"></span></div></div></div>
+        <div><h3 data-i="sysH">Resources</h3><div id="res"></div></div>
+        <div><h3 data-i="memH">What I remember</h3><div id="mem"></div></div>
         <div><h3>Agent trace</h3><div id="trace"><p class="empty">Appears after your first question.</p></div></div>
       </div>
     </div>

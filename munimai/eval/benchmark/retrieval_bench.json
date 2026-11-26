@@ -1,0 +1,950 @@
+{
+ "built_from_clauses": 50,
+ "items": [
+  {
+   "variant": "en",
+   "question": "If I run a small shop selling clothes, how much will I have to pay for a loan?",
+   "gold_scheme": "CGTMSE",
+   "gold_ref": "home.page_9.37",
+   "gold_id": 1100
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main ek choti shop chalti hun jisme kapde sale karte huon, loan leke mujhe kitna paisa paya hoga?",
+   "gold_scheme": "CGTMSE",
+   "gold_ref": "home.page_9.37",
+   "gold_id": 1100
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं एक छोटी दुकान चलाता हूँ जो कपड़े बेचता है, मुझे ऋण लेने पर कितना पैसा देना होगा?",
+   "gold_scheme": "CGTMSE",
+   "gold_ref": "home.page_9.37",
+   "gold_id": 1100
+  },
+  {
+   "variant": "en",
+   "question": "If I apply for a loan through this scheme, do I need to give a promise beforehand?",
+   "gold_scheme": "CGTMSE",
+   "gold_ref": "71.faqs.35",
+   "gold_id": 1053
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main is yojana ke through loan apply karunga, toh kya mujhe pehle promise dena hoga?",
+   "gold_scheme": "CGTMSE",
+   "gold_ref": "71.faqs.35",
+   "gold_id": 1053
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं इस योजना के माध्यम से ऋण के लिए आवेदन करता हूँ, तो क्या मुझे पहले से कोई वादा देना होगा?",
+   "gold_scheme": "CGTMSE",
+   "gold_ref": "71.faqs.35",
+   "gold_id": 1053
+  },
+  {
+   "variant": "en",
+   "question": "If I take a loan under this scheme, how long do I have to pay it back before I have to stop making payments to the bank?",
+   "gold_scheme": "CGTMSE",
+   "gold_ref": "home.page_15.58",
+   "gold_id": 1121
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main is scheme ke netre ek loan leta hu, toh loan ko badhatey kaise samay dunga, jab bank se payment bandh karna padega?",
+   "gold_scheme": "CGTMSE",
+   "gold_ref": "home.page_15.58",
+   "gold_id": 1121
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं इस योजना के तहत ऋण लेता हूँ, तो मुझे ऋण चुकाने के लिए कितने समय तक बैंक को भुगतान करना होगा?",
+   "gold_scheme": "CGTMSE",
+   "gold_ref": "home.page_15.58",
+   "gold_id": 1121
+  },
+  {
+   "variant": "en",
+   "question": "Can I get a loan if I just started my shop?",
+   "gold_scheme": "CGTMSE",
+   "gold_ref": "71.faqs.7",
+   "gold_id": 1025
+  },
+  {
+   "variant": "hinglish",
+   "question": "Can I get a loan if I just started my business?",
+   "gold_scheme": "CGTMSE",
+   "gold_ref": "71.faqs.7",
+   "gold_id": 1025
+  },
+  {
+   "variant": "hi",
+   "question": "क्या मैं सिर्फ शुरुआत में अपना दुकान के लिए लोन ले सकता हूँ?",
+   "gold_scheme": "CGTMSE",
+   "gold_ref": "71.faqs.7",
+   "gold_id": 1025
+  },
+  {
+   "variant": "en",
+   "question": "If I use a bank to help me get this loan, will I pay more interest?",
+   "gold_scheme": "CGTMSE",
+   "gold_ref": "71.faqs.13",
+   "gold_id": 1031
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main loan lene ke liye ek bank ko istemaal karta hoon, to kya main zyada interest payunga?",
+   "gold_scheme": "CGTMSE",
+   "gold_ref": "71.faqs.13",
+   "gold_id": 1031
+  },
+  {
+   "variant": "hi",
+   "question": "अगर मैं इस लोन के लिए एक बैंक का उपयोग करता हूँ, तो क्या मुझे अधिक ब्याज देना होगा?",
+   "gold_scheme": "CGTMSE",
+   "gold_ref": "71.faqs.13",
+   "gold_id": 1031
+  },
+  {
+   "variant": "en",
+   "question": "If I run a small shop selling spices, can I get a loan to buy a bigger cooler?",
+   "gold_scheme": "MUDRA_GENERAL",
+   "gold_ref": "eligibility.who_can_apply",
+   "gold_id": 7
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main ek chota shop hai jo spices sell karta hu, to main cooler kharidne ke liye loan le sakta hu?",
+   "gold_scheme": "MUDRA_GENERAL",
+   "gold_ref": "eligibility.who_can_apply",
+   "gold_id": 7
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं एक छोटा दुकान चलाने वाला हूँ जो मसालों की बिक्री करता हूँ, तो क्या मैं एक बड़ा कूलर खरीदने के लिए ऋण ले सकता हूँ?",
+   "gold_scheme": "MUDRA_GENERAL",
+   "gold_ref": "eligibility.who_can_apply",
+   "gold_id": 7
+  },
+  {
+   "variant": "en",
+   "question": "Can a small shop owner get a loan through this scheme?",
+   "gold_scheme": "MUDRA_GENERAL",
+   "gold_ref": "eligibility.enterprise_type",
+   "gold_id": 8
+  },
+  {
+   "variant": "hinglish",
+   "question": "Can a small shop owner get a loan through this scheme?",
+   "gold_scheme": "MUDRA_GENERAL",
+   "gold_ref": "eligibility.enterprise_type",
+   "gold_id": 8
+  },
+  {
+   "variant": "hi",
+   "question": "क्या एक छोटे दुकानदार को इस योजना के तहत ऋण मिल सकता है?",
+   "gold_scheme": "MUDRA_GENERAL",
+   "gold_ref": "eligibility.enterprise_type",
+   "gold_id": 8
+  },
+  {
+   "variant": "en",
+   "question": "If I run a small grocery store, could I get a loan to buy a new refrigerator?",
+   "gold_scheme": "MUDRA_GENERAL",
+   "gold_ref": "use_of_funds.purpose",
+   "gold_id": 10
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main ek chhota grocery store chalaun, kya main fridge ke liye ek loan le sakta hun?",
+   "gold_scheme": "MUDRA_GENERAL",
+   "gold_ref": "use_of_funds.purpose",
+   "gold_id": 10
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं एक छोटे किराने की दुकान का मालिक हूं, तो क्या मैं एक नई रेफ्रिजरेटर खरीदने के लिए ऋण प्राप्त कर सकता हूं?",
+   "gold_scheme": "MUDRA_GENERAL",
+   "gold_ref": "use_of_funds.purpose",
+   "gold_id": 10
+  },
+  {
+   "variant": "en",
+   "question": "If I’ve already gotten a small loan through MUDRA, can I get a bigger one?",
+   "gold_scheme": "MUDRA_TARUN",
+   "gold_ref": "loan_amount.tarun_plus",
+   "gold_id": 5
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar maine pehle MUDRA se chhota loan liya hai, to kya main bada loan pa sakta hun?",
+   "gold_scheme": "MUDRA_TARUN",
+   "gold_ref": "loan_amount.tarun_plus",
+   "gold_id": 5
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैंने पहले MUDRA से छोटा ऋण लिया है, तो क्या मैं बड़ा ऋण प्राप्त कर सकता हूँ?",
+   "gold_scheme": "MUDRA_TARUN",
+   "gold_ref": "loan_amount.tarun_plus",
+   "gold_id": 5
+  },
+  {
+   "variant": "en",
+   "question": "Where can a small shop owner get a loan through this MUDRA program?",
+   "gold_scheme": "MUDRA_GENERAL",
+   "gold_ref": "delivery.channel",
+   "gold_id": 16
+  },
+  {
+   "variant": "hinglish",
+   "question": "Kahaan ek chhota shop owner MUDRA program ke through loan pa sakta hai?",
+   "gold_scheme": "MUDRA_GENERAL",
+   "gold_ref": "delivery.channel",
+   "gold_id": 16
+  },
+  {
+   "variant": "hi",
+   "question": "एक छोटे दुकानदार MUDRA कार्यक्रम के माध्यम से ऋण कैसे प्राप्त कर सकता है?",
+   "gold_scheme": "MUDRA_GENERAL",
+   "gold_ref": "delivery.channel",
+   "gold_id": 16
+  },
+  {
+   "variant": "en",
+   "question": "If I run a small business and register with a specific program, can the government be required to buy some of my products?",
+   "gold_scheme": "NSIC",
+   "gold_ref": "singlepointregistrat.1a_benefits_extended_to_mses_having_.4",
+   "gold_id": 1196
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main ek chhota business chala raha hoon aur ek specific program mein register ho jaata hoon, to kya government ko meri kuch products kharidne ki zaroorat hai?",
+   "gold_scheme": "NSIC",
+   "gold_ref": "singlepointregistrat.1a_benefits_extended_to_mses_having_.4",
+   "gold_id": 1196
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं एक छोटे व्यवसाय का संचालन कर रहा हूँ और एक विशिष्ट कार्यक्रम के साथ पंजीकरण करता हूँ, तो क्या सरकार को मेरे कुछ उत्पादों को खरीदने की आवश्यकता होगी?",
+   "gold_scheme": "NSIC",
+   "gold_ref": "singlepointregistrat.1a_benefits_extended_to_mses_having_.4",
+   "gold_id": 1196
+  },
+  {
+   "variant": "en",
+   "question": "How much does it cost to register my business?",
+   "gold_scheme": "NSIC",
+   "gold_ref": "singlepointregistrat.2b_registration_process.7",
+   "gold_id": 1199
+  },
+  {
+   "variant": "hinglish",
+   "question": "Mujhe apni business ko register karne ka kitna kharcha hoga?",
+   "gold_scheme": "NSIC",
+   "gold_ref": "singlepointregistrat.2b_registration_process.7",
+   "gold_id": 1199
+  },
+  {
+   "variant": "hi",
+   "question": "मुझे अपनी व्यवसाय को रजिस्टर करने पर कितना खर्च आएगा?",
+   "gold_scheme": "NSIC",
+   "gold_ref": "singlepointregistrat.2b_registration_process.7",
+   "gold_id": 1199
+  },
+  {
+   "variant": "en",
+   "question": "If I run a small shop, can I get help from the government to grow my business?",
+   "gold_scheme": "NSIC",
+   "gold_ref": "msmesaarthi.target_beneficiaries.3",
+   "gold_id": 1225
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main ek chhota shop chalata hoon, to government se madad pa sakta hoon mere business ko badhane ke liye?",
+   "gold_scheme": "NSIC",
+   "gold_ref": "msmesaarthi.target_beneficiaries.3",
+   "gold_id": 1225
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं एक छोटा दुकान चलाता हूँ, तो क्या मैं अपने व्यवसाय को बढ़ाने के लिए सरकार से मदद पा सकता हूँ?",
+   "gold_scheme": "NSIC",
+   "gold_ref": "msmesaarthi.target_beneficiaries.3",
+   "gold_id": 1225
+  },
+  {
+   "variant": "en",
+   "question": "How can a small business find out about government programs to help them get more customers?",
+   "gold_scheme": "NSIC",
+   "gold_ref": "msmesaarthi.scope_of_the_scheme.2",
+   "gold_id": 1224
+  },
+  {
+   "variant": "hinglish",
+   "question": "How can a small business find out about government programs to help them get more customers?",
+   "gold_scheme": "NSIC",
+   "gold_ref": "msmesaarthi.scope_of_the_scheme.2",
+   "gold_id": 1224
+  },
+  {
+   "variant": "hi",
+   "question": "एक छोटे व्यवसाय के लिए ग्राहकों की संख्या बढ़ाने में मदद करने वाले सरकारी कार्यक्रमों के बारे में पता कैसे चल सकता है?",
+   "gold_scheme": "NSIC",
+   "gold_ref": "msmesaarthi.scope_of_the_scheme.2",
+   "gold_id": 1224
+  },
+  {
+   "variant": "en",
+   "question": "If I run a small shop that makes things, can I get help with a government loan to grow my business?",
+   "gold_scheme": "NSIC",
+   "gold_ref": "singlepointregistrat.2a_fresh_registration_criteria.6",
+   "gold_id": 1198
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main ek chhota shop hu jo cheezein banaata hu, kya main government loan ke saath business ko badhane mein madad pa sakta hun?",
+   "gold_scheme": "NSIC",
+   "gold_ref": "singlepointregistrat.2a_fresh_registration_criteria.6",
+   "gold_id": 1198
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं एक छोटा दुकान चलाने वाला हूँ जो चीजें बनाता हूँ, तो क्या मैं अपने व्यवसाय को बढ़ाने के लिए सरकारी ऋण के लिए पात्र हूँ?",
+   "gold_scheme": "NSIC",
+   "gold_ref": "singlepointregistrat.2a_fresh_registration_criteria.6",
+   "gold_id": 1198
+  },
+  {
+   "variant": "en",
+   "question": "If I’ve already gotten help from another government program, can I still apply for this loan?",
+   "gold_scheme": "PMEGP",
+   "gold_ref": "termsandconditions.eligibility_conditions_of_beneficiar.13",
+   "gold_id": 1275
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main pehle kisi aur sarkar ki program se madad lega chuki hoon, to kya main is loan ke liye bhi apply kar sakta hoon?",
+   "gold_scheme": "PMEGP",
+   "gold_ref": "termsandconditions.eligibility_conditions_of_beneficiar.13",
+   "gold_id": 1275
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैंने पहले किसी अन्य सरकारी योजना से सहायता प्राप्त कर ली है, तो क्या मैं इस ऋण के लिए भी आवेदन कर सकता हूँ?",
+   "gold_scheme": "PMEGP",
+   "gold_ref": "termsandconditions.eligibility_conditions_of_beneficiar.13",
+   "gold_id": 1275
+  },
+  {
+   "variant": "en",
+   "question": "If I run a small shop, can I use the money for buying a van to deliver goods?",
+   "gold_scheme": "PMEGP",
+   "gold_ref": "faq.trading_activities.6",
+   "gold_id": 1259
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main ek chhota shop chalata hoon, kya main van kharidne paise ka istemaal kar sakta hoon agar goods deliver karne ke liye?",
+   "gold_scheme": "PMEGP",
+   "gold_ref": "faq.trading_activities.6",
+   "gold_id": 1259
+  },
+  {
+   "variant": "hi",
+   "question": "अगर मैं एक छोटा दुकान चलाता हूँ, तो क्या मैं सामान पहुंचाने के लिए एक वैन खरीदने के लिए पैसे का उपयोग कर सकता हूँ?",
+   "gold_scheme": "PMEGP",
+   "gold_ref": "faq.trading_activities.6",
+   "gold_id": 1259
+  },
+  {
+   "variant": "en",
+   "question": "If I run a taxi service, can I get a loan to buy a van?",
+   "gold_scheme": "PMEGP",
+   "gold_ref": "homepage.trading_activities.15",
+   "gold_id": 1296
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main taxi service chalaun, to main van kharidne ke liye loan pa sakta hoon?",
+   "gold_scheme": "PMEGP",
+   "gold_ref": "homepage.trading_activities.15",
+   "gold_id": 1296
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं टैक्सी सेवा चलाऊँ, तो क्या मैं एक वैन खरीदने के लिए ऋण प्राप्त कर सकता हूँ?",
+   "gold_scheme": "PMEGP",
+   "gold_ref": "homepage.trading_activities.15",
+   "gold_id": 1296
+  },
+  {
+   "variant": "en",
+   "question": "If I haven't gotten my OTP, how can I still get the money for my business?",
+   "gold_scheme": "PMEGP",
+   "gold_ref": "homepage.choose_verification_method.7",
+   "gold_id": 1288
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar mujhe OTP nahi mila, toh main business ke liye paisa kaise pa sakta hoon?",
+   "gold_scheme": "PMEGP",
+   "gold_ref": "homepage.choose_verification_method.7",
+   "gold_id": 1288
+  },
+  {
+   "variant": "hi",
+   "question": "अगर मुझे ओटीपी नहीं मिला, तो मैं अपने व्यवसाय के लिए पैसे कैसे पा सकता हूँ?",
+   "gold_scheme": "PMEGP",
+   "gold_ref": "homepage.choose_verification_method.7",
+   "gold_id": 1288
+  },
+  {
+   "variant": "en",
+   "question": "If I'm buying a building that's already built, can I use that cost when figuring out how much money I need for my business?",
+   "gold_scheme": "PMEGP",
+   "gold_ref": "faq.eligibility_conditions_of_beneficiar.4",
+   "gold_id": 1257
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main ek ready banae gaara khareed raha hoon, to main uski cost ko apna business ke liye zaroori amount ko calculate karne mein use kar sakta hoon?",
+   "gold_scheme": "PMEGP",
+   "gold_ref": "faq.eligibility_conditions_of_beneficiar.4",
+   "gold_id": 1257
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं पहले से बना हुआ भवन खरीदता हूँ, तो क्या मैं उस लागत को अपने व्यवसाय के लिए आवश्यक धन की गणना में उपयोग कर सकता हूँ?",
+   "gold_scheme": "PMEGP",
+   "gold_ref": "faq.eligibility_conditions_of_beneficiar.4",
+   "gold_id": 1257
+  },
+  {
+   "variant": "en",
+   "question": "How do I find out if my shop is included in the government’s help program?",
+   "gold_scheme": "PM_SVANIDHI",
+   "gold_ref": "home.check_your_survey_status.4",
+   "gold_id": 1238
+  },
+  {
+   "variant": "hinglish",
+   "question": "Kaise mujhe pata chalega ki mera shop government ke madad program mein include hai?",
+   "gold_scheme": "PM_SVANIDHI",
+   "gold_ref": "home.check_your_survey_status.4",
+   "gold_id": 1238
+  },
+  {
+   "variant": "hi",
+   "question": "मैं यह कैसे पता लगा सकता हूँ कि मेरा दुकान सरकार की मदद योजना में शामिल है या नहीं?",
+   "gold_scheme": "PM_SVANIDHI",
+   "gold_ref": "home.check_your_survey_status.4",
+   "gold_id": 1238
+  },
+  {
+   "variant": "en",
+   "question": "If I’m running a small shop in a bigger town, can I still get a loan through this scheme?",
+   "gold_scheme": "PM_SVANIDHI",
+   "gold_ref": "home.a_special_micro_credit_facility_for_.1",
+   "gold_id": 1235
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main ek chhota shop running kar raha hoon ek bade sheher mein, to main is scheme ke through loan le sakta hoon?",
+   "gold_scheme": "PM_SVANIDHI",
+   "gold_ref": "home.a_special_micro_credit_facility_for_.1",
+   "gold_id": 1235
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं एक छोटे से दुकान चलाने में हूँ, तो क्या मैं इस योजना के माध्यम से ऋण प्राप्त कर सकता हूँ?",
+   "gold_scheme": "PM_SVANIDHI",
+   "gold_ref": "home.a_special_micro_credit_facility_for_.1",
+   "gold_id": 1235
+  },
+  {
+   "variant": "en",
+   "question": "Which states can apply for this loan program?",
+   "gold_scheme": "PM_SVANIDHI",
+   "gold_ref": "home.notified_states_uts.3",
+   "gold_id": 1237
+  },
+  {
+   "variant": "hinglish",
+   "question": "Kyaa desh yaa aadhyar pradesh isse loan le sakte hain?",
+   "gold_scheme": "PM_SVANIDHI",
+   "gold_ref": "home.notified_states_uts.3",
+   "gold_id": 1237
+  },
+  {
+   "variant": "hi",
+   "question": "किस राज्य इस ऋण कार्यक्रम के लिए आवेदन कर सकते हैं?",
+   "gold_scheme": "PM_SVANIDHI",
+   "gold_ref": "home.notified_states_uts.3",
+   "gold_id": 1237
+  },
+  {
+   "variant": "en",
+   "question": "If I get approved for this scheme, how much money can I actually get to buy tools for my business?",
+   "gold_scheme": "PM_VISHWAKARMA",
+   "gold_ref": "home.scheme_benefits.11",
+   "gold_id": 1252
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main is scheme ke liye approved ho jaaunga, to business ke liye tools kharidne ke liye main kitna paisa pa sakta hoon?",
+   "gold_scheme": "PM_VISHWAKARMA",
+   "gold_ref": "home.scheme_benefits.11",
+   "gold_id": 1252
+  },
+  {
+   "variant": "hi",
+   "question": "अगर मैं इस योजना के लिए स्वीकृत हो जाऊंगा, तो मेरे व्यवसाय के लिए उपकरण खरीदने के लिए मैं कितना पैसा प्राप्त कर सकता हूँ?",
+   "gold_scheme": "PM_VISHWAKARMA",
+   "gold_ref": "home.scheme_benefits.11",
+   "gold_id": 1252
+  },
+  {
+   "variant": "en",
+   "question": "If I use a digital payment method for my shop, will the government give me a little money back for each transaction?",
+   "gold_scheme": "PM_VISHWAKARMA",
+   "gold_ref": "home.scheme_benefits.12",
+   "gold_id": 1253
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main apne shop ke liye digital payment method use karunga, to government mujhe har transaction ke liye kuch paise batayega?",
+   "gold_scheme": "PM_VISHWAKARMA",
+   "gold_ref": "home.scheme_benefits.12",
+   "gold_id": 1253
+  },
+  {
+   "variant": "hi",
+   "question": "अगर मैं अपने दुकान के लिए डिजिटल भुगतान विधि का उपयोग करूँगा, तो सरकार मुझे प्रत्येक लेनदेन के लिए कुछ पैसे देगी?",
+   "gold_scheme": "PM_VISHWAKARMA",
+   "gold_ref": "home.scheme_benefits.12",
+   "gold_id": 1253
+  },
+  {
+   "variant": "en",
+   "question": "Can I get this loan if my wife and kids are with me?",
+   "gold_scheme": "PM_VISHWAKARMA",
+   "gold_ref": "home.eligibility_criteria.8",
+   "gold_id": 1249
+  },
+  {
+   "variant": "hinglish",
+   "question": "Can I get this loan if my wife and kids are with me?",
+   "gold_scheme": "PM_VISHWAKARMA",
+   "gold_ref": "home.eligibility_criteria.8",
+   "gold_id": 1249
+  },
+  {
+   "variant": "hi",
+   "question": "क्या मैं यह ऋण ले सकता हूँ अगर मेरे पत्नी और बच्चे मेरे साथ हैं?",
+   "gold_scheme": "PM_VISHWAKARMA",
+   "gold_ref": "home.eligibility_criteria.8",
+   "gold_id": 1249
+  },
+  {
+   "variant": "en",
+   "question": "If I’m a carpenter, can the government help me get better tools?",
+   "gold_scheme": "PM_VISHWAKARMA",
+   "gold_ref": "home.pm_vishwakarma.1",
+   "gold_id": 1242
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main ek carpenter hoon, to sarkar mujhe behtar tools madad kar sakti hai?",
+   "gold_scheme": "PM_VISHWAKARMA",
+   "gold_ref": "home.pm_vishwakarma.1",
+   "gold_id": 1242
+  },
+  {
+   "variant": "hi",
+   "question": "अगर मैं एक बढ़ई हूँ, तो क्या सरकार मुझे बेहतर उपकरण में मदद कर सकती है?",
+   "gold_scheme": "PM_VISHWAKARMA",
+   "gold_ref": "home.pm_vishwakarma.1",
+   "gold_id": 1242
+  },
+  {
+   "variant": "en",
+   "question": "If I’m a small business owner, can I get a loan without needing to put up a lot of extra money as security?",
+   "gold_scheme": "PM_VISHWAKARMA",
+   "gold_ref": "home.scheme_objectives.6",
+   "gold_id": 1247
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main ek chhota businessman hoon, to kya main security ke naam par extra paisa de bina loan le sakta hoon?",
+   "gold_scheme": "PM_VISHWAKARMA",
+   "gold_ref": "home.scheme_objectives.6",
+   "gold_id": 1247
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं एक छोटे व्यवसायी हूँ, तो क्या मैं बिना अतिरिक्त सुरक्षा के ऋण प्राप्त कर सकता हूँ?",
+   "gold_scheme": "PM_VISHWAKARMA",
+   "gold_ref": "home.scheme_objectives.6",
+   "gold_id": 1247
+  },
+  {
+   "variant": "en",
+   "question": "If I’m starting a small business and need to buy some new tools, how much money can SIDBI lend me?",
+   "gold_scheme": "SIDBI",
+   "gold_ref": "machinery_loan.frequently_asked_questions_faqs.6",
+   "gold_id": 1315
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main ek chhota business shuru kar raha hoon aur mujhe kuch naye tools kharen hain, to SIDBI se main kitna paisa lega sakta hoon?",
+   "gold_scheme": "SIDBI",
+   "gold_ref": "machinery_loan.frequently_asked_questions_faqs.6",
+   "gold_id": 1315
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं एक छोटा व्यवसाय शुरू कर रहा हूँ और मुझे कुछ नए उपकरण खरीदने की आवश्यकता है, तो SIDBI से मैं कितना पैसा ले सकता हूँ?",
+   "gold_scheme": "SIDBI",
+   "gold_ref": "machinery_loan.frequently_asked_questions_faqs.6",
+   "gold_id": 1315
+  },
+  {
+   "variant": "en",
+   "question": "If I’m starting a small business and need to buy some new tools, can I get a loan from this program?",
+   "gold_scheme": "SIDBI",
+   "gold_ref": "machinery_loan.frequently_asked_questions_faqs.5",
+   "gold_id": 1314
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main ek chhota business shuru kar raha hoon aur mujhe kuch naye tools kharen hain, to mai is program se loan le sakta hoon?",
+   "gold_scheme": "SIDBI",
+   "gold_ref": "machinery_loan.frequently_asked_questions_faqs.5",
+   "gold_id": 1314
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं एक छोटा व्यवसाय शुरू कर रहा हूँ और मुझे कुछ नए उपकरण खरीदने हैं, तो क्या मैं इस कार्यक्रम से ऋण ले सकता हूँ?",
+   "gold_scheme": "SIDBI",
+   "gold_ref": "machinery_loan.frequently_asked_questions_faqs.5",
+   "gold_id": 1314
+  },
+  {
+   "variant": "en",
+   "question": "If I run a small shop and need money to pay for supplies, can SIDBI help me get a loan?",
+   "gold_scheme": "SIDBI",
+   "gold_ref": "working_capital.frequently_asked_questions_faqs.8",
+   "gold_id": 1307
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main ek chhota shop chalata hun aur mujhe supplies ke liye paise ki zaroorat hai, to SIDBI mujhe loan lekr madad kar sakta hai?",
+   "gold_scheme": "SIDBI",
+   "gold_ref": "working_capital.frequently_asked_questions_faqs.8",
+   "gold_id": 1307
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं एक छोटे दुकान का मालिक हूँ और मुझे रसद के लिए पैसे की आवश्यकता है, तो क्या एसआईडीबीआई मुझे ऋण देने में मदद कर सकता है?",
+   "gold_scheme": "SIDBI",
+   "gold_ref": "working_capital.frequently_asked_questions_faqs.8",
+   "gold_id": 1307
+  },
+  {
+   "variant": "en",
+   "question": "If I’ve been running my shop for at least two years, can I get a loan through this scheme?",
+   "gold_scheme": "SIDBI",
+   "gold_ref": "working_capital.frequently_asked_questions_faqs.9",
+   "gold_id": 1308
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main apne shop ko kam se kam do saal se chal raha hoon, to main is scheme ke zariye loan le sakta hoon?",
+   "gold_scheme": "SIDBI",
+   "gold_ref": "working_capital.frequently_asked_questions_faqs.9",
+   "gold_id": 1308
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं अपने दुकान को कम से कम दो साल से चला रहा हूँ, तो क्या मैं इस योजना के माध्यम से ऋण ले सकता हूँ?",
+   "gold_scheme": "SIDBI",
+   "gold_ref": "working_capital.frequently_asked_questions_faqs.9",
+   "gold_id": 1308
+  },
+  {
+   "variant": "en",
+   "question": "If I’ve been running my shop for more than three years and have my GST and Udyam registration, can I get a loan from SIDBI?",
+   "gold_scheme": "SIDBI",
+   "gold_ref": "business_loan.for_msmes.4",
+   "gold_id": 1320
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main apne shop ko poore 3 saal se chal raha hoon aur meri GST aur Udyam registration hai, to kya main SIDBI se loan le sakta hoon?",
+   "gold_scheme": "SIDBI",
+   "gold_ref": "business_loan.for_msmes.4",
+   "gold_id": 1320
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं अपने दुकान को तीन वर्षों से अधिक समय से चला रहा हूँ और मेरे पास जीएसटी और उदमी पंजीकरण है, तो क्या मैं एसआईडीबीआई से ऋण प्राप्त कर सकता हूँ?",
+   "gold_scheme": "SIDBI",
+   "gold_ref": "business_loan.for_msmes.4",
+   "gold_id": 1320
+  },
+  {
+   "variant": "en",
+   "question": "If I get money from this scheme, do I have to show how I’m using it every year?",
+   "gold_scheme": "SISFS",
+   "gold_ref": "guidelines_20for_20s.page_13.38",
+   "gold_id": 1358
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main is scheme se paisa paun, kya mujhe har saal use kaise la rahi hoon, iska report dena padega?",
+   "gold_scheme": "SISFS",
+   "gold_ref": "guidelines_20for_20s.page_13.38",
+   "gold_id": 1358
+  },
+  {
+   "variant": "hi",
+   "question": "अगर मैं इस योजना से पैसे पाऊँ, तो क्या मुझे हर साल पैसे का उपयोग कैसे कर रहा हूँ, इसकी रिपोर्ट देनी होगी?",
+   "gold_scheme": "SISFS",
+   "gold_ref": "guidelines_20for_20s.page_13.38",
+   "gold_id": 1358
+  },
+  {
+   "variant": "en",
+   "question": "If a small business hasn't gotten help from the government, how long does it need to be running before it can apply?",
+   "gold_scheme": "SISFS",
+   "gold_ref": "guidelines_20for_20s.page_3.9",
+   "gold_id": 1329
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar koi chhota business sarkar se madad nahi lega hai, toh woh apply karne ke liye kitni din tak chalna hoga?",
+   "gold_scheme": "SISFS",
+   "gold_ref": "guidelines_20for_20s.page_3.9",
+   "gold_id": 1329
+  },
+  {
+   "variant": "hi",
+   "question": "यदि किसी छोटे व्यवसाय ने सरकार से सहायता नहीं ली है, तो वह आवेदन करने से पहले कितने समय तक चलनी चाहिए?",
+   "gold_scheme": "SISFS",
+   "gold_ref": "guidelines_20for_20s.page_3.9",
+   "gold_id": 1329
+  },
+  {
+   "variant": "en",
+   "question": "How much money has the government given to startups through this program in the last few years?",
+   "gold_scheme": "SISFS",
+   "gold_ref": "guidelines_20for_20s.page_7.21",
+   "gold_id": 1341
+  },
+  {
+   "variant": "hinglish",
+   "question": "Gobhi sarkar ne last few years mein startups ko is program ke zariye kitna paisa deka?",
+   "gold_scheme": "SISFS",
+   "gold_ref": "guidelines_20for_20s.page_7.21",
+   "gold_id": 1341
+  },
+  {
+   "variant": "hi",
+   "question": "पिछले कुछ वर्षों में इस कार्यक्रम के माध्यम से स्टार्टअप को सरकार ने कितना पैसा दिया है?",
+   "gold_scheme": "SISFS",
+   "gold_ref": "guidelines_20for_20s.page_7.21",
+   "gold_id": 1341
+  },
+  {
+   "variant": "en",
+   "question": "If I apply for money from this scheme, what do I need to show them about my business plan?",
+   "gold_scheme": "SISFS",
+   "gold_ref": "guidelines_20for_20s.page_10.29",
+   "gold_id": 1349
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main is scheme se paise apply karunga, toh mujhe unlogo se mera business plan baare mein kya dikhana hoga?",
+   "gold_scheme": "SISFS",
+   "gold_ref": "guidelines_20for_20s.page_10.29",
+   "gold_id": 1349
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं इस योजना से पैसे के लिए आवेदन करता हूँ, तो मुझे उन्हें मेरे व्यवसाय योजना के बारे में क्या दिखाना होगा?",
+   "gold_scheme": "SISFS",
+   "gold_ref": "guidelines_20for_20s.page_10.29",
+   "gold_id": 1349
+  },
+  {
+   "variant": "en",
+   "question": "Who decides which incubators get money from this government program?",
+   "gold_scheme": "SISFS",
+   "gold_ref": "guidelines_20for_20s.page_4.10",
+   "gold_id": 1330
+  },
+  {
+   "variant": "hinglish",
+   "question": "Kya log, jo incubators ke naam se kaam karte hain, inko yeh shigram se paisa kaise milega?",
+   "gold_scheme": "SISFS",
+   "gold_ref": "guidelines_20for_20s.page_4.10",
+   "gold_id": 1330
+  },
+  {
+   "variant": "hi",
+   "question": "इस सरकारी योजना से पैसे पाने के लिए incubators को कौन फैसला लेता है?",
+   "gold_scheme": "SISFS",
+   "gold_ref": "guidelines_20for_20s.page_4.10",
+   "gold_id": 1330
+  },
+  {
+   "variant": "en",
+   "question": "How much money can a small business get in a loan through this program?",
+   "gold_scheme": "STANDUP_INDIA",
+   "gold_ref": "home.what_is_stand_up_india.2",
+   "gold_id": 1363
+  },
+  {
+   "variant": "hinglish",
+   "question": "Kitne paise ek chote biwas ki loan ke liye is program mein paas kar sakta hai?",
+   "gold_scheme": "STANDUP_INDIA",
+   "gold_ref": "home.what_is_stand_up_india.2",
+   "gold_id": 1363
+  },
+  {
+   "variant": "hi",
+   "question": "छोटे व्यवसाय के लिए इस कार्यक्रम के माध्यम से ऋण राशि कितनी हो सकती है?",
+   "gold_scheme": "STANDUP_INDIA",
+   "gold_ref": "home.what_is_stand_up_india.2",
+   "gold_id": 1363
+  },
+  {
+   "variant": "en",
+   "question": "How much money do I need to put down to get a loan?",
+   "gold_scheme": "STANDUP_INDIA",
+   "gold_ref": "home.salient_features.3",
+   "gold_id": 1364
+  },
+  {
+   "variant": "hinglish",
+   "question": "Kitna paisa hona chahiye jo loan ke liye dalna ho?",
+   "gold_scheme": "STANDUP_INDIA",
+   "gold_ref": "home.salient_features.3",
+   "gold_id": 1364
+  },
+  {
+   "variant": "hi",
+   "question": "लोन लेने के लिए मुझे कितना पैसा लगाना होगा?",
+   "gold_scheme": "STANDUP_INDIA",
+   "gold_ref": "home.salient_features.3",
+   "gold_id": 1364
+  },
+  {
+   "variant": "en",
+   "question": "If I start a small business, how long can I be called a startup?",
+   "gold_scheme": "STARTUP_INDIA",
+   "gold_ref": "startup_recognition_.eligibility_criteria_for_startup_rec.2",
+   "gold_id": 1400
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main ek chhota business shuru karun, startup ke banne ke liye kitne time tak main eligible rah sakta hun?",
+   "gold_scheme": "STARTUP_INDIA",
+   "gold_ref": "startup_recognition_.eligibility_criteria_for_startup_rec.2",
+   "gold_id": 1400
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मैं एक छोटा व्यवसाय शुरू करता हूँ, तो मैं स्टार्टअप के रूप में कितने समय तक रह सकता हूँ?",
+   "gold_scheme": "STARTUP_INDIA",
+   "gold_ref": "startup_recognition_.eligibility_criteria_for_startup_rec.2",
+   "gold_id": 1400
+  },
+  {
+   "variant": "en",
+   "question": "If I want to get a certificate to show I'm a startup, do I need to pay anyone to help me with it?",
+   "gold_scheme": "STARTUP_INDIA",
+   "gold_ref": "startup_recognition_.disclaimer.6",
+   "gold_id": 1404
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main startup banne ke liye ek certificate paata hu, toh kya mujhe kisi ko madad lene ke liye paise dhene hai?",
+   "gold_scheme": "STARTUP_INDIA",
+   "gold_ref": "startup_recognition_.disclaimer.6",
+   "gold_id": 1404
+  },
+  {
+   "variant": "hi",
+   "question": "अगर मैं एक स्टार्टअप के रूप में प्रमाणित होने के लिए कोई प्रमाणपत्र चाहता हूँ, तो क्या मुझे इसे प्राप्त करने में किसी की मदद के लिए पैसे देने होंगे?",
+   "gold_scheme": "STARTUP_INDIA",
+   "gold_ref": "startup_recognition_.disclaimer.6",
+   "gold_id": 1404
+  },
+  {
+   "variant": "en",
+   "question": "How do I find out if my business qualifies for this program?",
+   "gold_scheme": "STARTUP_INDIA",
+   "gold_ref": "startup_scheme_html.discover_the_journey_of_startup_indi.12",
+   "gold_id": 1376
+  },
+  {
+   "variant": "hinglish",
+   "question": "Kaise mujhe pata chalega ki mera business is program ke liye eligible hai ya nahi?",
+   "gold_scheme": "STARTUP_INDIA",
+   "gold_ref": "startup_scheme_html.discover_the_journey_of_startup_indi.12",
+   "gold_id": 1376
+  },
+  {
+   "variant": "hi",
+   "question": "मैं यह कैसे पता लगा सकता हूँ कि मेरा व्यवसाय इस कार्यक्रम के लिए योग्य है या नहीं?",
+   "gold_scheme": "STARTUP_INDIA",
+   "gold_ref": "startup_scheme_html.discover_the_journey_of_startup_indi.12",
+   "gold_id": 1376
+  },
+  {
+   "variant": "en",
+   "question": "If my shop breaks a rule about pollution, will I get a visit from someone checking it out right away?",
+   "gold_scheme": "STARTUP_INDIA",
+   "gold_ref": "startup_scheme_html.discover_the_journey_of_startup_indi.10",
+   "gold_id": 1374
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar meri dukaan pollution ke ek niyam tod de, to kya kisi ne usko check karne ke liye jaldi aa jaega?",
+   "gold_scheme": "STARTUP_INDIA",
+   "gold_ref": "startup_scheme_html.discover_the_journey_of_startup_indi.10",
+   "gold_id": 1374
+  },
+  {
+   "variant": "hi",
+   "question": "यदि मेरी दुकान प्रदूषण के एक नियम को तोड़ दे, तो क्या किसी ने तुरंत उसे जांचने के लिए आ जाएगा?",
+   "gold_scheme": "STARTUP_INDIA",
+   "gold_ref": "startup_scheme_html.discover_the_journey_of_startup_indi.10",
+   "gold_id": 1374
+  },
+  {
+   "variant": "en",
+   "question": "If I get a certificate from the DPIIT, can I get some tax breaks on my business?",
+   "gold_scheme": "STARTUP_INDIA",
+   "gold_ref": "startup_recognition_.eligibility_criteria_for_startup_rec.3",
+   "gold_id": 1401
+  },
+  {
+   "variant": "hinglish",
+   "question": "Agar main DPIIT se ek certificate paun, to kya main apne business par tax breaks paun?",
+   "gold_scheme": "STARTUP_INDIA",
+   "gold_ref": "startup_recognition_.eligibility_criteria_for_startup_rec.3",
+   "gold_id": 1401
+  },
+  {
+   "variant": "hi",
+   "question": "अगर मैं DPIIT से एक सर्टिफिकेट पाऊँ, तो क्या मैं अपने व्यवसाय पर टैक्स ब्रेक पाऊँ?",
+   "gold_scheme": "STARTUP_INDIA",
+   "gold_ref": "startup_recognition_.eligibility_criteria_for_startup_rec.3",
+   "gold_id": 1401
+  }
+ ]
+}
